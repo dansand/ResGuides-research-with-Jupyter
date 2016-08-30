@@ -1,7 +1,21 @@
-# ResGuides: Lessons for next generation digital research tools
+# ResGuides: Python for Science
 
-ResBaz (the Research Bazaar) is a campaign, community and conference, falling under the ResPlat (Research Platforms) umbrella. ResPlat is the department within the University of Melbourne that helps researchers with the research-specific IT things they do. We offer data storage, cloud and high performance computing services and run workshops on the latest digital research skills.
+This book draws mainly from the resources listed below. We tried to incoporate what we felt were the best parts of these courses, and package it into a coherent set of lessons that can be taught in around 1.5 days. At the end of the course, we provide a few longer examples that could be given as homework. This book was enabled by Research Platforms at the University of Melbourne. 
 
-## Contribute
+[Software Carpentry](http://swcarpentry.github.io/python-novice-inflammation/)
 
-We love contributors! Please help us improve or fix the documentation by opening a Pull Request. The easiest way to contribute is to click on the `edit this page` button on the blue header bar.
+[Django Girls](http://tutorial.djangogirls.org/en/)
+
+[A Byte of Python](http://python.swaroopch.com/)
+
+[Introduction to Computing Using Python](http://www.cs.cornell.edu/courses/CS1110/2014fa/lectures/)
+
+[Python Programming Tutorial](http://www.programiz.com/python-programming)
+
+License
+
+This book is licensed under a Creative Commons Attribution-ShareAlike 4.0 International License.
+This means:
+You are free to Share i.e. to copy, distribute and transmit this book
+You are free to Remix i.e. to make changes to this book (especially translations)
+You are free to use it for commercial purposes
