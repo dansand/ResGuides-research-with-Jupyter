@@ -1,7 +1,19 @@
 # Summary
 
 * [Introduction](README.md)
-* [follow-this-guide](gitbooksintro.md)
-* [section1](content/section1.md)
-* [section2](content/section2.md)
-
+* [Basics](part1/readme.md)
+   * [python](part1/python.md)
+   * [jupyter](part1/jupyter1.md)
+   * [lists](part1/lists.md)
+   * [loops](part1/loops.md)
+   * [functions](part1/functions.md)
+   * [variables](part1/variables.md)
+   * [types](part1/types.md)
+   * [conditions](part1/conditions.md)
+* [The Scientific Python Stack](part2/readme.md)
+   * [libraries](part2/libraries.md)
+   * [numpy 1](part2/numpy1md.md)
+   * [numpy 2](part2/numpy2.md)
+   * [plotting](part2/plotting.md)
+   * [jupyter](part2/jupyter2.md)
+   * [scipy](part2/scipy.md)
