@@ -2,14 +2,6 @@
 
 > ## Learning Objectives
 >
-> *  Inline plotting with `%pylab inline`
-> *  converting Notebooks to other formats
-
-
-# Jupyter Notebooks 2
-
-> ## Learning Objectives
->
 > *   Jupyer / IPython Magics
 > *   Running scripts
 > *  Inline plotting with `%pylab inline`
