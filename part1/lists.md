@@ -4,8 +4,9 @@
 > ## Learning Objectives
 >
 > *   Explain what a list is.
+> *   Create a variable to store a list.
 > *   Create and index lists of simple values.
-> *   List slicing
+> *   List slicing.
 
 ##Creating lists
 
