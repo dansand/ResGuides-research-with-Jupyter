@@ -4,7 +4,7 @@
 
 > * Different Python environments
 > * Python commands
-> * Operators and expressions
+> * Math operators
 > * Python Strings
 
 ## Python prompt
