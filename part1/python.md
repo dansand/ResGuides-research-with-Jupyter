@@ -14,7 +14,7 @@ To start playing with Python, we need to open up a _command line_ on your comput
 ```bash
 $ python
 ```
-Here is a representative output of what might see when launch Python, namely a brief summary of which distribution and version of Python you are using. 
+Here is a representative output of what you might see when you launch Python, namely a brief summary of which distribution and version of Python you are using. 
 
 ```
 Python 2.7.9 (default, Mar  1 2015, 12:57:24)
@@ -42,31 +42,7 @@ Nice! See how the answer popped out? Python knows math! You could try other comm
 - `5 - 1`
 - `40 / 2`
 
-As you can see, Python is a great calculator. If you're wondering what else you can do...
-
-## Operators and Expressions {#op-exp}
-
-Most statements (logical lines) that you write will contain _expressions_. A simple example of an expression is `2 + 3`. An expression can be broken down into _operators_ and _operands_.
-
-_Operators_ are functionality that do something and can be represented by symbols such as `+` or by special keywords. Operators require some data to operate on and such data is called _operands_. In this case, `2` and `3` are the operands.
-
-
-As we just saw, you can evaluate the expressions given in the examples using the interpreter interactively. For example, to test the expression `2 + 3`, use the interactive Python interpreter prompt:
-
-```python
-2 + 3
-```
-```
-5
-```
-```python
-3 * 5
-```
-```
-15
-```
-
-Here is a quick overview of the available operators:
+As you can see, Python is a great calculator. If you're wondering what else you can do...here is a quick overview of the common mathematical operators:
 
 - `+` (plus)
     - Adds two objects
@@ -103,21 +79,18 @@ If you had an expression such as `2 + 3 * 4`, is the addition done first or the 
 
 ## Numbers
 
-We've begun using numbers in python and it seems pretty straight forward. However, we need to be a little careful here: there are a _number of types of numbers_ in python. Let's verify this, before we move on:
+We've begun using numbers in python and it seems pretty straight forward. However, as diligent Pythonistas, let's observe that not all number are created equal. In fact, there are a _number of types of numbers_ in python. Let's verify this, before we move on:
 
 ```python
 type(2)
 ```
-
 An examples of an integer is `2` which is just a whole number.
 
 ```python
 type(2.0)
 ```
 
-In programming we call decimal numbers floating point numbers (or _floats_ for short).
-
-Also what happened when we wrote `type(2)`? We will return to this in much detail later. 
+In programming we call decimal numbers floating point numbers (or _floats_ for short). Also what happened when we wrote `type(2)`? We will return to this in much detail later. You also might wonder why the need for multiple types of number in Python. In fact, it is very useful. If you wrote a program that counted people as they scanned their tickets at a convcert would you be better off using integers or floating point numbers?
 
 
 ## Strings
@@ -125,28 +98,28 @@ Also what happened when we wrote `type(2)`? We will return to this in much detai
 How about your name? Type your first name in quotes like this:
 
 ```python
-"Ola"
+"rick astley"
 ```
-    'Ola'
+    'rick astley'
 
 You've now created your first string! It's a sequence of characters that can be processed by a computer. The string must always begin and end with the same character. This may be single (`'`) or double (`"`) quotes (there is no difference!) The quotes tell Python that what's inside of them is a string.
 
 Strings can be strung together (or concatenated). Try this:
 
 ```python
-"Hi there " + "Ola"
+"Hi there " + "Rick"
 ```
 ```
-'Hi there Ola'
+'Hi there Rick'
 ```
 
 You can also multiply strings with a number:
 
 ```python
-"Ola" * 3
+"Rick" * 3
 ```
 ```
-'OlaOlaOla'
+'RickRickRick'
 ```
 If you need to put an apostrophe inside your string, you have two ways to do it.
 
@@ -171,25 +144,25 @@ or escaping the apostrophe with a backslash (`\`):
 Nice, huh? To see your name in uppercase letters, simply type:
 
 ```python
-"Ola".upper()
+"Rick".upper()
 ```
 ```
-'OLA'
+'RICK'
 ```
 
-You just used the `upper` __method__ on your string! A method (like `upper()`) is a sequence of instructions that Python has to perform on a given object (`"Ola"`) once you call it.
+You just used the `upper` __method__ on your string! A method (like `upper()`) is a sequence of instructions that Python has to perform on a given object (`"Rick"`) once you call it.
 
 > We will often discuss the concept of methods as we use them, because methods are fundamental in python.
 
 If you want to know the number of letters contained in your name, there is a __function__ for that too!
 
 ```python
-len("Ola")
+len("Rick")
 ```
 ```
 3
 ```
-Wonder why sometimes you call functions with a `.` at the end of a string (like `"Ola".upper()`) and sometimes you first call a function and place the string in parentheses? Well, in some cases, functions belong to objects, like `upper()`, which can only be performed on strings. In this case, we call the function a __method__. Other times, functions don't belong to anything specific and can be used on different types of objects, just like `len()`. That's why we're giving `"Ola"` as a parameter to the `len` function.
+Wonder why sometimes you call functions with a `.` at the end of a string (like `"Ola".upper()`) and sometimes you first call a function and place the string in parentheses? Well, in some cases, functions belong to objects, like `upper()`, which can only be performed on strings. In this case, we call the function a __method__. Other times, functions don't belong to anything specific and can be used on different types of objects, just like `len()`. That's why we're giving `"Rick"` as a parameter to the `len` function.
 
 
 ## Errors
@@ -217,7 +190,6 @@ It worked! We used the `str` function inside of the `len` function. `str()` conv
 - The `int` function converts things into __integers__
 
 > Important: we can convert numbers into text, but we can't necessarily convert text into numbers - what would `int('hello')` be anyway?
-
 
 
 
