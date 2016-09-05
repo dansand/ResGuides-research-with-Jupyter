@@ -83,6 +83,9 @@ TypeError: 'str' object does not support item assignment
 
 does not.
 
+A list is an _ordered_ sequence of items. Having order means we can index with numbers. Not all Python data types (containers) have this kind of order.  
+
+
 > ## Ch-Ch-Ch-Changes
 >
 > Data which can be modified in place is called [mutable](reference.html#mutable),
