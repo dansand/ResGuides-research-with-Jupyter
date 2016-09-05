@@ -9,15 +9,12 @@
 
 ## Python prompt
 
-To start playing with Python, we need to open up a *command line* on your computer.
+To start playing with Python, we need to open up a _command line_ on your computer. Opening up a Python console is usually as easy as typing `python` into the command prompt and hitting `enter`.
 
-Once you're ready, follow the instructions below.
-
-We want to open up a Python console, so type in `python` and hit `enter`.
-
-```python
-python
+```bash
+$ python
 ```
+Here is a representative output of what might see when launch Python, namely a brief summary of which distribution and version of Python you are using. 
 
 ```
 Python 2.7.9 (default, Mar  1 2015, 12:57:24)
@@ -27,7 +24,7 @@ Type "help", "copyright", "credits" or "license" for more information.
 
 ## Your first Python command!
 
-After running the Python command, the prompt changed to `>>>`. For us this means that for now we may only use commands in the Python language. You don't have to type in `>>>` - Python will do that for you.
+After running the `python` command in the _command line_ the prompt changed to `>>>`. This means that for now we may only use commands in the Python language. You don't have to type in `>>>` - Python will do that for you.
 
 If you want to exit the Python console at any point, just type `exit()` or use the shortcut `Ctrl + Z` for Windows and `Ctrl + D` for Mac/Linux. Then you won't see `>>>` any longer.
 
@@ -44,8 +41,6 @@ Nice! See how the answer popped out? Python knows math! You could try other comm
 - `4 * 5`
 - `5 - 1`
 - `40 / 2`
-
-Have fun with this for a little while and then get back here :).
 
 As you can see, Python is a great calculator. If you're wondering what else you can do...
 
@@ -104,7 +99,7 @@ Here is a quick overview of the available operators:
 
 ## Evaluation Order
 
-If you had an expression such as `2 + 3 * 4`, is the addition done first or the multiplication? Our high school maths tells us that the multiplication should be done first. This means that the multiplication operator has higher precedence than the addition operator.
+If you had an expression such as `2 + 3 * 4`, is the addition done first or the multiplication? Convection dictates that the multiplication should be done first. This means that the multiplication operator has higher _precedence_ than the addition operator.
 
 ## Numbers
 
