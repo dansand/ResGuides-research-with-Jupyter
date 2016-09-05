@@ -1,6 +1,6 @@
 # Conditions
 
-> ## Learning Objectives {.objectives}
+> ## Learning Objectives
 >
 > *   Explain the similarities and differences between tuples and lists.
 > *   Write conditional statements including `if`, `elif`, and `else` branches.
