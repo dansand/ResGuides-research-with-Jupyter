@@ -171,7 +171,7 @@ Item start to end is [1, 3, 5, 7]
 
 <!--sec data-title="Challenge 1" data-id="challenge" data-show=true ces-->
 
-We've encountered lists as strings as two fundamental python containers.Explain what the overall effect of this code is:
+We've now encountered lists and strings as two fundamental python containers. Explain what the overall effect of this code is:
 
 ```python
 list1 = ["I", "am", "becoming", "a", "programmer"]
