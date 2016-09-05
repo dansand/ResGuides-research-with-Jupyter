@@ -186,6 +186,38 @@ This code inputs an integer n for which it computes and prints the _nth_ Fibonac
 
 Note that the `int()` function here converts a string into a an integer. 
 
+
+And here is the Fibonacci algorithm we developed wrapped in a function:
+
+## From a "regular" code to a function¶
+
+```python
+def fibonacci(n):
+    """
+    Takes one argument `n` and returns the `n`-th Fibonacci number.
+    """
+    f0 = 0
+    f1 = 1
+    while n > 1:
+        nxt = f0 + f1
+        f0 = f1
+        f1 = nxt
+        n -= 1
+    return f1
+```
+
+
+The function definition opens with the word `def`, which is followed by the name of the function and a parenthesized list of parameter names. The [body](reference.html#function-body) of the function - the statements that are executed when it runs - is indented below the definition line.
+
+Let's try running our function. Calling our own function is no different from calling any other function:
+
+```python
+fibonacci(10)
+```
+```
+10
+```
+
 <!--
 
 ## Checking our Data
