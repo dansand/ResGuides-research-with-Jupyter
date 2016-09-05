@@ -9,10 +9,7 @@
 
 ##Creating lists
 
-A list is a way to store many values.
-Lists are built into the language (so we don't have to load a library to use them).
-
-We create a list by putting values inside square brackets:
+A list is a way to store many values. We create a list by putting values inside square brackets:
 
 ```python
 [1, 3, 5, 7]
@@ -21,7 +18,7 @@ We create a list by putting values inside square brackets:
 [1, 3, 5, 7]
 ```
 
-The above expression (in which a list was defined) was evaluated by but didn’t save the data in memory. To do that, we need to assign the list to a variable. A variable is just a name for a value, such as x, current_temperature, or subject_id. Python’s variables must begin with a letter and are case sensitive. We can create a new variable by assigning a value to it using =. As an illustration, let’s step back and instead of considering a table of data, consider the simplest “collection” of data, a single value. The line below assigns the value 55 to a variable weight_kg:
+The list was evaluated by Python (and returned to us) but Python didn’t save the data in memory. To do that, we need to assign the list to a variable. A variable is just a name for a value, such as x, current_temperature, or subject_id. Python’s variables must begin with a letter and are case sensitive. We can create a new variable by assigning a value to it using =. As an illustration, let’s step back and instead of considering a table of data, consider the simplest “collection” of data, a single value. The line below assigns the value 55 to a variable weight_kg:
 
 ```python
 weight_kg = 55
