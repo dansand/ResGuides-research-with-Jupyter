@@ -15,39 +15,7 @@ We're at the point now where like a way to package our code so that it is easier
 The function concept is probably *the* most important building block of any non-trivial software (in any programming language)
 
 Functions are defined using the `def` keyword. After this keyword comes an *identifier* name for the function, followed by a pair of parentheses which may enclose some names of variables, and by the final colon that ends the line. Next follows the block of statements that are part of this function. 
-An example will show that this is actually very simple. Here is the Fibonacci algorithm we developed wrapped in a function:
-
-## From a "regular" code to a function¶
-
-```python
-def fibonacci(n):
-    """
-    Takes one argument `n` and returns the `n`-th Fibonacci number.
-    """
-    f0 = 0
-    f1 = 1
-    while n > 1:
-        nxt = f0 + f1
-        f0 = f1
-        f1 = nxt
-        n -= 1
-    return f1
-```
-
-
-The function definition opens with the word `def`, which is followed by the name of the function and a parenthesized list of parameter names. The [body](reference.html#function-body) of the function - the statements that are executed when it runs - is indented below the definition line.
-
-Let's try running our function. Calling our own function is no different from calling any other function:
-
-```python
-fibonacci(10)
-```
-```
-10
-```
-
-
-Okay, let's try writing another function `fahr_to_kelvin` that converts temperatures from Fahrenheit to Kelvin:
+An example will show that this is actually very simple. Let's try writing a function `fahr_to_kelvin` that converts temperatures from Fahrenheit to Kelvin:
 
 ```python
 def fahr_to_kelvin(temp):
