@@ -10,7 +10,7 @@
 
 ##Creating lists
 
- Python has a great built-in list type named "list". A list is a way to store many values. We create a list by putting values inside square brackets:
+ A list is a way to store many values. We create a list simply by putting values inside square brackets:
 
 ```python
 [1, 3, 5, 7]
