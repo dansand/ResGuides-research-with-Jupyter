@@ -99,15 +99,25 @@ Here is a quick overview of the available operators:
 
 ## Evaluation Order
 
-If you had an expression such as `2 + 3 * 4`, is the addition done first or the multiplication? Convection dictates that the multiplication should be done first. This means that the multiplication operator has higher _precedence_ than the addition operator.
+If you had an expression such as `2 + 3 * 4`, is the addition done first or the multiplication? Convention dictates that the multiplication should be done first. This means that the multiplication operator has higher _precedence_ than the addition operator.
 
 ## Numbers
 
-We've begun using numbers in python, now it's time to consider the a fundamental dichotomy: numbers are mainly of two types - integers and floats.
+We've begun using numbers in python and it seems pretty straight forward. However, we need to be a little careful here: there are a _number of types of numbers_ in python. Let's verify this, before we move on:
+
+```python
+type(2)
+```
 
 An examples of an integer is `2` which is just a whole number.
 
-Examples of floating point numbers (or _floats_ for short) are `3.23` and `52.3E-4`. The `E` notation indicates powers of 10. In this case, `52.3E-4` means `52.3 * 10^-4^`.
+```python
+type(2.0)
+```
+
+In programming we call decimal numbers floating point numbers (or _floats_ for short).
+
+Also what happened when we wrote `type(2)`? We will return to this in much detail later. 
 
 
 ## Strings
