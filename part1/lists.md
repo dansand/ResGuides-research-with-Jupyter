@@ -182,6 +182,24 @@ _hint, try running_
 >```
 
 
+<!--sec data-title="Challenge 1" data-id="challenge" data-show=true ces-->
+
+We've encountered lists as strings as two fundamental python containers.Explain what the overall effect of this code is:
+
+```python
+list1 = ["I", "am", "becoming", "a", "programmer"]
+message = "\n".join(list1)
+print(message)
+```
+
+_hint, try running_
+```
+help(message.join)
+```
+
+<!--endsec-->
+
+
 
 
 
