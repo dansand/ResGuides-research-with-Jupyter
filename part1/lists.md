@@ -168,6 +168,10 @@ Item 1 to -1 is [3, 5]
 Item start to end is [1, 3, 5, 7]
 ```
 
+##Anything goes
+
+Lists are just one example of a Python _container_. Lists have certain inalienable rights, we've sen that the items of a list can be changed at will. Lists can also contain items of different __types_. Together these properties make lists very flexible. Sometimes this flexibility is undesirable - later we will encounter containers that are more restrictive in how we can interact with them.
+
 
 <!--sec data-title="Challenge 1" data-id="challenge" data-show=true ces-->
 
