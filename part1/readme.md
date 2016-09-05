@@ -1,9 +1,6 @@
 # Basics
 
-These lessons cover the basic syntax and data types of Python, along with the following generic programming concepts:
+These lessons provide an intriduction to the Python programming language, as well as the Jupyter notebook environment. 
 
-* Loops
-* Conditions / flow control
-* Functions
 
 The lessons are intended to be taught using the Jupyter notebook environment, and Python 3.* 
