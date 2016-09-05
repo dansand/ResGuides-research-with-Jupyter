@@ -191,20 +191,23 @@ Lists are just one example of a Python _container_ or _collection_. Lists have c
 
 <!--sec data-title="Challenge 1" data-id="challenge" data-show=true ces-->
 
-We've now encountered lists and strings as two fundamental python containers. Explain what the overall effect of this code is:
+So far, most of the elements that we have added to our collections have been string, float, or integer data types. However, the elements of a collections can be collections themselves. Indeed, we can include any data type inside a tuple or a list or even a set. This process is called nesting and it is a bit like Russian dolls.
 
 ```python
-list1 = ["I", "am", "becoming", "a", "programmer"]
-message = "\n".join(list1)
-print(message)
+pets = ['dogs', 'cats', 'fish']
+print( pets )
+pets.pop(1)   # Get rid of dogs
+dog_breeds = ['bulldog', 'terrier', 'greyhound']
+pets.append(dog_breeds)  # append list of dog breeds available
+pets
 ```
 
-_hint, try running_
-```
-help(message.join)
-```
+With your neighbour, work out how to index this list, so you return the `greyound` string.
 
 <!--endsec-->
+
+
+
 
 
 
