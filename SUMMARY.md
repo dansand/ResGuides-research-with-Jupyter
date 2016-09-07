@@ -9,7 +9,7 @@
    * [loops](part1/loops.md)
    * [functions](part1/functions.md)
    * [conditions](part1/conditions.md)
-* [The Scientific Python Stack](part2/readme.md)
+* [The Scientific Python Stack](part2/math.md)
    * [libraries](part2/libraries.md)
    * [numpy 1](part2/numpy1md.md)
    * [numpy 2](part2/numpy2.md)
@@ -17,3 +17,4 @@
    * [I/O](part2/fileIO.md)
    * [jupyter 2](part2/jupyter2.md)
    * [scipy](part2/scipy.md)
+
