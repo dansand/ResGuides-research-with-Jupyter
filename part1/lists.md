@@ -163,8 +163,6 @@ primes: [1, 3, 5, 7, 2]
 odds: [1, 3, 5, 7]
 ~~~
 
-This is different from how variables worked in lesson 1, and more similar to how a spreadsheet works.
-
 ##Slicing
 
 lists, (like a variety of python data structures), also have a slicing operation which allows us to retrieve a slice of the sequence i.e. a part of the sequence.
