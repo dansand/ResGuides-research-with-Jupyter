@@ -24,6 +24,11 @@ The list was evaluated by Python (and returned to us) but Python didn’t save t
 ```python
 weight_kg = 55
 ```
+We can even define multiple variables at once:
+
+```python
+count, result, total = 0, 0, 0
+```
 
 Let's _assign_ that list to a variable now:
 
