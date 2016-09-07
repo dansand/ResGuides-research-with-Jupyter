@@ -1,2 +1,0 @@
-# Arrays, plotting, and data
-
