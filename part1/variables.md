@@ -10,14 +10,6 @@
 
 Computer programs operate on data. A computer program is a set of statements (i.e., intructions) to accomplish one or more of the following: read, create, calculate, transform, organize, and store data. This goal is achieved through the use of variables. If you think of data as pieces of paper where you wrote something, then a variable is a folder to which you afix a sticker with a name and where you may store one or more pieces of paper.
 
-Python has basically only three rules about naming variables: 
-
-* names you define must start with a letter (a-z,A-Z) or underscore (_) and can be followed by any number of letters, digits (0-9), or underscores
-* names you define cannot be the same as any of Python's reserved words (see handout)
-* names are case-sensitive: 'YOU', 'you', 'You', and 'yOu' are all different names in Python
-Note that '-', '+', '*', and '/' are used by Python for defining operations on data and cannot be used in names.
- 
- So, a variable is nothing more than a name for something so you can use it later. Programmers use these variables to store data, make their code more readable and so they don't have to keep remembering what things are.
 
 Let's say we want to create a new variable called `name`:
 
@@ -200,3 +192,13 @@ As we'll see later, `print()` is also useful when we want to print things from i
 >
 > Do they always do the same thing?
 > Which do you find easier to read?
+
+
+***** 
+
+Python has basically only three rules about naming variables: 
+
+* names you define must start with a letter (a-z,A-Z) or underscore (_) and can be followed by any number of letters, digits (0-9), or underscores
+* names you define cannot be the same as any of Python's reserved words (see handout)
+* names are case-sensitive: 'YOU', 'you', 'You', and 'yOu' are all different names in Python
+Note that '-', '+', '*', and '/' are used by Python for defining operations on data and cannot be used in names.
