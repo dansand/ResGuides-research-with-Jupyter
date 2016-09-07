@@ -129,7 +129,7 @@ Since `weight_lb` doesn't "remember" where its value came from, it isn't automat
 
 When we write `weight_kg = 100.0`, we're changing `weight_kg` to point to a different (new) object, while `weight_lb` still points at the original object.  
 
-Now let's try a similar excecise with lists:
+Now let's try a similar excercise with lists:
 
 ```python
 a = [1,2,3]
