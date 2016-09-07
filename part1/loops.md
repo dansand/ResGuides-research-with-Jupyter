@@ -222,4 +222,8 @@ Write a loop that calculates the same result as `5 ** 3` using multiplication (a
 
 <!--endsec-->
 
+<!--sec data-title="Reverse a string" data-id="challenge" data-show=true ces-->
 
+Write a loop that takes a string, and produces a new string with the characters in reverse order, so `'Newton'` becomes `'notweN'`.
+
+<!--endsec-->
