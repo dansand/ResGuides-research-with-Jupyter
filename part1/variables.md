@@ -132,6 +132,8 @@ weight in kilograms is now: 100.0 and weight in pounds is still: 126.5
 
 Since `weight_lb` doesn't "remember" where its value came from, it isn't automatically updated when `weight_kg` changes. This is different from the way spreadsheets work.
 
+When we write `weight_kg = 100.0`, we're changing `weight_kg` to point to a different (new) object, while `weight_lb` still points at the original object.  
+
 Now let's try a similar excecise with lists:
 
 ```python
@@ -139,19 +141,17 @@ a = [1,2,3]
 b = a
 #print(a, b)
 print('a and b are now:', a, b)
-a.pop()
-print('a and b are now:', a, b)
+a[2] = 4
+print('but ... they are now both:', a, b)
 ```
 ```
 a and b are now: [1, 2, 3] [1, 2, 3]
-but ... a and b are now: [1, 2] [1, 2]
+but ... they are now both: [1, 2, 4] [1, 2, 4]
 ```
 
-Assignment statements in Python do not copy objects, they create bindings between a target and an object. Most operations that modify the list will modify it in place. This means that if you have multiple variables that point to the same list, all variables will be updated at the same time.
+Assignment statements in Python do not copy objects, they create bindings between a target and an object. Most operations that modify the list will modify it _in place_.  Writing `a[2] = 4  ` does not create a new object. This means that if you have multiple variables that point to the same list, all variables will be updated at the same time.
 
 In general, for collections that are mutable or contain mutable items, a `copy` is needed so one can change one copy without changing the other.
-
-Because numbers (as well as strings, tuples ...) cannot be changed, when we write `b = a`, a new variable is created.
 
 Note that Python creates a single new list every time you execute the [] expression. No more, no less. And Python never creates a new list if you assign a list to a variable.
 
