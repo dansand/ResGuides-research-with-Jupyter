@@ -1,5 +1,7 @@
 # What is Python?
 
+hi
+
 > ## Learning Objectives
 
 > * Different Python environments
