@@ -6,10 +6,9 @@
 > *   Write conditional statements including `if`, `elif`, and `else` branches.
 > *   Correctly evaluate expressions containing `and` and `or`.
 
-##Comparing things
-
-
 > This part is covered in The DjangoGirls [Python Basics: Comparisons](https://www.youtube.com/watch?v=7bzxqIKYgf4) video.
+
+## Comparing things
 
 In the first lesson, we saw some mathematical operators. Python is also equipped with comparison operators. All comparison operators return `True` or `False`. Note the capitalization of these names.
 
@@ -117,7 +116,7 @@ else:
 ```
 
 ```
-"-3 is negative"
+-3 is negative
 ```
 
 One important thing to notice in the code above is that we use a double equals sign `==` to test for equality
