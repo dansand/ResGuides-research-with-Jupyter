@@ -3,6 +3,7 @@
 > ## Learning Objectives
 > *   Create useful numpy arrays 
 > *   Perform operations on arrays of data.
+> *   Higher dimensional arrays
 
 ## Creating arrays
 
