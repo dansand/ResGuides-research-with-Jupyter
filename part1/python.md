@@ -46,7 +46,7 @@ As you can see, Python is a great calculator. If you're wondering what else you 
 
 - `+` (plus)
     - Adds two objects
-    - `3 + 5` gives `8`. `'a' + 'b'` gives `'ab'`.
+    - `3 + 5` gives `8`.
 
 - `-` (minus)
     - Gives the subtraction of one number from the other; if the first operand is absent it is assumed to be zero.
@@ -54,7 +54,7 @@ As you can see, Python is a great calculator. If you're wondering what else you 
 
 - `*` (multiply)
     - Gives the multiplication of the two numbers or returns the string repeated that many times.
-    - `2 * 3` gives `6`. `'la' * 3` gives `'lalala'`.
+    - `2 * 3` gives `6`.
 
 - `**` (power)
     - Returns x to the power of y
