@@ -84,7 +84,6 @@ weight in pounds: 121.0
 ```
 
 
-
 ## So what happens behind the scenes?
 
 A variable is a label for a location in memory. It can be used to hold a value. If we imagine the variable as a sticky note with a name written on it, assignment is like putting the sticky note on a particular value:
@@ -95,6 +94,9 @@ A variable is a label for a location in memory. It can be used to hold a value. 
 In statically typed languages, variables have predetermined types, and a variable can only be used to hold values of that type. Fortuntely for researchers, Python is `dynamically typed`. A language is dynamically typed if the type of a variable is interpreted at runtime: we don't have to tell Python that an integer is an integer, instead, it _interprets our will_.
 
 Any object (Python data type) can be assigned to a variable. Once a variable us instantiated, it can be passed around, handed to functions, queried, altered, etc. They really are fundamental to Python Programming.
+
+You can use the `whos` command at any time to see what variables you have created and what modules you have loaded into the computers memory. As this is an IPython command, it will only work if you are in an IPython terminal or the Jupyter Notebook.
+
 
 ## A common gotcha with lists
 
@@ -192,21 +194,21 @@ As we'll see later, `print()` is also useful when we want to print things from i
 
 
 
-> ## Who's who in the memory
->
->You can use the `whos` command at any time to see what variables you have created and what modules you have loaded into the computers memory. As this is an IPython command, it will only work if you are in an IPython terminal or the Jupyter Notebook.
->
->```python
->whos
->```
->```
->Variable    Type       Data/Info
->--------------------------------
->weight_kg   float      100.0
->weight_lb   float      126.5
->```
+> ## The dark art of variable Names:
+>Python has basically only three rules about naming variables: 
 
-<!--sec data-title="Challenge 2" data-id="challenge" data-show=true ces-->
+>* names you define must start with a letter (a-z,A-Z) or underscore (_) and can be followed by any number of letters, >digits (0-9), or underscores
+>* names you define cannot be the same as any of Python's reserved words (see handout)
+>* names are case-sensitive: 'YOU', 'you', 'You', and 'yOu' are all different names in Python
+>Note that '-', '+', '*', and '/' are used by Python for defining operations on data and cannot be used in names.
+
+
+
+
+
+## Challenges
+
+<!--sec data-title="Nicer variables" data-id="challenge" data-show=true ces-->
 
 Explain what the overall effect of this code is:
 
@@ -230,10 +232,3 @@ Which do you find easier to read?
 
 
 
-> ## The dark art of variable Names:
->Python has basically only three rules about naming variables: 
-
->* names you define must start with a letter (a-z,A-Z) or underscore (_) and can be followed by any number of letters, >digits (0-9), or underscores
->* names you define cannot be the same as any of Python's reserved words (see handout)
->* names are case-sensitive: 'YOU', 'you', 'You', and 'yOu' are all different names in Python
->Note that '-', '+', '*', and '/' are used by Python for defining operations on data and cannot be used in names.
