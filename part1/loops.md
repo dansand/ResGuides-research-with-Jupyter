@@ -206,7 +206,7 @@ for thingo in range(4):
 3
 ```
 
-<!--sec data-title="Computing powers with loops" data-id="challenge2" data-show=true ces-->
+<!--sec data-title="Computing powers with loops" data-id="challenge1" data-show=true ces-->
 
 Exponentiation is built into Python:
 
