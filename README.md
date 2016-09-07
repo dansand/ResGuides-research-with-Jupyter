@@ -12,7 +12,7 @@ This book draws mainly from the resources listed below. We tried to incoporate w
 
 [Python Programming Tutorial](http://www.programiz.com/python-programming)
 
-[Object-Oriented Programming in Python] http://python-textbok.readthedocs.io/en/latest/index.html
+[Object-Oriented Programming in Python] (http://python-textbok.readthedocs.io/en/latest/index.html)
 
 License
 
