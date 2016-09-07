@@ -1,6 +1,0 @@
-# matplotlib
-
-# plotting
-
-
-##List comprehensions
