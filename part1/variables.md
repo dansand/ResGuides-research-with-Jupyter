@@ -33,10 +33,12 @@ Yippee! Your first variable :)! You can always change what it refers to:
 ```python
 name = "Sonja"
 ```
+
 ```python
 name
 ```
 ```
+
 'Sonja'
 ```
 
@@ -45,6 +47,7 @@ You can use it in functions too:
 ```python
 len(name)
 ```
+
 ```
 5
 ```
@@ -54,9 +57,11 @@ But what if we used the wrong name? Can you guess what would happen? Let's try!
 ```python
 city = "Tokyo"
 ```
+
 ```python
 ctiy
 ```
+
 ```
     Traceback (most recent call last):
       File "<stdin>", line 1, in <module>
@@ -68,13 +73,14 @@ An error! As you can see, Python has different types of errors and this one is c
 Just like with the string assigned to `name`, our numeric (integer) variable can be printed to the screen:
 
 ```python
-weight_kg = 55.
+weight_kg = 55
 ```
-```
+
 
 ```python
 print(weight_kg)
 ```
+
 ```
 55
 ```
@@ -84,25 +90,20 @@ We can also do arithmetic with it:
 ```python
 print('weight in pounds:', 2.2 * weight_kg)
 ```
+
 ```python
 weight in pounds: 121.0
 ```
 
 ## What happens behind the scenes?
 
-a variable is a label for a location in memory. It can be used to hold a value. In statically typed languages, variables have predetermined types, and a variable can only be used to hold values of that type. In Python, we may reuse the same variable to store values of any type.
-
-If we imagine the variable as a sticky note with a name written on it, assignment is like putting the sticky note on a particular value:
+A variable is a label for a location in memory. It can be used to hold a value. If we imagine the variable as a sticky note with a name written on it, assignment is like putting the sticky note on a particular value:
 
 ![Variables as Sticky Notes](../fig/python-sticky-note-variables-01.svg)
 
-## A common Gotcha...
+## A common gotcha
 
-Assignment statements in Python do not copy objects, they create bindings between a target and an object. For collections that are mutable or contain mutable items, a copy is sometimes needed so one can change one copy without changing the other.
-
-At this stage, we know about three Python data types, strings, number, and lists. Let's see how variable assigment, and multiple references work (and can get us in to trouble).
-
-For example, let's store create a variable that stores weight in pounds:
+At this stage, we know about three Python data types, strings, number, and lists. Let's see how variable assigment, and multiple references work (and can get us in to trouble). For example, let's store create a variable that stores weight in pounds:
 
 ```python
 weight_lb = 2.2 * weight_kg
@@ -122,16 +123,33 @@ and then change `weight_kg`:
 weight_kg = 100.0
 print('weight in kilograms is now:', weight_kg, 'and weight in pounds is still:', weight_lb)
 ```
+
 ```
 weight in kilograms is now: 100.0 and weight in pounds is still: 126.5
 ```
 
 ![Updating a Variable](../fig/python-sticky-note-variables-03.svg)
 
-Since `weight_lb` doesn't "remember" where its value came from,
-it isn't automatically updated when `weight_kg` changes.
-This is different from the way spreadsheets work.
+Since `weight_lb` doesn't "remember" where its value came from, it isn't automatically updated when `weight_kg` changes. This is different from the way spreadsheets work.
 
+Now let's try a similar excecise with lists:
+
+```python
+a = [1,2,3]
+b = a
+#print(a, b)
+print('a and b are now:', a, b)
+a.pop()
+print('a and b are now:', a, b)
+```
+```
+a and b are now: [1, 2, 3] [1, 2, 3]
+but ... a and b are now: [1, 2] [1, 2]
+```
+
+Assignment statements in Python do not copy objects, they create bindings between a target and an object. For collections that are mutable or contain mutable items, a copy is sometimes needed so one can change one copy without changing the other.
+
+Because numbers (as well as strings, tuples ...) cannot be changed, when we write `b = a`, a new variable is created.
 
 ## The print function
 
@@ -155,6 +173,8 @@ Maria
 When you just type `name`, the Python interpreter responds with the string *representation* of the variable 'name', which is the letters M-a-r-i-a, surrounded by single quotes, ''. When you say `print(name)`, Python will "print" the contents of the variable to the screen, without the quotes, which is neater.
 
 As we'll see later, `print()` is also useful when we want to print things from inside functions, or when we want to print things on multiple lines.
+
+
 
 > ## Who's who in the memory
 >
