@@ -1,4 +1,4 @@
-# numpy 2
+# Numpy 2
 
 > ## Learning Objectives
 > *   Create useful numpy arrays 
