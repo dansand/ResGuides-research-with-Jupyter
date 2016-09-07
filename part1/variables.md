@@ -196,45 +196,44 @@ As we'll see later, `print()` is also useful when we want to print things from i
 >
 >You can use the `whos` command at any time to see what variables you have created and what modules you have loaded into the computers memory. As this is an IPython command, it will only work if you are in an IPython terminal or the Jupyter Notebook.
 >
->~~~ {.python}
+>```python
 >whos
->~~~
->~~~ {.output}
+>```
+>```
 >Variable    Type       Data/Info
 >--------------------------------
 >weight_kg   float      100.0
 >weight_lb   float      126.5
->~~~
+>```
+
+<!--sec data-title="Challenge 2" data-id="challenge" data-show=true ces-->
+
+Explain what the overall effect of this code is:
+
+```python
+left = 'L'
+right = 'R'
+temp = left
+left = right
+right = temp
+```
+
+Compare it to:
+
+```python
+left, right = right, left
+```
+Do they always do the same thing?
+Which do you find easier to read?
+
+<!--endsec-->
 
 
-> ## _challenge:_  Exchanges
->
-> Explain what the overall effect of this code is:
->
-> ~~~ {.python}
-> left = 'L'
-> right = 'R'
->
-> temp = left
-> left = right
-> right = temp
-> ~~~
->
-> Compare it to:
->
-> ~~~ {.python}
-> left, right = right, left
-> ~~~
->
-> Do they always do the same thing?
-> Which do you find easier to read?
 
+> ## The dark art of variable Names:
+>Python has basically only three rules about naming variables: 
 
-***** 
-
-Python has basically only three rules about naming variables: 
-
-* names you define must start with a letter (a-z,A-Z) or underscore (_) and can be followed by any number of letters, digits (0-9), or underscores
-* names you define cannot be the same as any of Python's reserved words (see handout)
-* names are case-sensitive: 'YOU', 'you', 'You', and 'yOu' are all different names in Python
-Note that '-', '+', '*', and '/' are used by Python for defining operations on data and cannot be used in names.
+>* names you define must start with a letter (a-z,A-Z) or underscore (_) and can be followed by any number of letters, >digits (0-9), or underscores
+>* names you define cannot be the same as any of Python's reserved words (see handout)
+>* names are case-sensitive: 'YOU', 'you', 'You', and 'yOu' are all different names in Python
+>Note that '-', '+', '*', and '/' are used by Python for defining operations on data and cannot be used in names.
