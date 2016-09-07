@@ -218,6 +218,7 @@ fibonacci(10)
 10
 ```
 
+<!--sec data-title="What is truth?" data-id="challenge1" data-show=true ces-->
 
 
 You just learned about a new type of object in Python. It's called a __Boolean__ -- and it probably is the easiest type there is.
