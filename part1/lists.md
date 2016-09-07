@@ -164,6 +164,8 @@ Item start to end is [1, 3, 5, 7]
 
 Lists are just one example of a Python _container_ or _collection_. Lists have certain inalienable rights, we've seen that the items of a list can be changed at will. Lists can also contain items of different __types_. Together these properties make lists very flexible. Sometimes this flexibility is undesirable - later we will encounter containers that are more restrictive in how we can interact with them.
 
+## Challenges
+
 
 <!--sec data-title="Challenge 1" data-id="challenge" data-show=true ces-->
 
