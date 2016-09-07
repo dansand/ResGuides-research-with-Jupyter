@@ -152,6 +152,9 @@ Doctrings are also commonly used to automatically generate a referrence manual f
 Technically, docstrings are not required by Python and the functions will do just fine without them. However, they are a standard part of any Python code.
 
 
+## Challenges
+
+
 <!--sec data-title="Combining strings" data-id="challenge1" data-show=true ces-->
 
 
