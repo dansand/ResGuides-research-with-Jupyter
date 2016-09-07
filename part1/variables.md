@@ -83,7 +83,7 @@ print('weight in pounds:', 2.2 * weight_kg)
 weight in pounds: 121.0
 ```
 
-Any object (Python data type) can be assigned to a variable. Once a variable us instantisated, it can be passed around, handed to fucntions, queried, altered, etc. They really are fundamental to Python Programming.
+
 
 ## So what happens behind the scenes?
 
@@ -91,11 +91,14 @@ A variable is a label for a location in memory. It can be used to hold a value. 
 
 ![Variables as Sticky Notes](../fig/python-sticky-note-variables-01.svg)
 
+
 In statically typed languages, variables have predetermined types, and a variable can only be used to hold values of that type. Fortuntely for researchers, Python is `dynamically typed`. A language is dynamically typed if the type of a variable is interpreted at runtime: we don't have to tell Python that an integer is an integer, instead, it _interprets our will_.
 
-## A common gotcha
+Any object (Python data type) can be assigned to a variable. Once a variable us instantiated, it can be passed around, handed to functions, queried, altered, etc. They really are fundamental to Python Programming.
 
-At this stage, we know about three Python data types, strings, number, and lists. Let's see how variable assigment, and multiple references work (and can get us in to trouble). For example, let's store create a variable that stores weight in pounds:
+## A common gotcha with lists
+
+At this stage, we know about three Python data types, strings, numbers (floats and integers), and lists. We can create variabes as a label for any one of these data types. Let's look a little deeper and see how multiple references to variables can behave a little strangely at times. 
 
 ```python
 weight_lb = 2.2 * weight_kg
@@ -131,13 +134,20 @@ Now let's try a similar excecise with lists:
 ```python
 a = [1,2,3]
 b = a
-#print(a, b)
 print('a and b are now:', a, b)
+```
+
+```
+a and b are now: [1, 2, 3] [1, 2, 3]
+```
+So far so good. Let's make a change to the list represented by the variable `a`:
+
+```python
 a[2] = 4
 print('but ... they are now both:', a, b)
 ```
+
 ```
-a and b are now: [1, 2, 3] [1, 2, 3]
 but ... they are now both: [1, 2, 4] [1, 2, 4]
 ```
 
