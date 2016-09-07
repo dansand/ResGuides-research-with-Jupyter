@@ -1,7 +1,25 @@
 #Python libraries / modules
 
-Words are useful, but what's more useful are the sentences and stories we build with them. Similarly, while a lot of powerful tools are built into languages like Python, even more live in the [libraries](reference.html#library) they are used to build.
+> ## Learning Objectives
+>
+> *  What are libraries?
+> *  How to use them
+> *  Where to get them
 
+## Standard Library
+
+Up until now, we've mainly been uing the Python Standard library. The library contains built-in modules (written in C) that provide access to system functionality such as file I/O that would otherwise be inaccessible to Python programmers, as well as modules written in Python that provide standardized solutions for many problems that occur in everyday programming.
+ 
+* The `os` module provides functions for interacting with the operating system
+* The `glob` module provides a function for making file lists from directory wildcard searches
+* The `math` module gives access to the underlying C library functions for floating point math:
+* The `datetime` module supplies classes for manipulating dates and times in both simple and complex ways
+
+glob example here..
+
+## Other libraries
+
+In addition to the standard library, there is a growing collection of several thousand components (from individual programs and modules to packages and entire application development frameworks), available from the Python Package Index (PIP), or Conda.
 
 ##importing a library
 
