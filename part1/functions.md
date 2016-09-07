@@ -75,7 +75,7 @@ we define basic operations, then combine them in ever-large chunks to get the ef
 
 ##Local variables
 
-When you declare variables inside a function definition, they are not related in any way to other variables with the same names used outside the function - i.e. variable names are local to the function. This is called the scope of the variable. All variables have the scope of the block they are declared in starting from the point of definition of the name.
+When you declare variables inside a function definition, they are not related in any way to other variables with the same names used outside the function - i.e. variable names are local to the function. This is called the __scope__ of the variable. All variables have the scope of the block they are declared in starting from the point of definition of the name.
 
 ```python
 x = 50
@@ -153,53 +153,59 @@ Doctrings are also commonly used to automatically generate a referrence manual f
 Technically, docstrings are not required by Python and the functions will do just fine without them. However, they are a standard part of any Python code.
 
 
-> ## _challenge :_ Combining strings
->
-> "Adding" two strings produces their concatenation:
-> `'a' + 'b'` is `'ab'`.
-> Write a function called `fence` that takes two parameters called `original` and `wrapper`
-> and returns a new string that has the wrapper character at the beginning and end of the original.
-> A call to your function should look like this:
->
-> ~~~ {.python}
-> print(fence('name', '*'))
-> ~~~
-> ~~~ {.output}
-> *name*
-> ~~~
-
-> ## _challenge :_ Selecting characters from strings
->
-> If the variable `s` refers to a string,
-> then `s[0]` is the string's first character
-> and `s[-1]` is its last.
-> Write a function called `outer`
-> that returns a string made up of just the first and last characters of its input.
-> A call to your function should look like this:
->
-> ~~~ {.python}
-> print(outer('helium'))
-> ~~~
-> ~~~ {.output}
-> hm
-> ~~~
+<!--sec data-title="Combining strings" data-id="challenge1" data-show=true ces-->
 
 
-> ## _challenge :_ Variables inside and outside functions
->
-> What does the following piece of code display when run - and why?
->
-> ~~~ {.python}
-> f = 0
-> k = 0
->
-> def f2k(f):
->   k = ((f-32)*(5.0/9.0)) + 273.15
->   return k
->
-> f2k(8)
-> f2k(41)
-> f2k(32)
->
-> print(k)
-> ~~~
+"Adding" two strings produces their concatenation:
+`'a' + 'b'` is `'ab'`.
+Write a function called `fence` that takes two parameters called `original` and `wrapper`
+and returns a new string that has the wrapper character at the beginning and end of the original.
+A call to your function should look like this:
+
+```python
+print(fence('name', '*'))
+```
+
+```
+*name*
+```
+
+
+<!--endsec-->
+
+
+<!--sec data-title="Selecting characters from strings" data-id="challenge2" data-show=true ces-->
+
+If the variable `s` refers to a string, then `s[0]` is the string's first character
+and `s[-1]` is its last. Write a function called `outer` that returns a string made up of just the first and last characters of its input. A call to your function should look like this:
+
+```python
+print(outer('helium'))
+```
+
+```
+hm
+```
+
+<!--endsec-->
+
+
+<!--sec data-title="Variables inside and outside functions" data-id="challenge3" data-show=true ces-->
+
+What does the following piece of code display when run - and why?
+
+```python
+f = 0
+k = 0
+
+def f2k(f):
+    k = ((f-32)*(5.0/9.0)) + 273.15
+    return k
+
+f2k(8)
+f2k(41)
+f2k(32)
+
+print(k)
+```
+<!--endsec-->
