@@ -4,7 +4,6 @@
 >
 > *   Define a function that takes parameters.
 > *   Return a value from a function.
-> *   Test and debug a function.
 > *   Set default values for function parameters.
 > *   Explain why we should divide programs into small, single-purpose functions.
 
