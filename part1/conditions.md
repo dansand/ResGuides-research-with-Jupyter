@@ -218,143 +218,35 @@ fibonacci(10)
 10
 ```
 
-<!--
-
-## Checking our Data
-
-Now that we've seen how conditionals work,
-we can use them to check for the suspicious features we saw in our inflammation data.
-In the first couple of plots, the maximum inflammation per day
-seemed to rise like a straight line, one unit per day.
-We can check for this inside the `for` loop we wrote with the following conditional:
-
-~~~ {.python}
-if data.max(axis=0)[0] == 0 and data.max(axis=0)[20] == 20:
-    print('Suspicious looking maxima!')
-~~~
-
-We also saw a different problem in the third dataset;
-the minima per day were all zero (looks like a healthy person snuck into our study).
-We can also check for this with an `elif` condition:
-
-~~~{.python}
-elif data.min(axis=0).sum() == 0:
-    print('Minima add up to zero!')
-~~~
-
-And if neither of these conditions are true, we can use `else` to give the all-clear:
-
-~~~ {.python}
-else:
-    print('Seems OK!')
-~~~
-
-Let's test that out:
-
-~~~ {.python}
-data = numpy.loadtxt(fname='inflammation-01.csv', delimiter=',')
-if data.max(axis=0)[0] == 0 and data.max(axis=0)[20] == 20:
-    print('Suspicious looking maxima!')
-elif data.min(axis=0).sum() == 0:
-    print('Minima add up to zero!')
-else:
-    print('Seems OK!')
-~~~
-
-~~~ {.output}
-Suspicious looking maxima!
-~~~
-
-~~~ {.python}
-data = numpy.loadtxt(fname='inflammation-03.csv', delimiter=',')
-if data.max(axis=0)[0] == 0 and data.max(axis=0)[20] == 20:
-    print('Suspicious looking maxima!')
-elif data.min(axis=0).sum() == 0:
-    print('Minima add up to zero!')
-else:
-    print('Seems OK!')
-~~~
-
-~~~ {.output}
-Minima add up to zero!
-~~~
-
-In this way,
-we have asked Python to do something different depending on the condition of our data.
-Here we printed messages in all cases,
-but we could also imagine not using the `else` catch-all
-so that messages are only printed when something is wrong,
-freeing us from having to manually examine every plot for features we've seen before.
-
--->
-
-> ## _challenge_: How many paths?
->
-> Which of the following would be printed if you were to run this code? Why did you pick this answer?
->
-> 1.  A
-> 2.  B
-> 3.  C
-> 4.  B and C
->
->```python
-> if 4 > 5:
->     print('A')
-> elif 4 == 5:
->     print('B')
-> elif 4 < 5:
->     print('C')
-> ```
-
-> ## _challenge_: What is truth?
->
->
->Incidentally, you just learned about a new type of object in Python. It's called a __Boolean__ -- and it probably is the easiest type there is.
->
->There are only two Boolean objects:`True` and `False`. In python expressions `True` and `False` are special words in which represent true and false statements. 
-
->However, they aren't the only values in Python that are true and false. After reading and running the following `if` statements, explain what the rule is for which values are considered true and which are considered false.
->
-> ```python
-> if '':
->     print('empty string is true')
-> if 'word':
->     print('word is true')
-> if []:
->     print('empty list is true')
-> if [1, 2, 3]:
->     print('non-empty list is true')
-> if 0:
->     print('zero is true')
-> if 1:
->     print('one is true')
-> ```
-
-> ## _challenge_: Close enough
->
-> Write some conditions that print `True` if the variable `a` is within 10% of the variable `b`
-> and `False` otherwise.
-> Compare your implementation with your partner's:
-> do you get the same answer for all possible pairs of numbers?
 
 
-> ## _challenge_: In-place operators
->
-> Python (and most other languages in the C family) provides [in-place operators](reference.html#in-place-operator)
-> that work like this:
->
-> ```python
-> x = 1  # original value
-> x += 1 # add one to x, assigning result back to x
-> x *= 3 # multiply x by 3
-> print(x)
-> ```
-> ```python
-> 6
-> ```
->
-> Write some code that sums the positive and negative numbers in a list separately,
-> using in-place operators.
-> Do you think the result is more or less readable than writing the same without in-place operators?
+You just learned about a new type of object in Python. It's called a __Boolean__ -- and it probably is the easiest type there is.
+
+There are only two Boolean objects:`True` and `False`. In python expressions `True` and `False` are special words in which represent true and false statements. 
+
+However, they aren't the only values in Python that are true and false. After reading and running the following `if` statements, explain what the rule is for which values are considered true and which are considered false.
+
+ ```python
+ if '':
+     print('empty string is true')
+ if 'word':
+     print('word is true')
+ if []:
+     print('empty list is true')
+ if [1, 2, 3]:
+     print('non-empty list is true')
+ if 0:
+     print('zero is true')
+ if 1:
+     print('one is true')
+ ```
+
+
+<!--endsec-->
+
+
+
+
+
 
 
