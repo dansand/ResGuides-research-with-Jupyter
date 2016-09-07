@@ -153,7 +153,7 @@ but ... they are now both: [1, 2, 4] [1, 2, 4]
 
 Assignment statements in Python do not copy objects, they create bindings between a target and an object. Most operations that modify the list will modify it _in place_.  Writing `a[2] = 4  ` does not create a new object. This means that if you have multiple variables that point to the same list, all variables will be updated at the same time.
 
-In general, for collections that are mutable or contain mutable items, a `copy` is needed so one can change one copy without changing the other.
+In general, for collections that are mutable or contain mutable items, a `copy` is needed so one can change one copy without changing the other. A quick-and-dirty way to `copy` lists is like this: `b = a[:]`
 
 Note that Python creates a single new list every time you execute the [] expression. No more, no less. And Python never creates a new list if you assign a list to a variable.
 
