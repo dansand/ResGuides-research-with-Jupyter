@@ -9,7 +9,7 @@
 
 # Functions
 
-We're at the point now where like a way to package our code so that it is easier to reuse, and Python provides for this by letting us define things called 'functions' - a shorthand way of re-executing longer pieces of code. 
+We're at the point now where like a way to package our code so that it is easier to reuse, and Python provides for this by letting us define things called __functions__ - a shorthand way of re-executing longer pieces of code. 
 
 The function concept is probably *the* most important building block of any non-trivial software (in any programming language)
 
