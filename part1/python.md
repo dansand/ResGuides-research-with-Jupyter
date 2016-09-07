@@ -9,7 +9,7 @@
 
 ## Python prompt
 
-To start playing with Python, we need to open up a _command line_ on your computer. Opening up a Python console is usually as easy as typing `python` into the command prompt and hitting `enter`.
+To start using Python, you'll need to open up a _command line_ on your computer. Opening up a Python console is usually as easy as typing `python` into the command prompt and hitting `enter`.
 
 ```bash
 $ python
