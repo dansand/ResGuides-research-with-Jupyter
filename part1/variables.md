@@ -165,8 +165,7 @@ B = A # both names will point to the same list
 
 A = []; B = [] # independent lists
 ```
-
-`L[i:j]` returns a new list, containing the objects between i and j.
+Remember list slices? `L[i:j]` returns a _new_ list, containing the objects between i and j.
 
 ## The print function
 
