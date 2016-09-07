@@ -12,6 +12,8 @@ This book draws mainly from the resources listed below. We tried to incoporate w
 
 [Python Programming Tutorial](http://www.programiz.com/python-programming)
 
+[Object-Oriented Programming in Python] http://python-textbok.readthedocs.io/en/latest/index.html
+
 License
 
 This book is licensed under a Creative Commons Attribution-ShareAlike 4.0 International License.
