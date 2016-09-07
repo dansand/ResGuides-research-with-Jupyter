@@ -13,16 +13,16 @@
         "mathjax",
         "sectionx",
         "youtubex",
-        "edit-link"
+        "-edit-link"
     ],
     "pluginsConfig": {
         "ga": {
             "token": "UA-12478122-2"
         },
-        "edit-link": {
-           "base": "https://github.com/dansand/ResGuides-research-with-Jupyter/edit/master",
-           "label": "Edit This Page"
-       }
+        "-edit-link": {
+            "base": "https://github.com/dansand/ResGuides-research-with-Jupyter/edit/master",
+            "label": "Edit This Page"
+        }
     },
     "styles": {
         "website": "styles/all.css",
