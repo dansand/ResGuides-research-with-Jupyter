@@ -19,10 +19,10 @@ An example will show that this is actually very simple. Let's try writing a func
 
 ```python
 def fahr_to_kelvin(temp):
-    return ((temp - 32) * (5/9.)) + 273.15```
+    return ((temp - 32) * (5/9.)) + 273.15
+```
 
-
-You might have noticed that when we _call_ the function, the values (also called _arguments_ or _paramters_) we pass to it are assigned to those variables so that we can use them inside the function. Inside the function, we use a [return statement](reference.html#return-statement) to send a result back to whoever asked for it.
+You might have noticed that when we _call_ the function, the values (also called _arguments_ or _paramters_) we pass to it are assigned to those variables so that we can use them inside the function. Inside the function, we use a `return` statement to send a result back to whoever asked for it.
 
 Let's try running our function.
 
