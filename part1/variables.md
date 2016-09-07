@@ -5,7 +5,7 @@
 
 > *   Assign values to variables
 > *   Changing variables
-> *   Gotchas with multiple references
+> *   Gotchas with lists and multiple assigments
 
 
 Computer programs operate on data. A computer program is a set of statements (i.e., intructions) to accomplish one or more of the following: read, create, calculate, transform, organize, and store data. This goal is achieved through the use of variables. If you think of data as pieces of paper where you wrote something, then a variable is a folder to which you afix a sticker with a name and where you may store one or more pieces of paper.
@@ -17,9 +17,7 @@ Let's say we want to create a new variable called `name`:
 name = "Ola"
 ```
 
-You see? It's easy! It's simply: name equals Ola.
-
-As you've noticed, your program didn't return anything like it did before. So how do we know that the variable actually exists? Simply enter `name` and hit `enter`:
+As you may have noticed in past lessons, Python didn't return anything like it did before. So how do we know that the variable actually exists? Simply enter `name` and hit `enter`:
 
 ```python
 name
@@ -37,19 +35,9 @@ name = "Sonja"
 ```python
 name
 ```
-```
 
+```
 'Sonja'
-```
-
-You can use it in functions too:
-
-```python
-len(name)
-```
-
-```
-5
 ```
 
 But what if we used the wrong name? Can you guess what would happen? Let's try!
@@ -95,11 +83,15 @@ print('weight in pounds:', 2.2 * weight_kg)
 weight in pounds: 121.0
 ```
 
-## What happens behind the scenes?
+Any object (Python data type) can be assigned to a variable. Once a variable us instantisated, it can be passed around, handed to fucntions, queried, altered, etc. They really are fundamental to Python Programming.
+
+## So what happens behind the scenes?
 
 A variable is a label for a location in memory. It can be used to hold a value. If we imagine the variable as a sticky note with a name written on it, assignment is like putting the sticky note on a particular value:
 
 ![Variables as Sticky Notes](../fig/python-sticky-note-variables-01.svg)
+
+In statically typed languages, variables have predetermined types, and a variable can only be used to hold values of that type. Fortuntely for researchers, Python is `dynamically typed`. A language is dynamically typed if the type of a variable is interpreted at runtime: we don't have to tell Python that an integer is an integer, instead, it _interprets our will_.
 
 ## A common gotcha
 
