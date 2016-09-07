@@ -13,6 +13,7 @@
    * [libraries](part2/libraries.md)
    * [numpy 1](part2/numpy1.md)
    * [numpy 2](part2/numpy2.md)
+   * [math](part2/math.md)
    * [plotting](part2/plotting.md)
    * [I/O](part2/fileIO.md)
    * [jupyter 2](part2/jupyter2.md)
