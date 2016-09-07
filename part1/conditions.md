@@ -217,6 +217,8 @@ fibonacci(10)
 10
 ```
 
+## Challenges
+
 <!--sec data-title="What is truth?" data-id="challenge1" data-show=true ces-->
 
 
