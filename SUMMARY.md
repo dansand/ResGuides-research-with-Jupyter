@@ -11,7 +11,7 @@
    * [conditions](part1/conditions.md)
 * [The Scientific Python Stack](part2/math.md)
    * [libraries](part2/libraries.md)
-   * [numpy 1](part2/numpy1md.md)
+   * [numpy 1](part2/numpy1.md)
    * [numpy 2](part2/numpy2.md)
    * [plotting](part2/plotting.md)
    * [I/O](part2/fileIO.md)
