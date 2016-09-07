@@ -5,9 +5,10 @@
 
 > *   Assign values to variables
 > *   Changing variables
+> *   Gotchas with multiple references
 
 
-Computer programs operate on data. A computer program is a set of statements (i.e., intructions) to accomplish one or more of the following: read, create, calculate, transform, organize, and store data. In order to operate on data, a computer program must have a way to store and retrieve it. This goal is achieved through the use of variables. If you think of data as pieces of paper where you wrote something, then a variable is a folder to which you afix a sticker with a name and where you may store one or more pieces of paper.
+Computer programs operate on data. A computer program is a set of statements (i.e., intructions) to accomplish one or more of the following: read, create, calculate, transform, organize, and store data. This goal is achieved through the use of variables. If you think of data as pieces of paper where you wrote something, then a variable is a folder to which you afix a sticker with a name and where you may store one or more pieces of paper.
 
 Python has basically only three rules about naming variables: 
 
@@ -72,16 +73,12 @@ ctiy
 An error! As you can see, Python has different types of errors and this one is called a **NameError**. Python will give you this error if you try to use a variable that hasn't been defined yet. If you encounter this error later, check your code to see if you've mistyped any names.
 
 
-So a Python variable is just a name for a value. Python's variables must begin with a letter and are [case sensitive](reference.html#case-sensitive).
-We create a new variable by assigning a value to it using `=`. Note that `=` means assignment in Python.
-Let's consider the simplest "collection" of data, a single value. The line below assigns the value `55` to a variable `weight_kg`:
-
+Just like with the string assigned to `name`, our numeric (integer) variable can be printed to the screen:
 
 ```python
-weight_kg = 55
+weight_kg = 55.
 ```
-
-Just like with the string assigned to `name`, our numeric (integer) variable can be printed to the screen:
+```
 
 ```python
 print(weight_kg)
@@ -99,29 +96,21 @@ print('weight in pounds:', 2.2 * weight_kg)
 weight in pounds: 121.0
 ```
 
-We can also change a variable's value by assigning it a new one:
+## What happens behind the scenes?
 
-```python
-weight_kg = 57.5
-```
-```python
-print('weight in kilograms is now:', weight_kg)
-```
-```
-weight in kilograms is now: 57.5
-```
+a variable is a label for a location in memory. It can be used to hold a value. In statically typed languages, variables have predetermined types, and a variable can only be used to hold values of that type. In Python, we may reuse the same variable to store values of any type.
 
-As the example above shows,
-we can print several things at once by separating them with commas.
-
-If we imagine the variable as a sticky note with a name written on it,
-assignment is like putting the sticky note on a particular value:
+If we imagine the variable as a sticky note with a name written on it, assignment is like putting the sticky note on a particular value:
 
 ![Variables as Sticky Notes](../fig/python-sticky-note-variables-01.svg)
 
-This means that assigning a value to one variable does *not* change the values of other variables.
-For example,
-let's store the subject's weight in pounds in a variable:
+## A common Gotcha...
+
+Assignment statements in Python do not copy objects, they create bindings between a target and an object. For collections that are mutable or contain mutable items, a copy is sometimes needed so one can change one copy without changing the other.
+
+At this stage, we know about three Python data types, strings, number, and lists. Let's see how variable assigment, and multiple references work (and can get us in to trouble).
+
+For example, let's store create a variable that stores weight in pounds:
 
 ```python
 weight_lb = 2.2 * weight_kg
