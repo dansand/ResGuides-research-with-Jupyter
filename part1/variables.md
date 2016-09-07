@@ -4,7 +4,7 @@
 > ## Learning Objectives
 
 > *   Assign values to variables
-> *   Changing variables
+> *   Variables as labels
 > *   Gotchas with lists and multiple assigments
 
 
