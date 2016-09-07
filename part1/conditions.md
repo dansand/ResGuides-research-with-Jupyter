@@ -6,7 +6,6 @@
 > *   Write conditional statements including `if`, `elif`, and `else` branches.
 > *   Correctly evaluate expressions containing `and` and `or`.
 
-> This part is covered in The DjangoGirls [Python Basics: Comparisons](https://www.youtube.com/watch?v=7bzxqIKYgf4) video.
 
 ## Comparing things
 
@@ -245,6 +244,10 @@ However, they aren't the only values in Python that are true and false. After re
 
 
 <!--endsec-->
+
+## Resources
+
+> DjangoGirls [Python Basics: Comparisons](https://www.youtube.com/watch?v=7bzxqIKYgf4) video.
 
 
 
