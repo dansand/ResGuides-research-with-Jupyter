@@ -206,27 +206,5 @@ for thingo in range(4):
 3
 ```
 
-<!--sec data-title="Computing powers with loops" data-id="challenge" data-show=true ces-->
 
-Exponentiation is built into Python:
-
-```python
-print(5 ** 3)
-```
-
-```
-125
-```
-
-Write a loop that calculates the same result as `5 ** 3` using multiplication (and without exponentiation).
-
-<!--endsec-->
-
-
-
-<!--sec data-title="Reverse a string" data-id="challenge" data-show=true ces-->
-
-Write a loop that takes a string, and produces a new string with the characters in reverse order, so `'Newton'` becomes `'notweN'`.
-
-<!--endsec-->
 
