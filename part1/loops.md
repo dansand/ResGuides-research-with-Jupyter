@@ -187,25 +187,24 @@ for number in odds:
 7
 ```
 
+## Range
 
-> ## _challenge:_ From 1 to N
->
-> Python has a built-in function called `range` that creates a sequence of numbers. Range can
-> accept 1-3 parameters. If one parameter is input, range creates an array of that length,
-> starting at zero and incrementing by 1. If 2 parameters are input, range starts at
-> the first and ends at the second, incrementing by one. If range is passed 3 parameters,
-> it starts at the first one, ends at the second one, and increments by the third one. For
-> example,
-> `range(3)` produces the numbers 0, 1, 2, while `range(2, 5)` produces 2, 3, 4,
-> and `range(3, 10, 3)` produces 3, 6, 9.
-> Using `range`,
-> write a loop that uses `range` to print the first 3 natural numbers:
->
-> ~~~ {.python}
-> 1
-> 2
-> 3
-> ~~~
+Python has a built-in function called `range` that creates an _iterator_ for sequence of numbers. In a nutshell, it generates special type of a Python object, which is generally used to iterate over with for loops. 
+
+
+In basic terms, if you want to use range() in a for loop, then you're good to go. However you can't use it purely as a list object.
+
+```python
+for thingo in range(4):
+    print(thingo)
+```
+
+```
+0
+1
+2
+3
+```
 
 > ## _challenge:_ Computing powers with loops
 >
