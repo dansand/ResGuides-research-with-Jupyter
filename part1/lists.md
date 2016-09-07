@@ -19,11 +19,14 @@
 [1, 3, 5, 7]
 ```
 
-The list was evaluated by Python (and returned to us) but Python didn’t save the data in memory. To do that, we need to assign the list to a variable. A variable is just a name for a value, such as x, current_temperature, or subject_id. Python’s variables must begin with a letter and are case sensitive. We can create a new variable by assigning a value to it using =. As an illustration, let’s step back and instead of considering a table of data, consider the simplest “collection” of data, a single value. The line below assigns the value 55 to a variable weight_kg:
+The list was evaluated by Python (and returned to us) but Python didn’t save the data in memory. To do that, we need to assign the list to a variable. A variable is just a name for a value, such as x, current_temperature, or subject_id. Python’s variables must begin with a letter and are case sensitive. We can create a new variable by assigning a value to it using `=`
 
 ```python
 weight_kg = 55
 ```
+
+Okay, so just to be clear, `=` is the assignment operator in Python, it does not mean "equal to". 
+
 We can even define multiple variables at once:
 
 ```python
