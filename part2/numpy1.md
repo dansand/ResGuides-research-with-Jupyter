@@ -201,24 +201,21 @@ ValueError                                Traceback (most recent call last)
 ----> 1 data[0,0] = "hello"
 ```
 
-## Something useful
 
 
 ## Plotting our data
 
-Matplotlib is an excellent 2D and 3D graphics library for generating scientific figures. One of the key features of matplotlib, that I think makes matplotlib highly suitable for generating figures for scientific publications is that all aspects of the figure can be controlled programmatically.
+Let's have a quick look look at our data:
 
 ```python
-fig, axes = plt.subplots(figsize=(12,3)) #use the subplots axis layout managers in matplotlib.
-
-axes.plot(data[:,0], data[:,2], 'r', label = 'MAM - Autumn')
-
-axes.set_xlabel('year')
-axes.set_ylabel('temperature')
-axes.set_title('European Seasonal Temperature Reconstructions')
-
-axes.legend()
+%pylab inline
+plt.plot(data[:,0])
 ```
+
+plot here...
+
+That was pretty easy huh!
+
 
 ## Shell commands in the Jupyter notebook
 
@@ -232,7 +229,7 @@ Date,Open,High,Low,Close,Volume,Adj Close
 
 ```
 
-
+## Something useful
 
 
  
