@@ -24,6 +24,7 @@ Importing a library is like getting a piece of lab equipment out of a storage lo
 ```python
 np.loadtxt('data/nasdaq.csv', delimiter=',', skiprows=1, usecols=(4,5))
 ```
+
 ```
 array([ 5227.209961,  5213.220215,  5222.990234, ...,   100.760002,
          100.839996,   100.      ])
@@ -45,7 +46,6 @@ to a variable using the same syntax.  Let's re-run `numpy.loadtxt` and save its 
 ```python
 filepath = 'data/nasdaq.csv'
 data = np.loadtxt(filepath, delimiter=',', skiprows=1, usecols=(4,5))
-
 ```
 
 We also put the file path into a variable called`filepath`, which can help make the call to `np.loadtxt` a bit simpler.
@@ -86,13 +86,12 @@ This tells us that `data` has 11495 rows, and 2 columns (it is 2-dimensional). W
 If we want to get a single number from the array,
 we must provide an [index](reference.html#index) in square bracket, similar to how we have worked with lists:
 
-```Python
+```python
 print('first value in data:', data[0, 0])
 ```
 
 ```
 ('first value in data:', 5227.2099609999996)
-
 ```
 
 ```python
