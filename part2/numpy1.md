@@ -75,6 +75,7 @@ We can see what its [shape](reference.html#shape) is like this:
 ```python
 print(data.shape)
 ```
+
 ```
 (11495, 2)
 ```
@@ -86,6 +87,7 @@ we must provide an [index](reference.html#index) in square bracket, similar to h
 
 ```Python
 print('first value in data:', data[0, 0])
+```
 
 ```
 ('first value in data:', 5227.2099609999996)
@@ -102,7 +104,7 @@ print('some random value in data:', data[250, 0])
 
 Hopefully, `data[0,0]` reminds you a bit of the indexing scheme we used for lists.
 
-As a result, if we have an M&times;N array in Python, its indices go from 0 to M-1 on the first axis and 0 to N-1 on the second. It takes a bit of getting used to, but one way to remember the rule is that the index is how many steps we have to take from the start to get the item we want.
+As a result, if we have an MxN array in Python, its indices go from 0 to M-1 on the first axis and 0 to N-1 on the second. It takes a bit of getting used to, but one way to remember the rule is that the index is how many steps we have to take from the start to get the item we want.
 
 
 An index like `data[250, 0]` selects a single element of an array, but we can select whole sections as well. For example, we can select the first ten days (columns) of values for the first four patients (rows) like this:
@@ -170,7 +172,7 @@ print(data[0:5,0])
 ```
 [ 5227.209961  5213.220215  5222.990234  5232.330078  5218.919922]
 ```
-These values represent years. One thing you may notice is that these values look like floats (floating point numbers). Unlike lists, Numpy arrays can only contain numbers. Even more restrictive, each instance of an array can only have ony type or number...e.g. float, int, complex. To find out which type of data out array contains, we can write
+These values represent the daily closing price for the Nasdaq composite index. One thing you may notice is that these values look like floats (floating point numbers). Unlike lists, Numpy arrays can only contain numbers. Even more restrictive, each instance of an array can only have ony type or number...e.g. float, int, complex. To find out which type of data out array contains, we can write
  
 ```python
 data.dtype
@@ -198,6 +200,9 @@ ValueError                                Traceback (most recent call last)
 <ipython-input-12-a09d72434238> in <module>()
 ----> 1 data[0,0] = "hello"
 ```
+
+## Something useful
+
 
 ## Plotting our data
 
