@@ -7,10 +7,11 @@
 > *   Select individual values and subsections from data.
 
 
-ftp://ftp.ncdc.noaa.gov/pub/data/paleo/historical/europe-seasonal.txt
+We are going to hit the ground running and import some numerical data. In this case, we have a csv file containing data form from the Nasdaq (to be precise, the Nasdaq Composite index). This tutorial assumes the data is located in the followinf _relative path_: `data/nasdaq.csv`.
 
-In order to load our climate data, we need to [import](reference.html#import) a library called NumPy.
-In general you should use this library if you want to do fancy things with numbers, especially if you have matrices or arrays.
+
+In order to load our data, we will use a function from library NumPy. In general you should use this library if you want to do analysis things numbers (Numpy is no good with textual data).
+
 We can load NumPy using:
 
 ```python
@@ -20,69 +21,47 @@ import numpy as np
 Importing a library is like getting a piece of lab equipment out of a storage locker and setting it up on the bench. Libraries provide additional functionality to the basic Python package, much like a new piece of equipment adds functionality to a lab space. Once you've loaded the library, we can ask the library to read our data file for us:
 
 ```python
-np.genfromtxt(filepath, skip_header=119)
+np.loadtxt('data/nasdaq.csv', delimiter=',', skiprows=1, usecols=(4,))
 ```
 ```
-array([[  1.50000000e+03,  -9.45000000e-01,   7.15700000e+00,
-          1.74830000e+01,   8.99000000e+00,   8.16600000e+00],
-       [  1.50100000e+03,  -8.50000000e-01,   7.43500000e+00,
-          1.74010000e+01,   8.68700000e+00,   8.16300000e+00],
-       [  1.50200000e+03,  -1.05300000e+00,   6.87200000e+00,
-          1.79060000e+01,   9.07100000e+00,   8.19400000e+00],
-       ..., 
-       [  2.00200000e+03,   2.07000000e-01,   9.21400000e+00,
-          1.89050000e+01,   9.30100000e+00,   9.50800000e+00],
-       [  2.00300000e+03,  -1.10100000e+00,   8.52100000e+00,
-          1.96150000e+01,   9.83800000e+00,   9.37400000e+00],
-       [  2.00400000e+03,   1.87000000e-01,   8.29700000e+00,
-          1.83250000e+01,   1.00730000e+01,   9.23500000e+00]])
+array([ 5227.209961,  5213.220215,  5222.990234, ...,   100.760002,
+         100.839996,   100.      ])
 ```
 
-The expression `numpy.genfromtxt(...)` is a [function call](reference.html#function-call) that asks Python to run the function `loadtxt` that belongs to the `numpy` library.
-This [dotted notation](reference.html#dotted-notation) is used everywhere in Python to refer to the parts of things as `thing.component`.
+The expression `np.loadtxt` is a [function call](reference.html#function-call) that asks Python to run the function `loadtxt` that belongs to the `numpy` library.
 
-`numpy.loadtxt` has two [parameters](reference.html#parameter):
-the name of the file we want to read, and the [delimiter](reference.html#delimiter) that separates values on a line. These both need to be character strings (or [strings](reference.html#string) for short), so we put them in quotes.
+This dotted notation is used everywhere in Python to refer to the parts of things as `thing.component`.
+
+`np.loadtxt` has a number of _parameters_. Most importantly, the the name of the file we want to read, and the _delimiter_ that separates values on a line. These both need to be character strings (or _strings_, so we put them in quotes.
 
 By default, only a few rows and columns are shown (with `...` to omit elements when displaying big arrays). To save space, Python displays numbers as `1.` instead of `1.0` when there's nothing interesting after the decimal point.
 
-Our call to `numpy.loadtxt` read our file, but didn't save the data in memory. To do that, we need to [assign](reference.html#assignment) the array to a [variable](reference.html#variable).
+Our call to `numpy.loadtxt` read our file, but didn't save the data in memory. To do that, we need to _assign_ the array to a _variable_
 
 Just as we can assign a single value to a integer,or list, or string (native data types) we can also assign an numpy array 
 to a variable using the same syntax.  Let's re-run `numpy.loadtxt` and save its result:
 
 ```python
-filepath = "../../data/europe-seasonal.txt"
-data = np.genfromtxt(filepath, skip_header=119)
+filepath = 'data/nasdaq.csv'
+data = np.loadtxt(filepath, delimiter=',', skiprows=1, usecols=(4,))
+
 ```
 
-We also put the file path into a variable called`filepath`, which can help make the call to `np.genfromtxt` a bit simpler. Also, notice we supplied a function argument `skiprows=119`. This file has a lot of `metadata`, which you can see if you run a shell command from the Jupyter notebook:
+We also put the file path into a variable called`filepath`, which can help make the call to `np.loadtxt` a bit simpler.
 
+Also, notice we supplied a function argument `skiprows`, and `usecols`. 
 ```python
-!head -20 $filepath
+!head -2 $filepath
 ```
 ```
-European Seasonal Temperature Reconstructions
------------------------------------------------------------------------
-               World Data Center for Paleoclimatology, Boulder
-                                  and
-                     NOAA Paleoclimatology Program
------------------------------------------------------------------------
-NOTE: PLEASE CITE CONTRIBUTORS WHEN USING THIS DATA!!!!!
-
-
-NAME OF DATA SET: European Seasonal Temperature Reconstructions
-LAST UPDATE: 6/2006 (Original receipt by WDC Paleo)
-CONTRIBUTOR: Juerg Luterbacher, University of Bern
-IGBP PAGES/WDCA CONTRIBUTION SERIES NUMBER: 2006-060
-
-SUGGESTED DATA CITATION: Luterbacher, J., et al.  2006. 
-European Seasonal Temperature Reconstructions.
-IGBP PAGES/World Data Center for Paleoclimatology 
-Data Contribution Series # 2006-060.
-NOAA/NCDC Paleoclimatology Program, Boulder CO, USA.
+Date,Open,High,Low,Close,Volume,Adj Close
+2016-09-02,5249.660156,5263.390137,5231.02002,5249.899902,1474200000,5249.899902
 
 ```
+
+## Shell commands in the Jupyter notebook
+
+
 ##Accessing our data
 
 Now that our data is in memory,
