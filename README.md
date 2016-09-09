@@ -1,6 +1,9 @@
-# ResGuides: Python for Science
+# ResGuides: Research with Jupyter
 
-This book draws mainly from the resources listed below. We tried to incoporate what we felt were the best parts of these courses, and package it into a coherent set of lessons that can be taught in around 1.5 days. At the end of the course, we provide a few longer examples that could be given as homework. This book was enabled by Research Platforms at the University of Melbourne. 
+The first section of this book book provides an introduction to the Python programming language, aimed at people who have never used a programming language.  It then provides a introduction to Scientific Python, often called The Scientific Python Stack; again intended for people who are not familiar with these libraries. The focus of the Scientific Python is around the simple managment, anlysis and visualisation of _Numerical_ data, in short'data wrangling'. At the end of the course, we provide a few longer examples that could be given as homework. This book was enabled by Research Platforms at the University of Melbourne.  We hope that after taking this course you will be equipped to begin to tackle your own data. 
+
+This book draws heavilily from the resources listed below:
+
 
 [Software Carpentry](http://swcarpentry.github.io/python-novice-inflammation/)
 
