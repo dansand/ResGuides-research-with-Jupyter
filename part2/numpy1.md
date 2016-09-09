@@ -5,6 +5,7 @@
 > *   Load a Python library and use the things it contains.
 > *   Read tabular data from a file into a program.
 > *   Select individual values and subsections from data.
+> *   Basic mathematical operations on arrays.
 
 
 We are going to hit the ground running and import some numerical data. In this case, we have a csv file containing data form from the Nasdaq (to be precise, the Nasdaq Composite index). This tutorial assumes the data is located in the followinf _relative path_: `data/nasdaq.csv`.
@@ -202,7 +203,6 @@ ValueError                                Traceback (most recent call last)
 ```
 
 
-
 ## Plotting our data
 
 Let's have a quick look look at our data:
@@ -218,17 +218,7 @@ That was pretty easy huh!
 
 ## Maths with arrays
 
-
-```python
-ess_file = '../../data/essendon_airport_temps.csv'
-array = np.genfromtxt(ess_file, delimiter=',')
-data = array[:,2:-2]
-years = array[:,0]
-years.astype(int)
-```
-
-Arrays also know how to perform common mathematical operations on their values. The simplest operations with data are arithmetic:
-add, subtract, multiply, and divide. When you do such operations on arrays, the operation is done on each individual element of the array.
+A great feature of Numpy arrays is the ease of doing mathematical operations on your data. Arrays know how to perform common mathematical operations on their values. The simplest operations with data are arithmetic: add, subtract, multiply, and divide. When you do such operations on arrays, the operation is done on each individual element of the array.
 
 ```python
 doubledata = data * 2.0
@@ -244,17 +234,19 @@ print(doubledata[0:5,])
 ```
 ```
 original:
-[[  nan   nan   nan   nan   nan   nan   nan   nan   nan   nan   nan]
- [  nan   nan   nan   nan   nan   nan   nan   nan   nan   nan   nan]
- [  nan   nan   nan  19.3  16.7  13.3  12.   13.2  15.9  18.4  20.7]
- [ 26.   25.2  29.2  19.7  16.   14.   13.8  16.   18.2  23.2  20.8]
- [ 23.2  25.7  22.   21.4  16.7  13.6  13.1  14.6  16.4  17.5  22.3]]
+[[  5.22720996e+03   1.59252000e+09]
+ [  5.21322022e+03   1.76177000e+09]
+ [  5.22299023e+03   1.56102000e+09]
+ ..., 
+ [  1.00760002e+02   0.00000000e+00]
+ [  1.00839996e+02   0.00000000e+00]
+ [  1.00000000e+02   0.00000000e+00]]
 doubledata:
-[[  nan   nan   nan   nan   nan   nan   nan   nan   nan   nan   nan]
- [  nan   nan   nan   nan   nan   nan   nan   nan   nan   nan   nan]
- [  nan   nan   nan  38.6  33.4  26.6  24.   26.4  31.8  36.8  41.4]
- [ 52.   50.4  58.4  39.4  32.   28.   27.6  32.   36.4  46.4  41.6]
- [ 46.4  51.4  44.   42.8  33.4  27.2  26.2  29.2  32.8  35.   44.6]]
+[[  1.04544199e+04   3.18504000e+09]
+ [  1.04264404e+04   3.52354000e+09]
+ [  1.04459805e+04   3.12204000e+09]
+ [  1.04646602e+04   2.83328000e+09]
+ [  1.04378398e+04   3.18212000e+09]]
 ```
 
 If, instead of taking an array and doing arithmetic with a single value (as above) you did the arithmetic operation with another array of the same shape, the operation will be done on 
@@ -275,34 +267,27 @@ Often, we want to do more than add, subtract, multiply, and divide values of dat
 print(data.mean())
 ```
 ```
-nan
+402558002.217
 ```
-Numpy finds that the mean of ut array, whicch contains 'NaNs' ot missing values, is NaN. Not a great result.
-
-Luckily, there are a range of Numpy library functions to deal with NaNs (i.e. ignore them in producing summary statistices)
+Numpy finds that the mean of our array, but remember this is all values of our array. Our `data` array contains two columns with differnt data (indeces), and a global mean is not meaningful. Instead we can do.
 
 ```python
-numpy.nanmean(data)
-```
-```
-19.230588235294118
+print(data.mean(axis=0))
 ```
 
-For an array without NaNs, we have the easier option:
-
-```python
-random.mean()
+```
+[  1.33631733e+03   8.05114668e+08]
 ```
 
-`mean` is a [method](reference.html#method) of the array,
-i.e., a function that belongs to it in the same way that the member `shape` does. If variables are nouns, methods are verbs: they are what the thing in question knows how to do. We need empty parentheses for `data.mean()`, even when we're not passing in any parameters, to tell Python to go and do something for us. `data.shape` doesn't need `()` because it is just a description but `data.mean()` requires the `()` because it is an action.
+This gives us the average values 'down the columns'. Hence we end up with the average closing price of teh Nasdaq composit (column zero), and the avergage of daily volume (column one).
+
 
 Numpy arrays have lots of useful methods:
 
 ~~~ {.python}
-print('maximum monthly avg. temperature:', numpy.nanmax(data))
-print('minimum monthly avg.temperature:', numpy.nanmin(data))
-print('mean monthly avg. temp:', numpy.nanmean(data))
+print('maximum monthly avg. temperature:', numpy.max(data))
+print('minimum monthly avg.temperature:', numpy.min(data))
+print('mean monthly avg. temp:', numpy.mean(data))
 ~~~
 ```python
 maximum monthly avg. temperature: 29.7
