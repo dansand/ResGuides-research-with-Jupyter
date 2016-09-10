@@ -8,8 +8,7 @@
 > *   Basic mathematical operations on arrays.
 
 
-We are going to hit the ground running and import some numerical data. In this case, we have a csv file containing data form from the Nasdaq (to be precise, the Nasdaq Composite index). This tutorial assumes the data is located in the followinf _relative path_: `data/nasdaq.csv`.
-
+We are going to hit the ground running and import some numerical data. In this case, we have a csv (comma separated variable) file containing historical price and volume data from the Nasdaq Stock Exchange (to be precise, the Nasdaq Composite index). This tutorial assumes the data is located in the followinf _relative path_: `data/nasdaq.csv`.
 
 In order to load our data, we will use a function from library NumPy. In general you should use this library if you want to do analysis things numbers (Numpy is no good with textual data).
 
