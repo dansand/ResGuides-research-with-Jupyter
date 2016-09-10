@@ -347,73 +347,25 @@ print(data.mean(axis=0))
 This gives us the average values 'down the columns'. Hence we end up with the average closing price of teh Nasdaq composit (column zero), and the avergage of daily volume (column one).
 
 
-Numpy arrays have lots of useful methods:
-
-~~~ {.python}
-print('maximum monthly avg. temperature:', numpy.max(data))
-print('minimum monthly avg.temperature:', numpy.min(data))
-print('mean monthly avg. temp:', numpy.mean(data))
-~~~
-```python
-maximum monthly avg. temperature: 29.7
-minimum monthly avg.temperature: 11.2
-mean monthly avg. temp: 19.6661666667
-```
-
-When analyzing data, though, we often want to look at partial statistics, such as the maximum value per patient or the average value per day.One way to do this is to create a new temporary array of the data we want, then ask it to do the calculation:
-
-To simplify things (avoid messy data with NaNs) lets create some dummy data.
-
-```python
-data = np.random.rand(10,10)
-```
-
-
-
-```python
-row0 = data[0, :] # 0 on the first axis, everything on the second
-print('maximum for row 0:', row0.max())
-```
-
-We don't actually need to store the row in a variable of its own.
-Instead, we can combine the selection and the method call:
-
-```python
-print('maximum value for row 2:', data[2, :].max())
-```
-
-What if we need the maximum inflammation for *all* rows (as in the next diagram on the left), or the average for each day (as in the diagram on the right)? As the diagram below shows, we want to perform the operation across an axis:
-
-
 ![Operations Across Axes](fig/python-operations-across-axes.png)
 
+Numpy arrays have lots of useful _methods_:
 
-
-To support this, most array methods allow us to specify the axis we want to work on. If we ask for the average across axis 0 (rows in our 2D example),
-we get:
-
-```python
-print(data.mean(axis=0))
+```python 
+print('maximum Nasdaq closing price:', np.max(data[:,0]))
+print('minimum Nasdaq closing price:', np.min(data[:,0]))
+print('mean Nasdaq closing price:', numpy.mean(data[:,0]))
 ```
 
-
-As a quick check, we can ask this array what its shape is:
-
 ```python
-print(data.mean(axis=0).shape)
+('maximum Nasdaq closing price:', 5262.0200199999999)
+('minimum Nasdaq closing price:', 54.869999)
+('mean Nasdaq closing price:', 1336.3173298529796)
 ```
 
-The expression `(10,)` tells us we have an N&times;1 vector, so this is the average __row__ for all patients.
-If we average across axis 1 (columns in our 2D example), we get:
+## Questions of arrays
 
-```python
-print(data.mean(axis=1))
-```
-
-
-which is the average across all __columns__.
-
-The mathematician Richard Hamming once said,"The purpose of computing is insight, not numbers," and the best way to develop insight is often to visualize data. Visualization deserves an entire lecture (or course) of its own, but we can explore a few features of Python's `matplotlib` library here.
+Okay, we've covered some basic numpy array accessing (indexing and slicing), as well as seen how easy basic mathematics. In line with the firts section of thise courses, a fundemental part of programming and data wrangling is being able to ask questions of our data. These questions generally evaluate to either true or false: the are known as boolean expressions, and as you may recall, Python has a special data _type_ called Boolean, of which there are only two memebers (`True` and `False`)
 
 
 ## Shell commands in the Jupyter notebook
