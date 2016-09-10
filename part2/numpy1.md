@@ -278,9 +278,8 @@ print(d)
 [0 1 9 3 4]
 [4 3 2 1 0]
 ```
-
-http://docs.scipy.org/doc/numpy/reference/arrays.indexing.html
-
+A deeper explaination of views and copies can be found here:
+https://docs.scipy.org/doc/numpy-dev/user/quickstart.html
 
 ## Maths with arrays
 
