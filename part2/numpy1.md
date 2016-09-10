@@ -226,7 +226,7 @@ plt.plot(data2[:,0])
 
 Numpy slicing slicing extends Python’s basic concept of slicing to N dimensions. It returns is a slice object (constructed by `start:stop:step` notation inside of brackets).
 
-Here, we used extended slicing that reads 'take all rows from the beginning the end (`data[:::, :]`), but in reverse order, hence the negative (`data[::-1, :]`). Not that the follwing, all make the same slice:
+Here, we used extended slicing that reads 'take all rows from the beginning the end (`data[:::, :]`), but in reverse order, hence the negative (`data[::-1, :]`). Note that the follwing, all make the same slice:
 
 ```python
 data[:, :]
