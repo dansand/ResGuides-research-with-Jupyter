@@ -395,6 +395,21 @@ not equal:
 [ True  True False  True  True]
 ```
 
+```python
+print('are there any values greater than 4?') 
+print(np.any(x > 4))
+```
+```
+True
+```
+
+```python
+print('are all values equal to six?')
+print(np.all(x == 6))
+```
+```
+False
+```
          
          
 
