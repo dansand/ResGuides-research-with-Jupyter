@@ -410,6 +410,20 @@ print(np.all(x == 6))
 ```
 False
 ```
+
+```python
+print('elements (indexes) where values are greater than 3:')
+print(np.where(x > 3))
+```
+```
+elements (indexes) where values are greater than 3
+(array([3, 4]),)
+```
+
+```python
+print('original array indexed by elements where values are greater than 3')
+print(x[np.where(x > 3)])
+```
          
          
 
