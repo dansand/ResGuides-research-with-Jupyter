@@ -226,7 +226,26 @@ plt.plot(data2[:,0])
 
 
 Here, we used extended slicing that reads 'take all rows from the beginning the end (`data[:, :]`), but in reverse order (`data[::-1, :]`). Note however, that in this istance we didn'y make a copy of the data. This is a bit confusing. We atually returned a _view_ of the original `data` object. Changes to the original array will be _reflected_ 
-in the view objects of that original array.
+in the view objects of that original array. This is true of all slices in numpy:
+
+```python
+c = np.array([0, 1, 2, 3, 4])
+d = c[:3]
+c[2] = 9
+print(c)
+print(d)
+```
+
+But, if you recall, thsi was not how lists worked:
+
+```python
+c = [0, 1, 2, 3, 4]
+d = c[:3]
+c[2] = 9
+print(c)
+print(d)
+```
+
 
 ## Maths with arrays
 
