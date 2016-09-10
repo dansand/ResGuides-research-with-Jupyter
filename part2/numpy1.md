@@ -6,6 +6,8 @@
 > *   Read tabular data from a file into a program.
 > *   Select individual values and subsections from data.
 > *   Basic mathematical operations on arrays.
+> *   Boolean questions on arrays.
+
 
 
 We are going to hit the ground running and import some numerical data. In this case, we have a csv (comma separated variable) file containing historical price and volume data from the Nasdaq Stock Exchange (to be precise, the Nasdaq Composite index). This tutorial assumes the data is located in the followinf _relative path_: `data/nasdaq.csv`.
@@ -367,7 +369,6 @@ print('mean Nasdaq closing price:', numpy.mean(data[:,0]))
 
 Okay, we've covered some basic numpy array accessing (indexing and slicing), as well as seen how easy basic mathematics. In line with the firts section of thise courses, a fundemental part of programming and data wrangling is being able to ask questions of our data. These questions generally evaluate to either true or false: the are known as boolean expressions, and as you may recall, Python has a special data _type_ called Boolean, of which there are only two memebers (`True` and `False`)
 
-all, any, nonzero, where
 
 ```python
 x = np.array([1, 2, 3, 4, 5])
@@ -383,6 +384,8 @@ print(x == 3)
 print('not equal:')
 print(x != 3)
 ```
+
+As you can see, these conditional or Boolean statements look exactly the same as when we used them on _simpler_ variables, such as floats, in section 1. 
 
 ```
 less than:
