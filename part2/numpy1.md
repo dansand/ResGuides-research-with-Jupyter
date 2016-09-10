@@ -400,6 +400,7 @@ print('are there any values greater than 4?')
 print(np.any(x > 4))
 ```
 ```
+are there any values greater than 4?
 True
 ```
 
@@ -408,6 +409,7 @@ print('are all values equal to six?')
 print(np.all(x == 6))
 ```
 ```
+are all values equal to six?
 False
 ```
 
