@@ -102,10 +102,9 @@ print('some random value in data:', data[250, 0])
 ('some random value in data:', 4683.919922)
 ```
 
-Hopefully, `data[0,0]` reminds you a bit of the indexing scheme we used for lists. The obvios differnce, however, is that we have now provided two numbers. In a two dimesional array, two numbers are required to uniquely identify each element. 
+Hopefully, `data[0,0]` reminds you a bit of the indexing scheme we used for lists. The obvious difference, however, is that we have now provided two numbers. In a two dimesional array, two numbers are required to uniquely identify each element (and in N-dimensions it will be N numbers).
 
-More generally, if we have an MxN numpy array, its indices go from 0 to M-1 on the first axis and 0 to N-1 on the second. It takes a bit of getting used to, but one way to remember the rule is that the index is how many steps we have to take from the start to get the item we want.
-
+Again, like lists, we count from zero: therfore if we have an MxN numpy array, its indices go from 0 to M-1 on the first axis and 0 to N-1 on the second. Because if this convention, indexing takes a bit of getting used to. 
 
 An index like `data[250, 0]` selects a single element of an array, but we can select whole sections as well. For example, we can select the first ten days (columns) of values for the first four patients (rows) like this:
 
@@ -126,7 +125,7 @@ print(data[0:10, 0:2])
  [  5.23837988e+03   1.63274000e+09]]
 ```
 
-The _slice_ `0:10` means, "Start at index 0 and go up to, but not including, index 10." Again, the up-to-but-not-including takes a bit of getting used to, but the rule is that the difference between the upper and lower bounds is the number of values in the slice.
+The _slice_ `0:10` means, "Start at index 0 and go up to, but not including, index 10." Again, the up-to-but-not-including takes a bit of getting used to, but the rule is that the difference between the upper and lower bounds is the number of values in the slice. 
 
 We don't have to start slices at 0:
 
@@ -172,7 +171,7 @@ print(data[0:5,0])
 ```
 [ 5227.209961  5213.220215  5222.990234  5232.330078  5218.919922]
 ```
-These values represent the daily closing price for the Nasdaq composite index. One thing you may notice is that these values look like floats (floating point numbers). Unlike lists, Numpy arrays can only contain numbers. Even more restrictive, each instance of an array can only have ony type or number...e.g. float, int, complex. To find out which type of data out array contains, we can write
+These values represent the daily closing price for the Nasdaq composite index (how do we know this? - let's get back to that later). One thing you may notice is that these values look like _floats_ (floating point numbers). Unlike lists, Numpy arrays can only contain numbers. Even more restrictive, each instance of an array can only have ony type or number...e.g. _float_, _int_, _complex_. To find out which type of data out array contains, we can write
  
 ```python
 data.dtype
@@ -189,7 +188,7 @@ print(data[0,0])
 ```
 1500.0
 ```
-As this code block shows, numpy will always coerce _numbers_ into the correct (i.e current) data type. Strings and other non-numeric objects, however, will fail:
+As this code block shows, numpy will always coerce numbers into the correct (i.e current) data type. Strings and other non-numeric objects, however, will fail:
 
 ```python
 data[0,0] = "hello"
@@ -204,16 +203,30 @@ ValueError                                Traceback (most recent call last)
 
 ## Plotting our data
 
-Let's have a quick look look at our data:
+Let's have a quick look at our data by making the simplest plot in all of Pythondom:
 
 ```python
 %pylab inline
 plt.plot(data[:,0])
 ```
 
-plot here...
+__plot here...__
 
-That was pretty easy huh!
+That was pretty easy huh! If you've been following the market however, you may notice that our data was plotted backwards. This is simply becuase our csv file listed data from newest to oldest, and numpy naturally reads from top to bottom. Do we need to fix this? Perhaps. Can we fix this? Absolutely:
+
+First, let's use some list slicing trickery:
+
+```python
+data2 = data[::-1, :]
+```
+
+```python
+plt.plot(data2[:,0])
+```
+
+
+Here, we used extended slicing that reads 'take all rows from the beginning the end (`data[:, :]`), but in reverse order (`data[::-1, :]`). Note however, that in this istance we didn'y make a copy of the data. This is a bit confusing. We atually returned a _view_ of the original `data` object. Changes to the original array will be _reflected_ 
+in the view objects of that original array.
 
 ## Maths with arrays
 
