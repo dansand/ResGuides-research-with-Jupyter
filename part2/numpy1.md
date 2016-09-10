@@ -10,9 +10,9 @@
 
 We are going to hit the ground running and import some numerical data. In this case, we have a csv (comma separated variable) file containing historical price and volume data from the Nasdaq Stock Exchange (to be precise, the Nasdaq Composite index). This tutorial assumes the data is located in the followinf _relative path_: `data/nasdaq.csv`.
 
-In order to load our data, we will use a function from library NumPy. In general you should use this library if you want to do analysis things numbers (Numpy is no good with textual data).
+In order to load our data, we will use a function from library NumPy (hereafter numpy). In general you should use this library if you want to do analysis things numbers (Numpy is no good with textual data).
 
-We can load NumPy using:
+We can load numpy using:
 
 ```python
 import numpy as np
@@ -234,7 +234,7 @@ data[::, :]
 data[::1, :]
 ```
 
-_Importantly_ in this instance we didn't make a copy of the data. _This is a bit confusing actually_. We actually returned a _view_ of the original `data` object. What this means is that changes to the original array will be _reflected_ 
+_Importantly_ in this instance we didn't make a copy of the data. _This is a bit confusing actually_. We actually returned a _view_ of the original `data` object (also called a shallow copy). What this means is that changes to the original array will be _reflected_ 
 in the view objects of that original array. This is true of all slices in numpy:
 
 ```python
@@ -265,7 +265,7 @@ print(d)
 ```
 
 
-If this is confusing you (and it should), one very simply way to _force_ a copy to made rather than a _view_, is to use the `copy()` method:
+If this is confusing you (and it should), one very simply way to force a _deep copy_ to be made (rather than a _view_ or a _shallow copy_), is to use the `copy()` method:
 
 ```python
 c = np.array([0, 1, 2, 3, 4])
