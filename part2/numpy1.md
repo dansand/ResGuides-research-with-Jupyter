@@ -156,7 +156,7 @@ print(small)
  [  5.21891992e+03   1.59106000e+09]]
 ``` 
  
- ## Cleaning our data
+ ## What's in our array?
  
  At this point we should think a little bit about what our numpy array actually contains. Fistly, why all that scienctific notation? When our array contains both large and small values, numpy defaults to printing this way. In this case, there si sufficient variation in the magnitude of our values to have triggered this prinitng option,
  
@@ -224,8 +224,18 @@ data2 = data[::-1, :]
 plt.plot(data2[:,0])
 ```
 
+Numpy slicing slicing extends Python’s basic concept of slicing to N dimensions. It returns is a slice object (constructed by `start:stop:step` notation inside of brackets).
 
-Here, we used extended slicing that reads 'take all rows from the beginning the end (`data[:, :]`), but in reverse order (`data[::-1, :]`). Note however, that in this istance we didn'y make a copy of the data. This is a bit confusing. We atually returned a _view_ of the original `data` object. Changes to the original array will be _reflected_ 
+Here, we used extended slicing that reads 'take all rows from the beginning the end (`data[:::, :]`), but in reverse order, hence the negative (`data[::-1, :]`). Not that the follwing, all make the same slice:
+
+```python
+data[:, :]
+data[::, :]
+data[::1, :]
+```
+
+
+Importantly in this instance we didn't make a copy of the data. _This is a bit confusing actually_. We actually returned a _view_ of the original `data` object. What this means is that changes to the original array will be _reflected_ 
 in the view objects of that original array. This is true of all slices in numpy:
 
 ```python
@@ -236,7 +246,7 @@ print(c)
 print(d)
 ```
 
-But, if you recall, thsi was not how lists worked:
+But, if you recall, this was _not_ how lists worked:
 
 ```python
 c = [0, 1, 2, 3, 4]
@@ -245,6 +255,8 @@ c[2] = 9
 print(c)
 print(d)
 ```
+
+http://docs.scipy.org/doc/numpy/reference/arrays.indexing.html
 
 
 ## Maths with arrays
