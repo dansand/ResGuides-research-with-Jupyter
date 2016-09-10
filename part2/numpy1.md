@@ -429,8 +429,12 @@ elements (indexes) where values are greater than 3
 print('original array indexed by elements where values are greater than 3')
 print(x[np.where(x > 3)])
 ```
+
+Let's return to teh Nasday data, and ask a question:
  
-```python         
+```python
+close = data[::-1,0].copy()
+vol = data[::-1,1].copy()
 print("Number days Nasdaq close above historical average average:")
 print(np.sum(close > close.mean()))
 ```
@@ -452,7 +456,26 @@ Date,Open,High,Low,Close,Volume,Adj Close
 
 ```
 
-## Something useful
+## Challenges
+
+
+<!--sec data-title="A simple trading algorithm" data-id="challenge1" data-show=true ces-->
+
+Let's use numpy to test a hypothesis for a simple trading stategy. The idea is to see whether the today's _movement_ in the Closing price has a tendency to follow _yesterday's_ _movement_: in other words, if the Nasdaq went up yesterday,is it more likely to go up today?
+
+To get started, assuming your have the Closing price array `close`, we can return a Boolean array of all elements where the Closing value was greater then the previus element.
+
+```python
+follow = close[:-1] < close[1:]
+
+```
+
+```
+*name*
+```
+
+
+<!--endsec-->
 
 
  
