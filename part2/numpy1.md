@@ -367,6 +367,37 @@ print('mean Nasdaq closing price:', numpy.mean(data[:,0]))
 
 Okay, we've covered some basic numpy array accessing (indexing and slicing), as well as seen how easy basic mathematics. In line with the firts section of thise courses, a fundemental part of programming and data wrangling is being able to ask questions of our data. These questions generally evaluate to either true or false: the are known as boolean expressions, and as you may recall, Python has a special data _type_ called Boolean, of which there are only two memebers (`True` and `False`)
 
+all, any, nonzero, where
+
+```python
+x = np.array([1, 2, 3, 4, 5])
+```
+
+```python
+print('less than:') 
+print( x < 3)
+print('less than or equal:')
+print( x <= 3)
+print('equal:')
+print(x == 3)
+print('not equal:')
+print(x != 3)
+```
+
+```
+less than:
+[ True  True False False False]
+less than or equal:
+[ True  True  True False False]
+equal:
+[False False  True False False]
+not equal:
+[ True  True False  True  True]
+```
+
+         
+         
+
 
 ## Shell commands in the Jupyter notebook
 
