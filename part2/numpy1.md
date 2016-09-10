@@ -203,7 +203,7 @@ ValueError                                Traceback (most recent call last)
 
 ## Plotting our data
 
-Let's have a quick look at our data by making the simplest plot in all of Pythondom:
+Let's have a quick look at our data by making perhaps the simplest plot in all of Pythondom:
 
 ```python
 %pylab inline
@@ -234,8 +234,7 @@ data[::, :]
 data[::1, :]
 ```
 
-
-Importantly in this instance we didn't make a copy of the data. _This is a bit confusing actually_. We actually returned a _view_ of the original `data` object. What this means is that changes to the original array will be _reflected_ 
+_Importantly_ in this instance we didn't make a copy of the data. _This is a bit confusing actually_. We actually returned a _view_ of the original `data` object. What this means is that changes to the original array will be _reflected_ 
 in the view objects of that original array. This is true of all slices in numpy:
 
 ```python
@@ -245,7 +244,11 @@ c[2] = 9
 print(c)
 print(d)
 ```
+```
 
+[0 1 9 3 4]
+[0 1 9
+```
 But, if you recall, this was _not_ how lists worked:
 
 ```python
@@ -254,6 +257,26 @@ d = c[:3]
 c[2] = 9
 print(c)
 print(d)
+```
+
+```
+[0, 1, 9, 3, 4]
+[0, 1, 2]
+```
+
+
+If this is confusing you (and it should), one very simply way to _force_ a copy to made rather than a _view_, is to use the `copy()` method:
+
+```python
+c = np.array([0, 1, 2, 3, 4])
+d = c[::-1].copy()
+c[2] = 9
+print(c)
+print(d)
+```
+```
+[0 1 9 3 4]
+[4 3 2 1 0]
 ```
 
 http://docs.scipy.org/doc/numpy/reference/arrays.indexing.html
