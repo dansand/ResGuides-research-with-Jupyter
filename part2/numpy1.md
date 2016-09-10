@@ -426,8 +426,15 @@ elements (indexes) where values are greater than 3
 print('original array indexed by elements where values are greater than 3')
 print(x[np.where(x > 3)])
 ```
-         
-         
+ 
+```python         
+print("Number days Nasdaq close above historical average average:")
+print(np.sum(close > close.mean()))
+```
+```
+Number days Nasdaq close above historical average average:
+4788
+```
 
 
 ## Shell commands in the Jupyter notebook
