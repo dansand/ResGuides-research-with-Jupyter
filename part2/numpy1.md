@@ -29,7 +29,7 @@ array([ 5227.209961,  5213.220215,  5222.990234, ...,   100.760002,
          100.839996,   100.      ])
 ```
 
-The expression `np.loadtxt` is a [function call](reference.html#function-call) that asks Python to run the function `loadtxt` that belongs to the `numpy` library.
+The expression `np.loadtxt` is a _function call]_ that asks Python to run the function `loadtxt` that belongs to the `numpy` library.
 
 This dotted notation is used everywhere in Python to refer to the parts of things as `thing.component`.
 
@@ -68,9 +68,9 @@ print(type(data))
 <class 'numpy.ndarray'>
 ```
 
-The output tells us that `data` currently refers to an N-dimensional array created by the NumPy library. These data correspond to historical temperature records from Europe. The rows are the years and the columns are the seasons.
+The output tells us that `data` _variable_ currently refers to an N-dimensional array (numpy.ndarray) created by the NumPy library. These data correspond to historical temperature records from Europe. The rows are the years and the columns are the seasons.
 
-We can see what its [shape](reference.html#shape) is like this:
+We can see what its _shape_ is like this:
 
 ```python
 print(data.shape)
@@ -89,21 +89,22 @@ we must provide an [index](reference.html#index) in square bracket, similar to h
 print('first value in data:', data[0, 0])
 ```
 
-```
+```python
 ('first value in data:', 5227.2099609999996)
 ```
 
 ```python
 print('some random value in data:', data[250, 0])
-```python
+
+```
 
 ```python
 ('some random value in data:', 4683.919922)
-```python
+```
 
-Hopefully, `data[0,0]` reminds you a bit of the indexing scheme we used for lists.
+Hopefully, `data[0,0]` reminds you a bit of the indexing scheme we used for lists. The obvios differnce, however, is that we have now provided two numbers. In a two dimesional array, two numbers are required to uniquely identify each element. 
 
-As a result, if we have an MxN array in Python, its indices go from 0 to M-1 on the first axis and 0 to N-1 on the second. It takes a bit of getting used to, but one way to remember the rule is that the index is how many steps we have to take from the start to get the item we want.
+More generally, if we have an MxN numpy array, its indices go from 0 to M-1 on the first axis and 0 to N-1 on the second. It takes a bit of getting used to, but one way to remember the rule is that the index is how many steps we have to take from the start to get the item we want.
 
 
 An index like `data[250, 0]` selects a single element of an array, but we can select whole sections as well. For example, we can select the first ten days (columns) of values for the first four patients (rows) like this:
