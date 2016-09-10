@@ -463,15 +463,19 @@ Date,Open,High,Low,Close,Volume,Adj Close
 
 Let's use numpy to test a hypothesis for a simple trading stategy. The idea is to see whether the today's _movement_ in the Closing price has a tendency to follow _yesterday's_ _movement_: in other words, if the Nasdaq went up yesterday,is it more likely to go up today?
 
+
+It's important in this challange to design you algorithm before you begin. Take some time to think through how to answer the question. Talk to your neighbours, instructors. After you have an idea of how you could solve the problem and broken the problem down into clear steps, you can start assembly the peices of code that you need to get you there. 
+
 To get started, assuming your have the Closing price array `close`, we can return a Boolean array of all elements where the Closing value was greater then the previus element.
 
 ```python
 follow = close[:-1] < close[1:]
 
 ```
+It may not be neccesary, but if you want to convert a _Boolean)_ array into a numeric (e.g en _integer_ array):
 
-```
-*name*
+```python
+one_zero_array = boolean_array.astype(int)
 ```
 
 
