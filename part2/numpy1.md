@@ -474,6 +474,8 @@ follow = close[:-1] < close[1:]
 
 ```
 
+A very similar expression can be formulated to determine if two consecutive days of increase or decrease have occured. 
+
 <!--endsec-->
 
 
