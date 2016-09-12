@@ -102,40 +102,43 @@ A list is an _ordered_ sequence of items. Having order means we can index with n
 
 ##Methods
 
-A list is an example of usage of objects and classes. When we use a variable i and assign a value to it, say integer 5 to it, you can think of it as creating an object (i.e. instance) i of class (i.e. type) int. In fact, you can read help(int) to understand this better.
-A class can also have methods i.e. functions defined for use with respect to that class only. You can use these pieces of functionality only when you have an object of that class. For example, Python provides an append method for the list class which allows you to add an item to the end of the list. For example, `mylist.append('an item')` will add that string to the list `mylist`. Note the use of dotted notation for accessing methods of the objects.
+A list is an example of usage of _objects_ and _classes_. When we use a variable `i` and assign a value to it, say integer `5` to it, you can think of it as creating an object (i.e. instance) `i` of class (i.e. type) _int_.
 
-There are many ways to change the contents of lists besides assigning new values to
-individual elements:
+As we touched on briefly in the first lessons, classes can also have methods i.e. functions defined for use with respect to that class only. You can use these pieces of functionality only when you have an object of that class. For example, Python provides an append method for the list class which allows you to add an item to the end of the list. For example, `mylist.append('an item')` will add that string to the list `mylist`. Note the use of dotted notation for accessing methods of the objects.
 
-~~~ {.python}
+There are many ways to change the contents of lists besides assigning new values to individual elements:
+
+```python
 odds.append(11)
 print('odds after adding a value:', odds)
-~~~
-~~~ {.output}
-odds after adding a value: [1, 3, 5, 7, 11]
-~~~
+```
 
-~~~ {.python}
+```
+odds after adding a value: [1, 3, 5, 7, 11]
+```
+
+```python
 del odds[0]
 print('odds after removing the first element:', odds)
-~~~
-~~~ {.output}
-odds after removing the first element: [3, 5, 7, 11]
-~~~
+```
 
-~~~ {.python}
+```
+odds after removing the first element: [3, 5, 7, 11]
+```
+
+```python
 odds.reverse()
 print('odds after reversing:', odds)
-~~~
-~~~ {.output}
+```
+
+```
 odds after reversing: [11, 7, 5, 3]
-~~~
+```
 
 
 ##Slicing
 
-lists, (like a variety of python data structures), also have a slicing operation which allows us to retrieve a slice of the sequence i.e. a part of the sequence.
+Lists, (like a variety of python data structures), also have a slicing operation which allows us to retrieve a _slice_ of the sequence (i.e. a part of the sequence).
 
 
 ```python
@@ -154,7 +157,7 @@ Item start to end is [1, 3, 5, 7]
 
 ##Anything goes
 
-Lists are just one example of a Python _container_ or _collection_. Lists have certain inalienable rights, we've seen that the items of a list can be changed at will. Lists can also contain items of different __types_. Together these properties make lists very flexible. Sometimes this flexibility is undesirable - later we will encounter containers that are more restrictive in how we can interact with them.
+Lists are just one example of a Python _container_ or _collection_. Lists have certain properties, and one we've just seen is that the items of a list can be changed at will. Lists can also contain items of different __types_. Together these properties make lists very flexible. Sometimes this flexibility is undesirable - later we will encounter containers that are more restrictive in how we can interact with them.
 
 ## Challenges
 
