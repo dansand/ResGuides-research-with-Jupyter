@@ -155,6 +155,7 @@ show(gridplot(p1, p2, ncols=2, plot_width=400, plot_height=400))  # open a noteb
 We could also save the html for these figures and view directly in a web browser:
 
 ```python
+from bokeh.resources import CDN
 html = file_html(p1, CDN, "my plot")
 with open('test.html', 'w') as f:
     f.write(html)
