@@ -1,13 +1,15 @@
 # What is Python?
 
-hi
-
 > ## Learning Objectives
 
 > * Different Python environments
 > * Python commands
 > * Math operators
 > * Python Strings
+
+## What is Python?
+
+Conceived in the late 1980s as a teaching and scripting language, Python has since become an essential tool for many programmers, engineers, researchers, and data scientists across academia and industry. The appeal of Python is in its simplicity and beauty, as well as the convenience of the large ecosystem of domain-specific tools that have been built on top of it. 
 
 ## Python prompt
 
