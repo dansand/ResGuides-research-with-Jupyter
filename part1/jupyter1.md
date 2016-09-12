@@ -2,7 +2,7 @@
 
 > ## Learning Objectives
 >
-> *   Explain what a the Jupyter Notebook environment is.
+> *   Explain what the Jupyter Notebook environment is.
 > *   Creation / execution of code cells.
 > *   Markdown and markdown cells
 > *   Shortcuts
@@ -10,7 +10,7 @@
 
 ### What are they?
 
-Notebook documents  are documents produced by the Jupyter Notebook App which contain both computer code (e.g. python) and rich text elements (paragraph, equations, figures, links, etc...). Notebook documents are both human-readable documents containing the analysis description and the results (figures, tables, etc..) as well as executable documents which can be run to perform data analysis.
+Notebooks are documents produced by the Jupyter Notebook App which contain both computer code (e.g. python) and rich text elements (paragraph, equations, figures, links, etc...). Notebook documents are both human-readable documents containing the analysis description and the results (figures, tables, etc..) as well as executable documents which can be run to perform data analysis.
 
 The Jupyter Notebook App is a web application that allows you to create and share documents that contain live code, equations, visualizations and explanatory text.
 
@@ -77,12 +77,7 @@ Want quick access to all the commands in Jupyter Notebooks? Open the command pal
 __The point is not remember all these, but to see that the Notebooks are equpied with all kinds of shortcuts to more efficiently produce content__
 
 
+### Literate programming & Reprodicible research 
 
-### Literate programming 
-
-Is an approach to programming introduced by Donald Knuth in which a program is given as an explanation of the program logic in a natural language, such as English, interspersed with snippets of macros and traditional source code, from which a compilable source code can be generated.
-
-
-
-https://github.com/dsfaco/a-brief-peek-into-all-things-bayes
+Literate programming is an approach to programming introduced by Donald Knuth in which a program is given as an explanation of the program logic in a natural language, such as English, interspersed with snippets of macros and traditional source code, from which a compilable source code can be generated.
 
