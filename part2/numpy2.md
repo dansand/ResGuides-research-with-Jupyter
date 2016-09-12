@@ -195,28 +195,37 @@ Note that the indexes are returned as a `Tuple` (an immutable list). A tuple wit
 
 
 
-> ##_challenge:_  dreaded greyscale
->
-> Now we know we know a little about doing maths with arrays, we can define a function a to convert a colour (RGB) image to grayscale.
-> 
-> The equivalent Matlab function uses the following formula:
->$$gray = 0.2989 \times red + 0.5870 \times green+ 0.1140 \times blue$$
-> 
-> 
->Write a python function that will compute the grayscale representation of our `face` array.
-
->  ##_challenge:_  Interpret
-> Explain the output of the following
-> ```python
-> Z = np.random.uniform(0,1,10)
-> z = 0.5
-> m = Z.flat[np.abs(Z - z).argmin()]
-> print(m)
-> ```
-
-> ## _challenge:_ Checkerboard
->Create an 8x8 matrix and fill it with a checkerboard pattern
+<!--sec data-title="the dreaded greyscale" data-id="challenge1" data-show=true ces-->
 
 
+Now we know we know a little about doing maths with arrays, we can define a function a to convert a colour (RGB) image to grayscale.
+ 
+The equivalent Matlab function uses the following formula:
+$$gray = 0.2989 \times red + 0.5870 \times green+ 0.1140 \times blue$$
+ 
+ 
+Write a python function that will compute the grayscale representation of our `face` array.
 
+
+<!--endsec-->
+
+<!--sec data-title="unpacking the meaning" data-id="challenge2" data-show=true ces-->
+
+
+Explain the output of the following. If you're stuck,try breaking up the multitude of functions and methods used in the third line.  
+
+np.random.seed(0)  # seed for reproducibility
+z = 0.5
+m = Z[np.abs(np.random.uniform(0,1,10) - z).argmin()]
+print(m)
+
+
+<!--endsec-->
+
+
+<!--sec data-title="checkerboard" data-id="challenge3" data-show=true ces-->
+
+Create an 8x8 matrix and fill it with a checkerboard pattern
+
+<!--endsec-->
 
