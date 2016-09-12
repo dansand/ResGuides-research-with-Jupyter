@@ -1,9 +1,6 @@
 # Jupyter Notebooks 1
 
 
-## Test
-
-
 > ##Learning Objectives
 >
 > *   Explain what the Jupyter Notebook environment is.
