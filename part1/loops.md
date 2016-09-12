@@ -37,13 +37,14 @@ This is a bad approach for two reasons:
     and if we give it a shorter one,
     it produces an error because we're asking for characters that don't exist.
 
-```
+```python
 word = 'tin'
 print(word[0])
 print(word[1])
 print(word[2])
 print(word[3])
 ```
+
 ```
 t
 i
@@ -63,7 +64,7 @@ IndexError: string index out of range
 
 Here's a better approach:
 
-```
+```python
 word = 'lead'
 for char in word:
     print(char)
