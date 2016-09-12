@@ -213,7 +213,7 @@ Let's try running our function. Calling our own function is no different from ca
 fibonacci(10)
 ```
 ```
-10
+55
 ```
 
 ## Challenges
