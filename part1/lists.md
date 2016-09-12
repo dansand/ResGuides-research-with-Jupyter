@@ -157,7 +157,7 @@ Item start to end is [1, 3, 5, 7]
 
 ##Anything goes
 
-Lists are just one example of a Python _container_ or _collection_. Lists have certain properties, and one we've just seen is that the items of a list can be changed at will. Lists can also contain items of different __types_. Together these properties make lists very flexible. Sometimes this flexibility is undesirable - later we will encounter containers that are more restrictive in how we can interact with them.
+Lists are just one example of a Python _container_ or _collection_. Lists have certain properties, and one we've just seen is that the items of a list can be changed at any time. We can reach in and delete, or update any item in the list. Lists can also contain items of different _types_. Together these properties make lists very flexible. Sometimes this flexibility is undesirable - later we will encounter containers that are more restrictive in how we can interact with them.
 
 ## Challenges
 
