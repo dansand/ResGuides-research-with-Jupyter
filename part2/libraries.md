@@ -6,7 +6,7 @@
 > *  How to use them
 > *  Where to get them
 
-## Libraries / packages modules
+## Libraries / packages / modules
 
 * A package is a collection of python modules under a common namespace. In practice one is created by placing multiple python modules in a directory with a special __init__.py module (file).
 
