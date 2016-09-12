@@ -169,7 +169,7 @@ So far, most of the elements that we have added to our collections have been str
 ```python
 pets = ['dogs', 'cats', 'fish']
 print( pets )
-pets.pop(1)   # Get rid of dogs
+pets.pop(0)   # Get rid of dogs
 dog_breeds = ['bulldog', 'terrier', 'greyhound']
 pets.append(dog_breeds)  # append list of dog breeds available
 pets
