@@ -151,3 +151,11 @@ Finally, open the plot in a notebook:
 ```
 show(gridplot(p1, p2, ncols=2, plot_width=400, plot_height=400))  # open a notebook
 ```
+
+We could also save the html for these figures and view directly in a web browser:
+
+```python
+html = file_html(p1, CDN, "my plot")
+with open('test.html', 'w') as f:
+    f.write(html)
+```
