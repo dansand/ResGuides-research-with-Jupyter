@@ -8,7 +8,7 @@
 > *   Explain why we should divide programs into small, single-purpose functions.
 
 
-The next element of Python programming we're goinf to learn about is the _fucntions_. Functions provide a way to package our code so that it is easier to reuse, and simultanously provides a shorthand way of re-executing longer pieces of code. The function concept is probably *the* most important building block of any non-trivial software (in any programming language)
+The next element of Python programming we're going to learn about is the _functions_. Functions provide a way to package our code so that it is easier to reuse, and simultanously provides a shorthand way of re-executing longer pieces of code. The function concept is probably *the* most important building block of any non-trivial software (in any programming language)
 
 Functions are defined using the `def` keyword. After this keyword comes an *identifier* name for the function, followed by a pair of parentheses which may enclose some names of variables, and by the final colon that ends the line. Next follows the block of statements that are part of this function. 
 
@@ -33,14 +33,11 @@ freezing point of water: 273.15
 boiling point of water: 373.15
 ```
 
-We've successfully called the function that we defined,
-and we have access to the value that we returned.
-
+We've successfully called the function that we defined, and we have access to the value that we returned.
 
 ## Composing Functions
 
-Now that we've seen how to turn Fahrenheit into Kelvin,
-it's easy to turn Kelvin into Celsius:
+Now that we've seen how to turn Fahrenheit into Kelvin, it's easy to turn Kelvin into Celsius:
 
 ```python
 def kelvin_to_celsius(temp_k):
@@ -53,7 +50,7 @@ absolute zero in Celsius: -273.15
 ```
 
 What about converting Fahrenheit to Celsius? We could write out the formula, but we don't need to.
-Instead, we can [compose](reference.html#compose) the two functions we have already created:
+Instead, we can _compose_the two functions we have already created:
 
 ```python
 def fahr_to_celsius(temp_f):
@@ -67,8 +64,7 @@ print('freezing point of water in Celsius:', fahr_to_celsius(32.0))
 freezing point of water in Celsius: 0.0
 ```
 
-This is our first taste of how larger programs are built:
-we define basic operations, then combine them in ever-large chunks to get the effect we want. Real-life functions will usually be larger than the ones shown here --- typically half a dozen to a few dozen lines --- but they shouldn't ever be much longer than that, or the next person who reads it won't be able to understand what's going on.
+This is our first taste of how larger programs are built: we define basic operations, then combine them in ever-large chunks to get the effect we want. Real-life functions will usually be larger than the ones shown here - typically half a dozen to a few dozen lines - but they shouldn't ever be much longer than that, or the next person who reads it won't be able to understand what's going on.
 
 ##Local variables
 
