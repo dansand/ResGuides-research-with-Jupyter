@@ -245,14 +245,17 @@ However, they aren't the only values in Python that are true and false. After re
 
 <!--endsec-->
 
-## Resources
-
-> DjangoGirls [Python Basics: Comparisons](https://www.youtube.com/watch?v=7bzxqIKYgf4) video.
-
-
 
 <!--sec data-title="Near to me" data-id="challenge2" data-show=true ces-->
 
 Write a function that takes two _floats_ as input parameters, and returns `True` if the value of these floats is within 10 % of one another, e.g. the ratio of the numbers falls in the range `0.9 - 1.1`.
 
 <!--endsec-->
+
+## Resources
+
+> DjangoGirls [Python Basics: Comparisons](https://www.youtube.com/watch?v=7bzxqIKYgf4) video.
+
+
+
+
