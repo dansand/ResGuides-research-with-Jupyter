@@ -1,19 +1,16 @@
-# ResGuides: Scientific research with Jupyter
+# ResGuides: research with Jupyter
 
-Scientific research with Jupyter is a course with three fundamental aims:
+Research with Jupyter is a course with three fundamental aims:
 
-* to teach basic and fundamental programming in Python
+* to teach basic programming in Python
 * to introduce the core components of Scientific Python (Scipy)
-* to build familiarity and skills around the Jupyter notebook 
+* to build familiarity and skills using Jupyter notebooks
 
-This course is intended to be taught. You may find the book useful to read by yourself, but we include only the bare minimum discussion, and assume that instructors will add detail as the opportunity arises. We have provided links to recorded lectures / video tutorials, so that those working by themselves can 
+This course is intended to be taught. You may find the book useful to read by yourself, but we include only the bare minimum discussion, and assume that instructors will add detail as the opportunity arises. We have provided links to recorded lectures / video tutorials, to try to make the course more useful for those working by themselves.
 
 We do assume that the course will be taught using the Jupyter notebook environment. You will find two sections which develop familiarity with the notebook environment. Again, these sections are most useful if they are demonstrated, rather than read. We have endeavoured to provided links to useful instructional videos so that you if you are working through the book without an instructor, you can gain the benefits of watching live coding. 
 
-This book was funded by Research Platforms at the University of Melbourne. 
-
-This book draws heavilily from the resources listed below:
-
+This book draws much of its content from the resources listed below:
 
 [Software Carpentry](http://swcarpentry.github.io/python-novice-inflammation/)
 
@@ -34,3 +31,5 @@ This means:
 You are free to Share i.e. to copy, distribute and transmit this book
 You are free to Remix i.e. to make changes to this book (especially translations)
 You are free to use it for commercial purposes
+
+This book was created by Dan Sandiford, and funded by Research Platforms at the University of Melbourne. Assistance in developing the lessons was provided by Alistair Walsh and Angus Keillar.
