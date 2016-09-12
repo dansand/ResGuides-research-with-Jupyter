@@ -240,7 +240,6 @@ The equivalent Matlab function uses the following formula:
 
 $$ gray = 0.2989 \times red + 0.5870 \times green+ 0.1140 \times blue $$
  
- 
 Write a python function that will compute the grayscale representation of our `face` array.
 
 
@@ -263,8 +262,6 @@ print(m)
 
 <!--sec data-title="checkerboard" data-id="challenge3" data-show=true ces-->
 
-Create an 8x8 matrix and fill it with a checkerboard pattern
+Create an 8x8 matrix and fill it with a checkerboard pattern.
 
 <!--endsec-->
-
-$ gray = 0.2989 \times red + 0.5870 \times green+ 0.1140 \times blue $
