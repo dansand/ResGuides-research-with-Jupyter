@@ -1,12 +1,14 @@
-# ResGuides: Research with Jupyter
+# ResGuides: Scientific research with Jupyter
 
-The first section of this book book provides an introduction to the Python programming language, aimed at people who have never used a programming language.  The second section provides a introduction to Scientific Python, often called The Scientific Python Stack; again intended for people who are not familiar with these libraries. 
+Scientific research with Jupyter is a course with three fundamental aims:
 
-The focus of the Scientific Python is around the simple managment, anlysis and visualisation of _Numerical_ data, in short'data wrangling'. Our main intention is that that after taking this course you will be equipped to begin to tackle your own data.
+* to teach basic and fundamental programming in Python
+* to introduce the core components of Scientific Python (Scipy)
+* to build familiarity and skills around the Jupyter notebook 
 
-This course is intended to be taught. You may find the book useful to read by yourself, but we include only the bare minimum discussion, and assume that instructors will add detail as the opportunity arises. 
+This course is intended to be taught. You may find the book useful to read by yourself, but we include only the bare minimum discussion, and assume that instructors will add detail as the opportunity arises. We have provided links to recorded lectures / video tutorials, so that those working by themselves can 
 
-We also assume that the course will be taught using the Jupyter notebook environment. You will find two sections which develop familiarity with the notebook environment. Again, these sections are most useful if they are demonstrated, rather than read. We have endeavoured to provided links to useful instructional videos so that you if you are working through the book without an instructor, you can gain the benefits of watching live coding. 
+We do assume that the course will be taught using the Jupyter notebook environment. You will find two sections which develop familiarity with the notebook environment. Again, these sections are most useful if they are demonstrated, rather than read. We have endeavoured to provided links to useful instructional videos so that you if you are working through the book without an instructor, you can gain the benefits of watching live coding. 
 
 This book was funded by Research Platforms at the University of Melbourne. 
 
