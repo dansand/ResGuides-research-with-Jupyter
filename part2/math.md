@@ -80,3 +80,34 @@ True
 False
 (array([ 5.,  6.,  7.]), array([ 1.,  2.,  3.]))
 ```
+
+## Math with arrays
+
+We cannot apply `maths` library functions, element wise, to lists or numpy arrays:
+
+```python
+a = np.array([1, 2, 3], float)
+print(math.exp(a))
+```
+
+```
+TypeError                                 Traceback (most recent call last)
+<ipython-input-389-4f48d5ba7274> in <module>()
+      1 a = np.array([1, 2, 3], float)
+----> 2 math.exp(a)
+
+TypeError: only length-1 arrays can be converted to Python scalars
+```
+
+Instead, we use the same mathematical functions directly from the numpy library:
+
+```python
+a = np.array([1, 2, 3], float)
+print(numpy.exp(a))
+```
+
+```
+[  2.71828183   7.3890561   20.08553692]
+```
+
+
