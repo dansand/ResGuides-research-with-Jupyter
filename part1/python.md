@@ -94,7 +94,7 @@ An examples of an integer is `2` which is just a whole number.
 type(2.0)
 ```
 
-In programming we call decimal numbers floating point numbers (or _floats_ for short). Also what happened when we wrote `type(2)`? We will return to this in much detail later. You also might wonder why the need for multiple types of number in Python. In fact, it is very useful. If you wrote a program that counted people as they scanned their tickets at a convcert would you be better off using integers or floating point numbers?
+In programming we call decimal numbers floating point numbers (or _floats_ for short). Also what happened when we wrote `type(2)`? We used a _function_ and we will return to what these are later in the course. You also might wonder why the need for multiple types of number in Python. In fact, it is very useful. If you wrote a program that counted people as they scanned their tickets at a concert, would you be better off using integers or floating point numbers?
 
 
 ## Strings
@@ -154,9 +154,7 @@ Nice, huh? To see your name in uppercase letters, simply type:
 'RICK'
 ```
 
-You just used the `upper` __method__ on your string! A method (like `upper()`) is a sequence of instructions that Python has to perform on a given object (`"Rick"`) once you call it.
-
-> We will often discuss the concept of methods as we use them, because methods are fundamental in python.
+You just used the `upper` __method__ on your string! A method (like `upper()`) is a sequence of instructions that Python performs on a given object (`"Rick"`), once you call it. The notation `x.method()` reminds us that the method is attached or belongs to the data type `x`. 
 
 If you want to know the number of letters contained in your name, there is a __function__ for that too!
 
@@ -194,7 +192,6 @@ It worked! We used the `str` function inside of the `len` function. `str()` conv
 - The `int` function converts things into __integers__
 
 > Important: we can convert numbers into text, but we can't necessarily convert text into numbers - what would `int('hello')` be anyway?
-
 
 
 
