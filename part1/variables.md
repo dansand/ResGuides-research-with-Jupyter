@@ -8,8 +8,7 @@
 > *   Gotchas with lists and multiple assigments
 
 
-Computer programs operate on data. A computer program is a set of statements (i.e., intructions) to accomplish one or more of the following: read, create, calculate, transform, organize, and store data. This goal is achieved through the use of variables. If you think of data as pieces of paper where you wrote something, then a variable is a folder to which you afix a sticker with a name and where you may store one or more pieces of paper.
-
+Computer programs operate on data. A computer program is a set of statements (i.e., intructions) to accomplish one or more of the following: read, create, calculate, transform, organize, and store data. This goal is achieved through the use of variables.  A variable is a storage location paired with an associated symbolic name (an identifier), which contains some known or unknown quantity of information referred to as a value.
 
 Let's say we want to create a new variable called `name`:
 
@@ -17,7 +16,7 @@ Let's say we want to create a new variable called `name`:
 name = "Ola"
 ```
 
-As you may have noticed in past lessons, Python didn't return anything like it did before. So how do we know that the variable actually exists? Simply enter `name` and hit `enter`:
+As you may have noticed when we used variables in previous lessons, during variable assignment Python doesn't return anything. So how do we know that the variable actually exists? Simply enter `name` and hit `enter`:
 
 ```python
 name
@@ -26,7 +25,7 @@ name
 'Ola'
 ```
 
-Yippee! Your first variable :)! You can always change what it refers to:
+A beautiful variable! But in case you disagree, you can always change what the variable refers to:
 
 ```python
 name = "Sonja"
@@ -100,7 +99,7 @@ You can use the `whos` command at any time to see what variables you have create
 
 ## A common gotcha with lists
 
-At this stage, we know about three Python data types, strings, numbers (floats and integers), and lists. We can create variabes as a label for any one of these data types. Let's look a little deeper and see how multiple references to variables can behave a little strangely at times. 
+At this stage, we know about three Python data types: strings, numbers (floats and integers), and lists. We can create variabes as a label for any one of these data types. Let's look a little deeper and see how multiple references to variables can behave a little strangely at times. 
 
 ```python
 weight_lb = 2.2 * weight_kg
@@ -153,7 +152,7 @@ print('but ... they are now both:', a, b)
 but ... they are now both: [1, 2, 4] [1, 2, 4]
 ```
 
-Assignment statements in Python do not copy objects, they create bindings between a target and an object. Most operations that modify the list will modify it _in place_.  Writing `a[2] = 4  ` does not create a new object. This means that if you have multiple variables that point to the same list, all variables will be updated at the same time.
+Assignment statements in Python do not copy objects, they create _bindings_ between a target and an object. Most operations that modify the list will modify it _in place_.  Writing `a[2] = 4  ` does not create a new object. This means that if you have multiple variables that point to the same list, all variables will be updated at the same time.
 
 In general, for collections that are mutable or contain mutable items, a `copy` is needed so one can change one copy without changing the other. A quick-and-dirty way to `copy` lists is like this: `b = a[:]`
 
@@ -193,7 +192,6 @@ When you just type `name`, the Python interpreter responds with the string *repr
 As we'll see later, `print()` is also useful when we want to print things from inside functions, or when we want to print things on multiple lines.
 
 
-
 > ## The dark art of variable Names:
 >Python has basically only three rules about naming variables: 
 
@@ -201,7 +199,6 @@ As we'll see later, `print()` is also useful when we want to print things from i
 >* names you define cannot be the same as any of Python's reserved words (see handout)
 >* names are case-sensitive: 'YOU', 'you', 'You', and 'yOu' are all different names in Python
 >Note that '-', '+', '*', and '/' are used by Python for defining operations on data and cannot be used in names.
-
 
 
 
