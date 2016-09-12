@@ -8,8 +8,6 @@
 > *   Basic mathematical operations on arrays.
 > *   Boolean questions on arrays.
 
-
-
 We are going to hit the ground running and import some numerical data. In this case, we have a csv (comma separated variable) file containing historical price and volume data from the Nasdaq Stock Exchange (to be precise, the Nasdaq Composite index). This tutorial assumes the data is located in the followinf _relative path_: `data/nasdaq.csv`.
 
 In order to load our data, we will use a function from library NumPy (hereafter numpy). In general you should use this library if you want to do analysis things numbers (Numpy is no good with textual data).
@@ -85,7 +83,7 @@ print(data.shape)
 This tells us that `data` has 11495 rows, and 2 columns (it is 2-dimensional). When we created the variable `data` to store our past climate data, we didn't just create the array, we also created information about the array, called _attributes_. This extra information describes `data` in the same way an adjective describes a noun. `data.shape` is an attribute  of `data` which described the dimensions of `data`. We use the same dotted notation for the attributes of variables that we use for the functions in libraries because they have the same part-and-whole relationship.
 
 If we want to get a single number from the array,
-we must provide an [index](reference.html#index) in square bracket, similar to how we have worked with lists:
+we must provide an _index_ in square bracket, similar to how we have worked with lists:
 
 ```python
 print('first value in data:', data[0, 0])
@@ -236,8 +234,7 @@ data[::, :]
 data[::1, :]
 ```
 
-_Importantly_ in this instance we didn't make a copy of the data. _This is a bit confusing actually_. We actually returned a _view_ of the original `data` object (also called a shallow copy). What this means is that changes to the original array will be _reflected_ 
-in the view objects of that original array. This is true of all slices in numpy:
+_Importantly_ in this instance we didn't make a copy of the data. _This is a bit confusing actually_. We actually returned a _view_ of the original `data` object (also called a shallow copy). What this means is that changes to the original array will be _reflected_ in the view objects of that original array. This is true of all slices in numpy:
 
 ```python
 c = np.array([0, 1, 2, 3, 4])
@@ -280,8 +277,7 @@ print(d)
 [0 1 9 3 4]
 [4 3 2 1 0]
 ```
-A deeper explaination of views and copies can be found here:
-https://docs.scipy.org/doc/numpy-dev/user/quickstart.html
+A deeper explaination of views and copies can be found here: https://docs.scipy.org/doc/numpy-dev/user/quickstart.html
 
 ## Maths with arrays
 
@@ -316,8 +312,7 @@ doubledata:
  [  1.04378398e+04   3.18212000e+09]]
 ```
 
-If, instead of taking an array and doing arithmetic with a single value (as above) you did the arithmetic operation with another array of the same shape, the operation will be done on 
-corresponding elements of the two arrays.
+If, instead of taking an array and doing arithmetic with a single value (as above) you did the arithmetic operation with another array of the same shape, the operation will be done on corresponding elements of the two arrays.
 
 Thus:
 
@@ -325,8 +320,7 @@ Thus:
 tripledata = doubledata + data
 ```
 
-will give you an array where `tripledata[0,0]` will equal `doubledata[0,0]` plus `data[0,0]`,
-and so on for all other elements of the arrays.
+will give you an array where `tripledata[0,0]` will equal `doubledata[0,0]` plus `data[0,0]`, and so on for all other elements of the arrays.
 
 Often, we want to do more than add, subtract, multiply, and divide values of data. Arrays also know how to do more complex operations on their values. If we want to find the average value of all elements in an array, for example, we can just ask the array for its mean value
 
@@ -349,7 +343,7 @@ print(data.mean(axis=0))
 This gives us the average values 'down the columns'. Hence we end up with the average closing price of teh Nasdaq composit (column zero), and the avergage of daily volume (column one).
 
 
-![Operations Across Axes](fig/python-operations-across-axes.png)
+![Operations Across Axes](../fig/python-operations-across-axes.png)
 
 Numpy arrays have lots of useful _methods_:
 
