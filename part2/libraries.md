@@ -6,6 +6,17 @@
 > *  How to use them
 > *  Where to get them
 
+## Libraries / packages modules
+
+* A package is a collection of python modules under a common namespace. In practice one is created by placing multiple python modules in a directory with a special __init__.py module (file).
+
+* A module is a single file of python code that is meant to be imported. This is a bit of a simplification since in practice quite a few modules detect when they are run as script and do something special in that case. Simply put, a module in python is a .py file that defines one or more function/classes which you intend to reuse in different codes of your program.
+* Unlike C or C++, the term library does not have any specific contextual meaning in p\Python. When used in Python, a library is used loosely to describe a collection of the core modules.
+
+```python
+from mypackage.mymodule import myclass
+```
+
 ## Standard Library
 
 Up until now, we've mainly been uing the Python Standard library. The library contains built-in modules (written in C) that provide access to system functionality such as file I/O that would otherwise be inaccessible to Python programmers, as well as modules written in Python that provide standardized solutions for many problems that occur in everyday programming.
