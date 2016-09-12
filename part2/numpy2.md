@@ -114,19 +114,7 @@ z = np.zeros((3,3))
  [ 0.  0.  0.]]
 ```
 
-```python
-# Create an array of the given shape /
-# and fill with random samples 
-# from a uniform distribution over [0, 1).
-random = np.random.rand(3,2)
-print(random
-```
-```
-[[ 0.95642119  0.82504981]
- [ 0.01412624  0.00413452]
- [ 0.37054704  0.55093531]]
-```
-(For example)
+
 
 In order to have a more visually appealing array to work with,  let's read in an image from the Scipy sample data:
 
@@ -147,6 +135,45 @@ plt.imshow(face)
 
 It's common that libraries include a small ammount of reprentative data, for examples / demonstrations. 
 
+
+## Random numbers
+
+The `numpy.random` contains a number functions that generate random numbers, and arrays of random numbers. 
+
+
+The most common thing you'll probably want to do is to create an array of floats, of the given shape and populate it with
+random samples from a uniform distribution (the range defaults to ``[0, 1)``).
+
+
+```python
+random = np.random.rand(3,2)
+print(random)
+```
+We can change the interval:
+
+```
+np.random.seed(0)
+b = np.random.uniform(low=-1, high=1, size=10)
+print(b)
+```
+```
+[ 0.09762701  0.43037873  0.20552675  0.08976637 -0.1526904   0.29178823
+ -0.12482558  0.783546    0.92732552 -0.23311696]
+```
+
+Providing the `seed` to the random number generator ensures that the output will be the same. Th numbers are still a good approximation of a the uniform distribution, randomly sampled, but once the seed has been set, the algorithm is _not random_ . The seed need to be set before any call to the `numpy.random` module, otherwise it is reset. 
+
+Random _integers_ from the uniform distribution: 
+
+```python
+p.random.seed(42)
+i = np.random.randint(low=0,high=10, size=10)
+print(i)
+``` 
+
+```
+[6 3 7 4 6 9 2 6 7 4]
+```
 
 ##Looping through arrays
 
