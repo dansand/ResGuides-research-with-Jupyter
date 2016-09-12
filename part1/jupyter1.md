@@ -57,7 +57,7 @@ But first...something key to be aware of: Jupyter Notebooks have two different k
 - `M` change cell to `markdown` mode (good for documentation)
 
 
-## Edit Mode
+### Edit Mode
 
 
 - `cmd` + `/` toggle comment lines
