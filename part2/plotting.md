@@ -104,3 +104,50 @@ for ax in axes:
 ```
 
 Bokeh is a Python interactive visualization library that targets modern web browsers for presentation. Its goal is to provide elegant, concise construction of novel graphics in the style of D3.js, and to extend this capability with high-performance interactivity over very large or streaming datasets. Bokeh can help anyone who would like to quickly and easily create interactive plots, dashboards, and data applications.
+
+
+Firstly, you may have to download the bokeh library, we should be able to do this from the notebook:
+
+```
+!pip install bokeh
+```
+Now we'll load the bokeh modules we need:
+
+```python
+from bokeh.layouts import gridplot
+from bokeh.plotting import figure, show, output_file
+from bokeh.io import output_notebook
+```
+
+And configure the Jupyter notebook output:
+
+```python
+output_notebook()
+```
+Now we'll create some bokeh figure objects
+
+```python
+x = np.linspace(0, 4*np.pi, 100)
+y = np.sin(x)
+
+TOOLS = "pan,wheel_zoom,box_zoom,reset,save,box_select"
+
+p1 = figure(title="Legend Example", tools=TOOLS)
+p1.circle(x,   y, legend="sin(x)")
+p1.circle(x, 2*y, legend="2*sin(x)", color="orange")
+p1.circle(x, 3*y, legend="3*sin(x)", color="green")
+
+p2 = figure(title="Another Legend Example", tools=TOOLS)
+p2.circle(x, y, legend="sin(x)")
+p2.line(x, y, legend="sin(x)")
+p2.line(x, 2*y, legend="2*sin(x)",
+        line_dash=(4, 4), line_color="orange", line_width=2)
+p2.square(x, 3*y, legend="3*sin(x)", fill_color=None, line_color="green")
+p2.line(x, 3*y, legend="3*sin(x)", line_color="green")
+```
+
+Finally, open the plot in a notebook:
+
+```
+show(gridplot(p1, p2, ncols=2, plot_width=400, plot_height=400))  # open a notebook
+```
