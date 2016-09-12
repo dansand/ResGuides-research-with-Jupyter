@@ -71,7 +71,7 @@ Want quick access to all the commands in Jupyter Notebooks? Open the command pal
 
 __The point is not remember all these, but to see that the Notebooks are equpied with all kinds of shortcuts to more efficiently produce content__
 
-## Code
+## Other Languages
 
 Not just Python! The Notebook has support for over 40 programming languages, including those popular in Data Science such as Python, R, Julia and Scala.
 
