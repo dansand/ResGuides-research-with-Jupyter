@@ -13,7 +13,7 @@ Conceived in the late 1980s as a teaching and scripting language, Python has sin
 
 ## Python prompt
 
-To start using Python, you'll need to open up a _command line_ on your computer. Opening up a Python console is usually as easy as typing `python` into the command prompt and hitting `enter`.
+The traditional, pehaps still the default way to to start using Python, is to open up a _command line_ on your computer. From here, opening up a _Python_ session is usually as easy as typing `python` into the command prompt and hitting `enter`.
 
 ```bash
 $ python
