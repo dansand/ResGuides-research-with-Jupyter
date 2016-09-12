@@ -24,6 +24,10 @@ This book draws much of its content and examples from the resources listed below
 
 [Object-Oriented Programming in Python](http://python-textbok.readthedocs.io/en/latest/index.html)
 
+[Whirlwind Tour of Python](http://www.oreilly.com/programming/free/a-whirlwind-tour-of-python.csp)
+
+[scientific-python-lectures](https://github.com/jrjohansson/scientific-python-lectures)
+
 License
 
 This book is licensed under a Creative Commons Attribution-ShareAlike 4.0 International License.
