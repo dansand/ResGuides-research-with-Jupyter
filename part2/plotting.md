@@ -1,9 +1,9 @@
 # plotting
 
 > ## Learning Objectives
-> *  Plot data with matplotlib and seaborn 
 > *  Matplotlib is Object Oriented
-> *  Look ahead: Intercative visualisation with IPython Widgets & Bokeh
+> *  Plot data with matplotlib and seaborn 
+> *  Look ahead: Interactive visualisation with Bokeh
 
 
 ## Matplotlib and notebooks
