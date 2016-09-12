@@ -237,7 +237,8 @@ Note that the indexes are returned as a `Tuple` (an immutable list). If you see 
 Now we know we know a little about doing maths with arrays, we can define a function a to convert a colour (RGB) image to grayscale.
  
 The equivalent Matlab function uses the following formula:
-$$gray = 0.2989 \times red + 0.5870 \times green+ 0.1140 \times blue$$
+
+$$ gray = 0.2989 \times red + 0.5870 \times green+ 0.1140 \times blue $$
  
  
 Write a python function that will compute the grayscale representation of our `face` array.
