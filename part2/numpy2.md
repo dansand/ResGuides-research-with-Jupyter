@@ -267,3 +267,4 @@ Create an 8x8 matrix and fill it with a checkerboard pattern
 
 <!--endsec-->
 
+$$ gray = 0.2989 \times red + 0.5870 \times green+ 0.1140 \times blue $$
