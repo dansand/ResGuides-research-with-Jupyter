@@ -77,7 +77,7 @@ a
 d
 ```
 
-This is shorter---certainly shorter than something that prints every character in a hundred-letter string---and
+This is shorter, certainly shorter than something that prints every character in a hundred-letter string, and
 more robust as well:
 
 ```python
@@ -95,8 +95,8 @@ e
 n
 ```
 
-The improved version uses a [for loop](reference.html#for-loop)
-to repeat an operation---in this case, printing---once for each thing in a collection.
+The improved version uses a _for loop_)
+to repeat an operation-in this case, printing-once for each thing in a collection.
 The general form of a loop is:
 
 ```python
@@ -104,10 +104,7 @@ for variable in collection:
     do things with variable
 ```
 
-We can call the [loop variable](reference.html#loop-variable) anything we like,
-but there must be a colon at the end of the line starting the loop,
-and we must indent anything we want to run inside the loop. Unlike many other languages, there is no
-command to signify the end of the loop body (e.g. end for); what is indented after the for statement belongs to the loop.
+We can call the _loop variable_ anything we like, but there must be a colon at the end of the line starting the loop, and we must indent anything we want to run inside the loop. Unlike many other languages, there is no command to signify the end of the loop body (e.g. end for); anything that is indented after the `for` statement belongs to the loop.
 
 Here's another loop that repeatedly updates a variable:
 
@@ -122,27 +119,9 @@ print('There are', length, 'vowels')
 There are 5 vowels
 ```
 
-It's worth tracing the execution of this little program step by step.
-Since there are five characters in `'aeiou'`,
-the statement on line 3 will be executed five times.
-The first time around,
-`length` is zero (the value assigned to it on line 1)
-and `vowel` is `'a'`.
-The statement adds 1 to the old value of `length`,
-producing 1,
-and updates `length` to refer to that new value.
-The next time around,
-`vowel` is `'e'` and `length` is 1,
-so `length` is updated to be 2.
-After three more updates,
-`length` is 5;
-since there is nothing left in `'aeiou'` for Python to process,
-the loop finishes
-and the `print` statement on line 4 tells us our final answer.
+It's worth tracing the execution of this little program step by step. Since there are five characters in `'aeiou'`, the statement on line 3 will be executed five times. The first time around, `length` is zero (the value assigned to it on line 1) and `vowel` is `'a'`. The statement adds 1 to the old value of `length`, producing 1, and updates `length` to refer to that new value. The next time around, `vowel` is `'e'` and `length` is 1, so `length` is updated to be 2. After three more updates, `length` is 5; since there is nothing left in `'aeiou'` for Python to process, the loop finishes and the `print` statement on line 4 tells us our final answer.
 
-Note that a loop variable is just a variable that's being used to record progress in a loop.
-It still exists after the loop is over,
-and we can re-use variables previously defined as loop variables as well:
+Note that a loop variable is just a variable that's being used to record progress in a loop. It still exists after the loop is over, and we can re-use variables previously defined as loop variables as well:
 
 ```python
 letter = 'z'
@@ -158,8 +137,7 @@ c
 after the loop, letter is c
 ```
 
-Note also that finding the length of a string is such a common operation
-that Python actually has a built-in function to do it called `len`:
+Note also that finding the length of a string is such a common operation that Python actually has a built-in function to do it called `len`:
 
 ```python
 print(len('aeiou'))
@@ -169,10 +147,7 @@ print(len('aeiou'))
 5
 ```
 
-`len` is much faster than any function we could write ourselves,
-and much easier to read than a two-line loop;
-it will also give us the length of many other things that we haven't met yet,
-so we should always use it when we can.
+`len` is much faster than any function we could write ourselves, and much easier to read than a two-line loop; it will also give us the length of many other things that we haven't met yet, so we should always use it when we can.
 
 If we loop over a list, which we learnt about in the previous lesson, the loop variable is assigned elements one at a time:
 
