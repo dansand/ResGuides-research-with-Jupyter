@@ -50,7 +50,7 @@ absolute zero in Celsius: -273.15
 ```
 
 What about converting Fahrenheit to Celsius? We could write out the formula, but we don't need to.
-Instead, we can _compose_the two functions we have already created:
+Instead, we can _compose_ the two functions we have already created:
 
 ```python
 def fahr_to_celsius(temp_f):
@@ -84,6 +84,7 @@ func(x)
 print('x is still', x)
 
 ```
+
 ```
 x is 50
 Changed local x to 2
@@ -126,6 +127,7 @@ def print_max(x, y):
 print_max(3, 5)
 print(print_max.__doc__)
 ```
+
 ```
 5 is maximum
 'Prints the maximum of two numbers. The two values must be integers.'
