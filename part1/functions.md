@@ -7,13 +7,11 @@
 > *   Set default values for function parameters.
 > *   Explain why we should divide programs into small, single-purpose functions.
 
-# Functions
 
-We're at the point now where like a way to package our code so that it is easier to reuse, and Python provides for this by letting us define things called __functions__ - a shorthand way of re-executing longer pieces of code. 
-
-The function concept is probably *the* most important building block of any non-trivial software (in any programming language)
+The next element of Python programming we're goinf to learn about is the _fucntions_. Functions provide a way to package our code so that it is easier to reuse, and simultanously provides a shorthand way of re-executing longer pieces of code. The function concept is probably *the* most important building block of any non-trivial software (in any programming language)
 
 Functions are defined using the `def` keyword. After this keyword comes an *identifier* name for the function, followed by a pair of parentheses which may enclose some names of variables, and by the final colon that ends the line. Next follows the block of statements that are part of this function. 
+
 An example will show that this is actually very simple. Let's try writing a function `fahr_to_kelvin` that converts temperatures from Fahrenheit to Kelvin:
 
 ```python
