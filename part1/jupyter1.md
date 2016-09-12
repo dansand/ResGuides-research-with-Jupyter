@@ -41,7 +41,6 @@ But first...something key to be aware of: Jupyter Notebooks have two different k
 2. **Edit mode** - when you're typing in a cell. Indicated by a green cell border
 
 
-
 ### Command Mode
 
 - `shift` + `enter` run cell, select below
