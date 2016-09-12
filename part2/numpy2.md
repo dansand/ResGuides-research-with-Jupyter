@@ -250,11 +250,12 @@ Write a python function that will compute the grayscale representation of our `f
 
 Explain the output of the following. If you're stuck,try breaking up the multitude of functions and methods used in the third line.  
 
+```python 
 np.random.seed(0)  # seed for reproducibility
 z = 0.5
 m = Z[np.abs(np.random.uniform(0,1,10) - z).argmin()]
 print(m)
-
+```
 
 <!--endsec-->
 
