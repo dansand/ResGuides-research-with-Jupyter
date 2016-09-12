@@ -8,7 +8,7 @@
 > *   Shortcuts
 
 
-### What are they?
+## What are they?
 
 Notebooks are documents produced by the Jupyter Notebook App which contain both computer code (e.g. python) and rich text elements (paragraph, equations, figures, links, etc...). Notebook documents are both human-readable documents containing the analysis description and the results (figures, tables, etc..) as well as executable documents which can be run to perform data analysis.
 
@@ -19,7 +19,7 @@ _How will the children of the future learn about science? How will the scientist
 
 * Jupyter Notebooks were formally called ipython notebooks...hence the .ipynb file extension legacy
 
-### The notebook dashboard
+## The notebook dashboard
 
 The Notebook Dashboard is the component which is shown first when launching Jupyter Notebook App. The Notebook Dashboard is mainly used to open notebook documents, and to manage the running kernels (visualize and shutdown).
 
@@ -27,16 +27,16 @@ The Notebook Dashboard is the component which is shown first when launching Jupy
 Make sure you have a Notebook. If you're don't have iPython/Jupyter on your computer, you can run a temporary notebook here:
 [Tempnb] (https://tmpnb.org/)
 
-###Code
+## Code
 
 Not just Python! The Notebook has support for over 40 programming languages, including those popular in Data Science such as Python, R, Julia and Scala.
 
-### Markdown
+## Markdown
 
 Explanatory text can be integrating with the Jupyter Notebook using a simple formatting schema called _Markdown_. See the link for a basic description.
 https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet
 
-###Keyboard Shortcuts
+## Keyboard Shortcuts
 
 #### Command mode vs. Edit mode
 
@@ -47,7 +47,7 @@ But first...something key to be aware of: Jupyter Notebooks have two different k
 
 
 
-#### Command Mode
+### Command Mode
 
 - `shift` + `enter` run cell, select below
 - `ctrl` + `enter` run cell
@@ -62,13 +62,13 @@ But first...something key to be aware of: Jupyter Notebooks have two different k
 - `M` change cell to `markdown` mode (good for documentation)
 
 
-#### Edit Mode
+## Edit Mode
 
 
 - `cmd` + `/` toggle comment lines
 - `tab` code completion or indent
 
-#### Command Palette
+## Command Palette
 
 `cmd` + `shift` + `p`
 
@@ -77,7 +77,7 @@ Want quick access to all the commands in Jupyter Notebooks? Open the command pal
 __The point is not remember all these, but to see that the Notebooks are equpied with all kinds of shortcuts to more efficiently produce content__
 
 
-### Literate programming & Reprodicible research 
+## Literate programming & Reprodicible research 
 
 Literate programming is an approach to programming introduced by Donald Knuth in which a program is given as an explanation of the program logic in a natural language, such as English, interspersed with snippets of macros and traditional source code, from which a compilable source code can be generated.
 
