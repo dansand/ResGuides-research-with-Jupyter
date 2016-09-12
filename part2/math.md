@@ -47,5 +47,36 @@ print(a)
 4.0
 ```
 
-This will work for all mathematical operators.
+This will work for all mathematical operators. The syntax It also extends to other data types, specifically, numpy arrays:
 
+```python
+a = np.array([1, 2, 3], float)
+b = a
+print(a is b)
+a += 4
+print(a is b)
+print(a, b)
+```
+```
+True
+True
+(array([ 5.,  6.,  7.]), array([ 5.,  6.,  7.]))
+```
+
+
+The behaviour is different here than if we had used the _non-in-place_ operation:
+
+```python
+a = np.array([1, 2, 3], float)
+b = a
+print(a is b)
+a = a + 4
+print(a is b)
+print(a, b)
+```
+
+```
+True
+False
+(array([ 5.,  6.,  7.]), array([ 1.,  2.,  3.]))
+```
