@@ -175,50 +175,59 @@ print(i)
 [6 3 7 4 6 9 2 6 7 4]
 ```
 
-##Looping through arrays
-
-There are a number of ways of looping through `np.arrays`.
+We can also create random samples from many common probability density functions. Let's, say an oil company drills 9 wild-cat oil exploration wells, each with an estimated probability of success of 0.1. All nine wells fail, the company gives up on oil and switches to it's focus to Renewable energy. What is the probability of that happening? Each Well is a success or fail outcome, which means we can model the process with a binomial distribution:  Let’s do 20,000 trials of the model, and count the number that generate zero positive results.
 
 ```python
-data = np.arange(0,10,2 )
+np.random.seed(0)
+print('answer is :', sum(np.random.binomial(n=9, p=0.1, size=20000) == 0)/20000.)
+```
+
+```
+('answer is :', 0.39240000000000003)
+```
+
+##Looping through arrays
+
+There are a number of ways of looping through numpy arrays
+
+```python
+np.random.seed(0)
+arr = np.random.rand(2,2)
 ```
 
 
 ```python
-for x in np.nditer(data):
+for x in np.nditer(arr):
     print(x)
 ```
 
 ```
-0
-2
-4
-6
-8
+0.548813503927
+0.715189366372
+0.602763376072
+0.544883182997
 ```
 
 
 
 ```python
 
-for index, x in np.ndenumerate(data):
+for index, x in np.ndenumerate(arr):
     print(index)
     print(x)
 ```
 ```
-(0,)
-0
-(1,)
-2
-(2,)
-4
-(3,)
-6
-(4,)
-8
+(0, 0)
+0.548813503927
+(0, 1)
+0.715189366372
+(1, 0)
+0.602763376072
+(1, 1)
+0.544883182997
 ```
 
-Note that the indexes are returned as a `Tuple` (an immutable list). A tuple with a single element / value, `n` gets prented as `(n,)`. 
+Note that the indexes are returned as a `Tuple` (an immutable list). If you see Python output that looks like `(n,)`, this is the default print style of the single-element tuple.  
 
 
 
