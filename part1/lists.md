@@ -25,15 +25,9 @@ The list was evaluated by Python (and returned to us) but Python didn’t save t
 weight_kg = 55
 ```
 
-Okay, so just to be clear, `=` is the assignment operator in Python, it does not mean "equal to". 
+Okay, so just to be clear, `=` is the assignment operator in Python; it binds a data object to a variable name, so that we can easilt refer to that object. A different operator, which we will see later, is used for equality comparison (`==`). 
 
-We can even define multiple variables at once:
-
-```python
-count, result, total = 0, 0, 0
-```
-
-Let's _assign_ that list to a variable now:
+Let's _assign_ our list to a variable:
 
 ```python
 odds = [1, 3, 5, 7]
@@ -54,13 +48,11 @@ print('first and last:', odds[0], odds[-1])
 first and last: 1 7
 ```
 
-Programming languages like Fortran and MATLAB start counting at 1, because that's what human beings have done for thousands of years.Languages in the C family (including C++, Java, Perl, and Python) count from 0 because that's simpler for computers to do.
+Notice how our variable now stands for the data object, in this case a list. This is the beatiful simplicity of programming - now we can deal with and act on a simple, easy-to-rememeber variable, even if _points_ to a large, complex data object.
 
+Note that programming languages in the C family (including C++, Java, Perl, and Python) count from 0 (because that's simpler for computers to do).
 
-There is one important difference between lists and strings:
-we can change the values in a list,
-but we cannot change the characters in a string.
-For example:
+There is one important difference between lists and strings: we can change the values in a list, but we cannot change the characters in a string. For example:
 
 ```python
 names = ['Newton', 'Darwing', 'Turing'] # typo in Darwin's name
@@ -96,8 +88,8 @@ A list is an _ordered_ sequence of items. Having order means we can index with n
 
 > ## Ch-Ch-Ch-Changes
 >
-> Data which can be modified in place is called [mutable](reference.html#mutable),
-> while data which cannot be modified is called [immutable](reference.html#immutable).
+> Data which can be modified in place is called _mutable_
+> while data which cannot be modified is called _immutable_
 > Strings and numbers are immutable. This does not mean that variables with string or number values are constants,
 > but when we want to change the value of a string or number variable, we can only replace the old value
 > with a completely new value.
