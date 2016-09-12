@@ -64,6 +64,16 @@ cos(pi)
 
 In addition to the standard library, there is a growing collection of several thousand components (from individual programs and modules to packages and entire application development frameworks), available from the Python Package Index (PIP), or Conda.
 
+For convenience, Python comes with a program called pip (a recursive acronym meaning "pip installs packages"), which will automatically fetch packages released and listed on PyPI (if you use Python version 2, pip must be installed separately). Running either if these from the command line (assuming pip and anaconda are installed on your system), will install the bokeh plotting library:
+
+```
+pip install bokeh
+```
+
+```
+conda install bokeh
+```
+
 
 ## Summary
 
