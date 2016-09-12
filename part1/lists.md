@@ -19,7 +19,7 @@
 [1, 3, 5, 7]
 ```
 
-The list was evaluated by Python (and returned to us) but Python didn’t save the data in memory. To do that, we need to assign the list to a variable. A variable is just a name for a value, such as x, current_temperature, or subject_id. Python’s variables must begin with a letter and are case sensitive. We can create a new variable by assigning a value to it using `=`
+The list was evaluated by Python (and returned to us) but Python didn’t save the data in memory. To do that, we need to assign the list to a variable. A variable is just a name for a value, such as `x`, `current_temperature`, or `subject_id`. Python’s variables must begin with a letter and are case sensitive. We can create a new variable by assigning a value to it using `=`
 
 ```python
 weight_kg = 55
