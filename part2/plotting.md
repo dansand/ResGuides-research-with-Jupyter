@@ -83,3 +83,22 @@ for ax in axes:
     ax.set_ylabel('y')
     ax.set_title('title')
 ```
+
+## Seaborn and bokeh
+
+Seaborn is a Python visualization library based on matplotlib. It provides a high-level interface for drawing attractive statistical graphics. 
+
+A very simple use of seaborn is to change the default plotting styles for matplotlib:
+
+```python
+import seaborn as sns
+sns.set(style="darkgrid")
+```
+```python
+fig, axes = plt.subplots(nrows=1, ncols=2)
+for ax in axes:
+    ax.plot(x, y, 'r')
+    ax.set_xlabel('x')
+    ax.set_ylabel('y')
+    ax.set_title('title')
+```
