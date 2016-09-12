@@ -6,8 +6,7 @@
 > *  Look ahead: Intercative visualisation with IPython Widgets & Bokeh
 
 
-##Matplotlib and notebooks
-
+## Matplotlib and notebooks
 
 Matplotlib is an excellent 2D and 3D graphics library for generating scientific figures. Some of the many advantages of this library include:
 * Easy to get started
@@ -30,7 +29,7 @@ import numpy as np
 
 We prefer the explicit imports of these libraries in addition to ` %pylab inline`.
 
-##Object oriented programming
+## Object oriented programming
 
 The main idea with object-oriented programming is to have objects that one can apply functions and actions on, and no object or program states should be global (such as the MATLAB-like API). The real advantage of this approach becomes apparent when more than one figure is created, or when a figure contains more than one subplot. 
 
@@ -54,3 +53,33 @@ axes.set_title('title')
 
 
 
+Although a little bit more code is involved, the advantage is that we now have full control of where the plot axes are placed, and we can easily add more than one axis to the figure:
+
+```python
+fig = plt.figure()
+axes1 = fig.add_axes([0.1, 0.1, 0.8, 0.8]) # main axes
+axes2 = fig.add_axes([0.2, 0.5, 0.4, 0.3]) # inset axes
+
+# main figure
+axes1.plot(x, y, 'r')
+axes1.set_xlabel('x')
+axes1.set_ylabel('y')
+axes1.set_title('title')
+
+# insert
+axes2.plot(y, x, 'g')
+axes2.set_xlabel('y')
+axes2.set_ylabel('x')
+axes2.set_title('insert title');
+```
+
+If we don't care about being explicit about where our plot axes are placed in the figure canvas, then we can use one of the many axis layout managers in matplotlib. My favorite is subplots, which can be used like this:
+
+```python
+fig, axes = plt.subplots(nrows=1, ncols=2)
+for ax in axes:
+    ax.plot(x, y, 'r')
+    ax.set_xlabel('x')
+    ax.set_ylabel('y')
+    ax.set_title('title')
+```
