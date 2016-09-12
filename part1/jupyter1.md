@@ -14,22 +14,17 @@ Notebooks are documents produced by the Jupyter Notebook App which contain both 
 
 The Jupyter Notebook App is a web application that allows you to create and share documents that contain live code, equations, visualizations and explanatory text.
 
-_How will the children of the future learn about science? How will the scientists of the future expand our thinking? I think the answer is Jupyter Notebooks._ Safia Abdalla
+_How will the children of the future learn about science? How will the scientists of the future expand our thinking? I think the answer is Jupyter Notebooks._ (Safia Abdalla)
 
-
-* Jupyter Notebooks were formally called ipython notebooks...hence the .ipynb file extension legacy
+Jupyter Notebooks were formally called ipython notebooks...hence the .ipynb file extension legacy
 
 ## The notebook dashboard
 
 The Notebook Dashboard is the component which is shown first when launching Jupyter Notebook App. The Notebook Dashboard is mainly used to open notebook documents, and to manage the running kernels (visualize and shutdown).
 
+Make sure you have a Notebook. If you don't have iPython/Jupyter on your computer, you can run a temporary notebook here:
+[Tempnb](https://tmpnb.org/). You should be able to follow much of this course using [Tempnb](https://tmpnb.org/), the only restriction being you can't download the example data sets. 
 
-Make sure you have a Notebook. If you're don't have iPython/Jupyter on your computer, you can run a temporary notebook here:
-[Tempnb] (https://tmpnb.org/)
-
-## Code
-
-Not just Python! The Notebook has support for over 40 programming languages, including those popular in Data Science such as Python, R, Julia and Scala.
 
 ## Markdown
 
@@ -38,7 +33,7 @@ https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet
 
 ## Keyboard Shortcuts
 
-#### Command mode vs. Edit mode
+### Command mode vs. Edit mode
 
 But first...something key to be aware of: Jupyter Notebooks have two different keyboard input modes:
 
@@ -75,6 +70,10 @@ But first...something key to be aware of: Jupyter Notebooks have two different k
 Want quick access to all the commands in Jupyter Notebooks? Open the command palette with `cmd` + `shift` + `p` and you'll quickly be able to search all the commands!
 
 __The point is not remember all these, but to see that the Notebooks are equpied with all kinds of shortcuts to more efficiently produce content__
+
+## Code
+
+Not just Python! The Notebook has support for over 40 programming languages, including those popular in Data Science such as Python, R, Julia and Scala.
 
 
 ## Literate programming & Reprodicible research 
