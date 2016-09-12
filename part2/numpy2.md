@@ -7,7 +7,7 @@
 
 ## Creating arrays
 
-We have see an example of creating an array from an existing data file using `np.genfromtxt()`. We start with this approach because as researchers, and often want to dive straigt into our data.There are a number of more formulaic ways to initialise new numpy arrays, for example:
+We have see an example of creating an array from an existing data file using `np.genfromtxt()`. We start with this approach because as researchers, and often want to dive straight into our data. There are alos a number of ways to initialise new numpy arrays, for example:
 
 * from a Python list or tuples
 * using functions that are dedicated to generating numpy arrays, such as `arange`, `linspace`, etc.
@@ -42,7 +42,7 @@ print(type(v), type(M))
 <class 'numpy.ndarray'> <class 'numpy.ndarray'>
 ```
 
-And as numpt arrays, we should be concerned about their size and shape:
+When dealing with numpy arrays, we find it useful to commonly remind check that the size and shape of our arrays are as we would exect:
 
 ```python
 print(v.shape, M.shape)
@@ -61,7 +61,6 @@ So far the `numpy.ndarray` looks pretty much like a Python list (or nested list)
 
 
 For larger arrays it is inpractical to initialize the data manually, using explicit python lists. Instead we can use one of the many _array-generating functions_ in numpy that generate arrays of different forms. 
-
 
 
 ```python
@@ -90,16 +89,18 @@ plt.show()
 
 
 ```python
-x, y = np.mgrid[0:3, 0:3] # similar to meshgrid in MATLAB
-print(x), print(y)
+x1, x2 = np.meshgrid(np.arange(1, 11, 2), np.arange(-12, -3, 3))
+print(x1)
+print(x2)
 ```
+
 ```
-[[0 0 0]
- [1 1 1]
- [2 2 2]]
-[[0 1 2]
- [0 1 2]
- [0 1 2]]
+[[1 3 5 7 9]
+ [1 3 5 7 9]
+ [1 3 5 7 9]]
+[[-12 -12 -12 -12 -12]
+ [ -9  -9  -9  -9  -9]
+ [ -6  -6  -6  -6  -6]]
 ```
 
 ```python
@@ -132,15 +133,19 @@ In order to have a more visually appealing array to work with,  let's read in an
 ```python
 from scipy import misc
 face = misc.face()
+print(type(face))
 ```
+
+```
+<type 'numpy.ndarray'>
+```
+
 
 ```python       
-plt.imshow(f)
+plt.imshow(face)
 ```
 
-
-
-
+It's common that libraries include a small ammount of reprentative data, for examples / demonstrations. 
 
 
 ##Looping through arrays
@@ -148,15 +153,45 @@ plt.imshow(f)
 There are a number of ways of looping through `np.arrays`.
 
 ```python
-#for x in np.nditer(data):
-#    print(x)
+data = np.arange(0,10,2 )
 ```
+
+
+```python
+for x in np.nditer(data):
+    print(x)
+```
+
+```
+0
+2
+4
+6
+8
+```
+
+
 
 ```python
 
 for index, x in np.ndenumerate(data):
-    print(index, x)
+    print(index)
+    print(x)
 ```
+```
+(0,)
+0
+(1,)
+2
+(2,)
+4
+(3,)
+6
+(4,)
+8
+```
+
+Note that the indexes are returned as a `Tuple` (an immutable list). A tuple with a single element / value, `n` gets prented as `(n,)`. 
 
 
 
@@ -182,7 +217,6 @@ for index, x in np.ndenumerate(data):
 > ## _challenge:_ Checkerboard
 >Create an 8x8 matrix and fill it with a checkerboard pattern
 
-> ## _challenge:_ Normalise 
-Normalise a 5x5 random matrix 
+
 
 
