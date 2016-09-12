@@ -476,6 +476,8 @@ follow = close[:-1] < close[1:]
 
 A very similar expression can be formulated to determine if two consecutive days of increase or decrease have occured. 
 
+* the idea for this challenge comes from Nate Silver's book _signal and the noise_. 
+
 <!--endsec-->
 
 
