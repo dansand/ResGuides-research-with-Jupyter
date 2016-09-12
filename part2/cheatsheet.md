@@ -1,5 +1,8 @@
 Scientific Python Cheatsheet
 ============================
+
+This cheatsheet originates from: https://ipgp.github.io/scientific_python_cheat_sheet
+
 <!-- markdown-toc start - Don't forget to edit this section according to your modifications -->
 **Table of Contents**
 
