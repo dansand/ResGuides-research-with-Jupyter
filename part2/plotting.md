@@ -44,7 +44,6 @@ y = x ** 2
 To use the object-oriented API we start out we store a reference to the newly created figure instance in the fig variable, and from it we create a new axis instance axes using the add_axes method in the Figure class instance fig:
 
 ```
-
 fig = plt.figure()
 axes = fig.add_axes([0.1, 0.1, 0.8, 0.8]) # left, bottom, width, height (range 0 to 1)
 axes.plot(x, y, 'r')
@@ -52,3 +51,6 @@ axes.set_xlabel('x')
 axes.set_ylabel('y')
 axes.set_title('title')
 ```
+
+
+
