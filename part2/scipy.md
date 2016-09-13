@@ -18,15 +18,6 @@ SciPy is a collection of scientific functionality that is built on NumPy. The pa
 
 ## Interpolation and gradients
 
-Let's once again grab our Nasdaq data
+Generally we use interpolation when we'd like to model data _in between_ data points. The simplist type of interpolation is when our data is a function of 1 variable. This is often called _Univariate _ interpolation in Scipy. 
 
-```python
-import numpy as np
-import scipy as sp
-```
 
-```python
-filename = 'data/nasdaq.csv'
-data = np.loadtxt(filename, delimiter=',', skiprows=1,usecols=(4,5))
-close = data[::-1, 0].copy()
-```
