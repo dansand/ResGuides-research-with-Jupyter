@@ -70,10 +70,24 @@ Let's create some more data, this time with some random signal
 
 ```python
 
-np.random.seed(6)
+np.random.seed(10)
 
 # data
 n = 100
-x = np.linspace(0, 50, n)
-y = 0.5 * np.cumsum(np.random.randn(n))
+x = np.linspace(0, 70, n)
+y = 0.5 * np.cumsum(np.random.randn(n)) #Return a sample (or samples) from the "standard normal" distribution.
+```
+
+```python
+
+# plot data, spline fit, and derivatives
+fig, ax = plt.subplots()
+
+ax.plot(x, y, 'ko', ms=2, label='data')
+ax.plot(x, spline_0(x), 'k', label='5th deg spline')
+ax.plot(x, spline_1(x), 'g', label='1st order derivative', lw = 0.5)
+ax.plot(x, spline_2(x), 'b', label='2nd order derivative',  lw = 0.5)
+
+ax.legend(loc='best')
+ax.grid()
 ```
