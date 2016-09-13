@@ -44,7 +44,7 @@ print(type(f))
 ```
 <class '_io.TextIOWrapper'>
 
-### Read a file line-by-line
+## Read a file line-by-line
 
 We can use readline() method to read individual lines of a file. This method reads a file till the newline, including the newline character
 
@@ -147,7 +147,7 @@ array([  8.92000000e+02,   3.00000000e+00,   3.45000000e+01,
 
 This is fine, and if you definitely want to use the numpy package, it may be the easiest way to get just the numeric data out of a delimited plain txt file (i.e a csv ). But if your data consists of both number and characters, there is a more applicable package available in Python...
 
-### Mixed tabular Pandas
+## Mixed tabular Pandas
 
 While we don't use the Pandas library in this course, it's useful to get a feel for what Pandas is, what types of data it can handle, and show how easy it is to read these in...
 
@@ -214,6 +214,6 @@ plt.show()
 
 ![Pandas histogram](fig/pandas_hist.png)
 
-##Encoding
+## Encoding
 
 When working with files in text mode, it is recommended to specify the encoding type. Files are stored in bytes in the disk, we need to decode them when we read into Python. Similarly, encoding is performed while writing texts to the file. The default encoding is platform dependent. In windows, it is 'cp1252' but 'utf-8' in Linux. Hence, we must not rely on the default encoding otherwise, our code will behave differently in different platforms. Thus, this is the preferred way to open a file for reading in text mode.
