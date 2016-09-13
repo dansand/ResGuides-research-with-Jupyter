@@ -165,3 +165,20 @@ html = file_html(p1, CDN, "my plot")
 with open('test.html', 'w') as f:
     f.write(html)
 ```
+
+
+<!--sec data-title="Focus on the positives" data-id="challenge1" data-show=true ces-->
+
+
+The code below creates a 1-d array of values. 
+
+```python
+x = np.linspace(0,20*np.pi, 200)
+```
+
+Create another array that gives the `sin` function of this array. Then set all value less than zero to zero. 
+
+Plot the result.
+
+
+<!--endsec-->
