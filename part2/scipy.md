@@ -60,6 +60,8 @@ ax.legend(loc=2)
 ax.grid()
 ```
 
+![Interpolation](../fig/interp.png)
+
 
 ## Gradients in noisy data
 
@@ -92,3 +94,5 @@ ax.plot(x, spline_2(x), 'b', label='2nd order derivative',  lw = 0.5)
 ax.legend(loc='best')
 ax.grid()
 ```
+
+![Spline](../fig/grad_noisy.png
