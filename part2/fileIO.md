@@ -215,7 +215,7 @@ sns.set(rc={"figure.figsize": (8, 4)}); np.random.seed(0)
 ax = sns.distplot(df['Age'].dropna())
 ```
 
-![Pandas histogram](fig/pand_hist.png)
+![Pandas histogram](../fig/pand_hist.png)
 
 ```python
 g = sns.FacetGrid(df, col="Pclass", sharex=False,
@@ -223,7 +223,7 @@ g = sns.FacetGrid(df, col="Pclass", sharex=False,
 g.map(sns.boxplot, "Age", 'Sex');
 ```
 
-![Pandas histogram](fig/facet.png)
+![Pandas histogram](../fig/facet.png)
 
 
 ## Encoding
