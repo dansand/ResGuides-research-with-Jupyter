@@ -95,4 +95,4 @@ ax.legend(loc='best')
 ax.grid()
 ```
 
-![Spline](../fig/grad_noisy.png
+![Spline](../fig/grad_noisy.png)
