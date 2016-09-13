@@ -3,7 +3,6 @@
 > ## Learning Objectives
 > *  Introduce the diverse scipy tools
 > * Interpolation
-> * Scikit Image
 
 
 SciPy is a collection of scientific functionality that is built on NumPy. The package began as a set of Python wrappers to well-known Fortran libraries for numerical computing, and has grown from there. The package is arranged as a set of submodules, each implementing some class of numerical algorithms. Here is an incomplete sample of some of the more important ones for data science:
