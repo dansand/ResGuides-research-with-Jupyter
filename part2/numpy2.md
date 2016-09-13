@@ -109,26 +109,8 @@ In this case, the same thing could have been better achived by using `flatten()`
 z.flatten()
 ```
 
-In order to have a more visually appealing array to work with,  let's read in an image from the Scipy sample data:
-
-```python
-from scipy import misc
-face = misc.face()
-print(type(face))
-```
-
-```
-<type 'numpy.ndarray'>
-```
 
 
-```python       
-plt.imshow(face)
-```
-
-It's common that libraries include a small ammount of reprentative data, for examples / demonstrations. 
-
-## Fancy indexing
 
 
 ## Random numbers
@@ -179,6 +161,23 @@ print('answer is :', sum(np.random.binomial(n=9, p=0.1, size=20000) == 0)/20000.
 
 ```
 ('answer is :', 0.39240000000000003)
+
+```
+
+## Fancy indexing
+
+Fancy indexing generally refers using the result of a numpy Boolean array to index a non-boolean array. Imagine you wanted to sqaure only the negative values in an array:
+
+```python
+rand = np.random.RandomState(42)
+A = rand.randint(-100,100, size=10)
+T = A.copy() - 5
+T[T<0] **= 2
+print(T)
+```
+
+```
+[   9   74  169 8281    1 1156   83 7225    9   16]
 ```
 
 ##Looping through arrays
@@ -223,6 +222,28 @@ for index, x in np.ndenumerate(arr):
 ```
 
 Note that the indexes are returned as a `Tuple` (an immutable list). If you see Python output that looks like `(n,)`, this is the default print style of the single-element tuple.  
+
+## Images as arrays
+
+
+In order to have a more visually appealing array to work with,  let's read in an image from the Scipy sample data:
+
+```python
+from scipy import misc
+face = misc.face()
+print(type(face))
+```
+
+```
+<type 'numpy.ndarray'>
+```
+
+
+```python       
+plt.imshow(face)
+```
+
+It's common that libraries include a small ammount of reprentative data, for examples / demonstrations. 
 
 
 
