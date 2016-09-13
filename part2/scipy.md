@@ -29,7 +29,7 @@ from scipy import interpolate
 Let's go ahead and create some data:
 
 ```python
-x = np.linspace(0, 4, 12)
+x = np.linspace(0, 4, 8)
 y = np.cos(x**2/3+4)
 
 xn = np.linspace(0, 4, 100)
@@ -57,6 +57,7 @@ ax.plot(xn, yn1, label='linear Interp values', lw=0.7)
 ax.plot(xn, yn2, label='quadratic Interp values', lw=0.7)
 
 ax.legend(loc=2)
+ax.grid()
 ```
 
 
