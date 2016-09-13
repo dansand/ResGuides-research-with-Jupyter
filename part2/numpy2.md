@@ -237,7 +237,6 @@ Note that the indexes are returned as a `Tuple` (an immutable list). If you see 
 
 ## Images as arrays
 
-
 In order to have a more visually appealing array to work with,  let's read in an image from the Scipy sample data:
 
 ```python
@@ -254,9 +253,21 @@ print(type(face))
 ```python       
 plt.imshow(face)
 ```
+We can import this as a greyscale image
 
-It's common that libraries include a small ammount of reprentative data, for examples / demonstrations. 
+```python     
+f = misc.face(gray=True)
+```
 
+Like any numpy array we can now start playing around with values:
+
+```python
+f[0:300, 0:300] = 255
+f[500:, 700:] = 0
+plt.imshow(f, cmap=plt.cm.gray) 
+```
+
+Learning numpy is a great way to get into image analysis. 
 
 
 <!--sec data-title="the dreaded greyscale" data-id="challenge1" data-show=true ces-->
