@@ -173,6 +173,13 @@ with open('test.html', 'w') as f:
     f.write(html)
 ```
 
+Note that by using a Jupyter magic, we can even load that html into the notebook.
+
+```python
+%%html
+test.html
+```
+
 
 <!--sec data-title="Focus on the positives" data-id="challenge1" data-show=true ces-->
 
