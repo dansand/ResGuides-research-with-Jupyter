@@ -301,6 +301,13 @@ print(m)
 
 <!--sec data-title="checkerboard" data-id="challenge3" data-show=true ces-->
 
-Create an 8x8 matrix and fill it with a checkerboard pattern.
+Create an square numpy array and fill it with a checkerboard pattern.
+
+```python
+import numpy as np
+check = np.zeros((9, 9))
+ ...
+plt.imshow(check, cmap='gray', interpolation='nearest') 
+```
 
 <!--endsec-->
