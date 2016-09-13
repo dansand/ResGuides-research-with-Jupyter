@@ -61,3 +61,19 @@ ax.legend(loc=2)
 
 
 ## Gradients in noisy data
+
+Often we would like to compute gradients in a data set. However, the gradient operator acts as a short pass filter, and enhaces high frequency noise. If your data contains a lot of high freqency noise, this will be amplified if we do not take care in how we calculate a gradient. 
+
+One solution is to smooth the original signal. Scipy’s UnivariateSpline class is a useful way to smooth 1-d data, such as time series, especially if you need an estimate of the derivative. It is an implementation of an interpolating spline. 
+
+Let's create some more data, this time with some random signal
+
+```python
+
+np.random.seed(6)
+
+# data
+n = 100
+x = np.linspace(0, 50, n)
+y = 0.5 * np.cumsum(np.random.randn(n))
+```
