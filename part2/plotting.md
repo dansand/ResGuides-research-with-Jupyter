@@ -87,6 +87,25 @@ for ax in axes:
     ax.set_title('title')
 ```
 
+A scatter plot is easy too!
+
+```python
+rng = np.random.RandomState(0)
+x = rng.randn(100)
+y = rng.randn(100)
+colors = rng.rand(100)
+sizes = 1000 * rng.rand(100)
+```
+
+```python
+fig, ax = plt.subplots()
+s = ax.scatter(x, y, c=colors, s=sizes, alpha=0.3,
+            cmap='viridis')
+fig.colorbar(s)  # show color scale
+```
+
+![Fig3](../fig/scatter.png)
+
 ## Seaborn and bokeh
 
 Seaborn is a Python visualization library based on matplotlib. It provides a high-level interface for drawing attractive statistical graphics. 
