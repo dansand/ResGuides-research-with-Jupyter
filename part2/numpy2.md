@@ -103,6 +103,12 @@ The reshape method lets you (almost) arbitrarily change the shape of an array
 z.reshape(9)
 ```
 
+In this case, the same thing could have been better achived by using `flatten()`:
+
+```python
+z.flatten()
+```
+
 In order to have a more visually appealing array to work with,  let's read in an image from the Scipy sample data:
 
 ```python
