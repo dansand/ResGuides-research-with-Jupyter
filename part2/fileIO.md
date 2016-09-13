@@ -203,7 +203,7 @@ df.describe()
 | 75%         | 1204.750000 | 3.000000   | NaN        | 1.000000   | 0.000000   | NaN        |
 | max         | 1309.000000 | 3.000000   | 76.000000  | 8.000000   | 9.000000   | 512.329200 |
 
-This is also very useful: pandas has taken all of the numerical columns and quickly calculated the mean, std, minimum and maximum value. Convenient! But also a word of caution: we know there are a lot of missing values in Age, for example. How did pandas deal with that? It must have left out any nulls from the calculation. So if we start quoting the "average age on the Titanic" we need to caveat how we derived that number.
+This is also very useful: pandas has taken all of the numerical columns and quickly calculated the mean, std, minimum and maximum value. Convenient! But also a word of caution: we know there are a lot of missing values in Age, for example. How did pandas deal with that? It must have left out any NaNs from the calculation. So if we start quoting the "average age on the Titanic" we need to caveat how we derived that number.
 
 ```python
 %matplotlib inline
