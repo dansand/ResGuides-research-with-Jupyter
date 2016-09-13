@@ -166,7 +166,7 @@ print('answer is :', sum(np.random.binomial(n=9, p=0.1, size=20000) == 0)/20000.
 
 ## Fancy indexing
 
-Fancy indexing generally refers using the result of a numpy Boolean array to index a non-boolean array. Imagine you wanted to sqaure only the negative values in an array:
+Fancy indexing generally refers using arrays of indices or Booleans to index another array. Imagine you wanted to sqaure only the negative values in an array:
 
 ```python
 rand = np.random.RandomState(42)
@@ -179,6 +179,8 @@ print(T)
 ```
 [   9   74  169 8281    1 1156   83 7225    9   16]
 ```
+
+As you can see, numpy arrays can be indexed with boolean or integer arrays (masks). By default this creates _copies not views_.
 
 ##Looping through arrays
 
