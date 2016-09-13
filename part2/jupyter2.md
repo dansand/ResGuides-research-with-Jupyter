@@ -15,7 +15,7 @@
 
 This magic loads a Python file from a filepath or URL and replaces the contents of the cell with the contents of the file.
     
-    %matplotlib inline
+    %pylab inline
     
 This magic places matplotlib plots inline instead of opening a new window.
 
@@ -38,10 +38,6 @@ This magic times the execution of a Python statement or expression. The CPU and 
     %%html
 
 Render the cell as a block of HTML
-
-    %%latex
-
-Render the cell as a block of latex
 
 ## Timing code
 
