@@ -205,14 +205,26 @@ df.describe()
 
 This is also very useful: pandas has taken all of the numerical columns and quickly calculated the mean, std, minimum and maximum value. Convenient! But also a word of caution: we know there are a lot of missing values in Age, for example. How did pandas deal with that? It must have left out any NaNs from the calculation. So if we start quoting the "average age on the Titanic" we need to caveat how we derived that number.
 
+## Quick plots with Pandas and seaborn
+
+Now we have a data frame, let's quickly look at couple of quick plots we can create by passing our dataframe into Seaborn. 
+
 ```python
-%matplotlib inline
-import matplotlib.pyplot as plt
-df['Age'].dropna().hist(bins=16, range=(0,80), alpha = .5)
-plt.show()
+import seaborn as sns
+sns.set(rc={"figure.figsize": (8, 4)}); np.random.seed(0)
+ax = sns.distplot(df['Age'].dropna())
 ```
 
-![Pandas histogram](fig/pandas_hist.png)
+![Pandas histogram](fig/pand_hist.png)
+
+```python
+g = sns.FacetGrid(df, col="Pclass", sharex=False,
+                  gridspec_kws={"width_ratios": [5, 3, 3]})
+g.map(sns.boxplot, "Age", 'Sex');
+```
+
+![Pandas histogram](fig/facet.png)
+
 
 ## Encoding
 
