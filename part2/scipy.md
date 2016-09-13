@@ -50,13 +50,11 @@ yn2 = f2(xn)
 ```python
 fig, ax = plt.subplots(figsize = (8,4))
 
-ax.plot(xn, y0, '--k', label='True values', lw=0.4)
+ax.plot(xn, y0, '--k', label='True values', lw=0.7)
 ax.plot(x, y, 'ok', label='Known points')
-ax.plot(xn, yn, label='linear Interp values', lw=0.4)
-ax.plot(xn, yn1, label='linear Interp values', lw=0.4)
-ax.plot(xn, yn0, label='nearest neighbour values', lw=0.4)
-ax.plot(xn, yn2, label='quadratic Interp values', lw=0.4)
-
+ax.plot(xn, yn0, label='nearest neighbour values', lw=0.7)
+ax.plot(xn, yn1, label='linear Interp values', lw=0.7)
+ax.plot(xn, yn2, label='quadratic Interp values', lw=0.7)
 
 ax.legend(loc=2)
 ```
