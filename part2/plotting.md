@@ -51,6 +51,8 @@ axes.set_ylabel('y')
 axes.set_title('title')
 ```
 
+![Fig1](../fig/plt1.png)
+
 
 Although a little bit more code is involved, the advantage is that we now have full control of where the plot axes are placed, and we can easily add more than one axis to the figure:
 
@@ -72,6 +74,8 @@ axes2.set_ylabel('x')
 axes2.set_title('insert title');
 ```
 
+![Fig1](../fig/plt2.png)
+
 If we don't care about being explicit about where our plot axes are placed in the figure canvas, then we can use one of the many axis layout managers in matplotlib. My favorite is subplots, which can be used like this:
 
 ```python
@@ -90,8 +94,7 @@ Seaborn is a Python visualization library based on matplotlib. It provides a hig
 A very simple use of seaborn is to change the default plotting styles for matplotlib:
 
 ```python
-import seaborn as sns
-sns.set(style="darkgrid") #Set aesthetic parameters in one step.
+import seaborn as sns #seaborn defaults
 ```
 ```python
 fig, axes = plt.subplots(nrows=1, ncols=2)
@@ -101,12 +104,16 @@ for ax in axes:
     ax.set_ylabel('y')
     ax.set_title('title')
 ```
+
+![Fig1](../fig/plt3.png)
+
 As well changing the default style of out matplotlib plots, Seaborn excels in predefined, out-of-the-box-plots. The emphasis is on statistical distrubutions:
 
 ```python
 x = np.random.normal(size=100)
 sns.distplot(x);
 ```
+
 
 Bokeh is a Python interactive visualization library that targets modern web browsers for presentation. Its goal is to provide elegant, concise construction of novel graphics in the style of D3.js, and to extend this capability with high-performance interactivity over very large or streaming datasets. Bokeh can help anyone who would like to quickly and easily create interactive plots, dashboards, and data applications.
 
@@ -176,9 +183,7 @@ The code below creates a 1-d array of values.
 x = np.linspace(0,20*np.pi, 200)
 ```
 
-Create another array that gives the `sin` function of this array. Then set all value less than zero to zero. 
-
-Plot the result.
+Create another array that gives the `sin` function of this array. Then set all value less than zero to zero. Finally, plot the result.
 
 
 <!--endsec-->
