@@ -129,6 +129,7 @@ Now we'll load the bokeh modules we need:
 from bokeh.layouts import gridplot
 from bokeh.plotting import figure, show, output_file
 from bokeh.io import output_notebook
+from bokeh.embed import file_html
 ```
 
 And configure the Jupyter notebook output:
