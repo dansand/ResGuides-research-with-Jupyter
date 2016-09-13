@@ -52,7 +52,6 @@ axes.set_title('title')
 ```
 
 
-
 Although a little bit more code is involved, the advantage is that we now have full control of where the plot axes are placed, and we can easily add more than one axis to the figure:
 
 ```python
@@ -92,7 +91,7 @@ A very simple use of seaborn is to change the default plotting styles for matplo
 
 ```python
 import seaborn as sns
-sns.set(style="darkgrid")
+sns.set(style="darkgrid") #Set aesthetic parameters in one step.
 ```
 ```python
 fig, axes = plt.subplots(nrows=1, ncols=2)
@@ -101,6 +100,12 @@ for ax in axes:
     ax.set_xlabel('x')
     ax.set_ylabel('y')
     ax.set_title('title')
+```
+As well changing the default style of out matplotlib plots, Seaborn excels in predefined, out-of-the-box-plots. The emphasis is on statistical distrubutions:
+
+```python
+x = np.random.normal(size=100)
+sns.distplot(x);
 ```
 
 Bokeh is a Python interactive visualization library that targets modern web browsers for presentation. Its goal is to provide elegant, concise construction of novel graphics in the style of D3.js, and to extend this capability with high-performance interactivity over very large or streaming datasets. Bokeh can help anyone who would like to quickly and easily create interactive plots, dashboards, and data applications.
