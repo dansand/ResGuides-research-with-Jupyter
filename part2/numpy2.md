@@ -12,10 +12,14 @@ We have see an example of creating an array from an existing data file using `np
 * from a Python list or tuples
 * using functions that are dedicated to generating numpy arrays, such as `arange`, `linspace`, etc.
 
-To create a new 1D  array (sometimes called a vector) from Python lists we can use the np.array function.
+```python 
+import numpy as np
+```
+
+To create a new 1D  array from Python lists we can use the `np.array()` function.
 
 ```python 
-v = array([1,2,3,4])
+v = np.array([1,2,3,4])
 print(v)
 ```
 ```
@@ -25,7 +29,7 @@ print(v)
 A 2D array (sometimes called a matrix) can be created from a nested list:
 
 ```python 
-M = array([[1, 2], [3, 4]])
+M = np.array([[1, 2], [3, 4]])
 print(M)
 ```
 ```
@@ -74,34 +78,10 @@ print(x)
 
 ```python
 # create a vector with linspace, both end points ARE included
-linspace(0, 10, 25) # arguments: start, end, number
-```
-
-Let's plot some point generated using `np.linspace`
-
-```python
-x = np.linspace(0, 3, 20)
-y = np.linspace(0, 9, 20)
-plt.plot(x, y)       # line plot
-plt.plot(x, y, 'o')  # dot plot
-plt.show() 
+np.linspace(0, 10, 25) # arguments: start, end, number
 ```
 
 
-```python
-x1, x2 = np.meshgrid(np.arange(1, 11, 2), np.arange(-12, -3, 3))
-print(x1)
-print(x2)
-```
-
-```
-[[1 3 5 7 9]
- [1 3 5 7 9]
- [1 3 5 7 9]]
-[[-12 -12 -12 -12 -12]
- [ -9  -9  -9  -9  -9]
- [ -6  -6  -6  -6  -6]]
-```
 
 ```python
 #Return a new array of given shape and type, 
@@ -114,7 +94,14 @@ z = np.zeros((3,3))
  [ 0.  0.  0.]]
 ```
 
+## Array manipulation
 
+The reshape method lets you (almost) arbitrarily change the shape of an array
+
+
+```python
+z.reshape(9)
+```
 
 In order to have a more visually appealing array to work with,  let's read in an image from the Scipy sample data:
 
