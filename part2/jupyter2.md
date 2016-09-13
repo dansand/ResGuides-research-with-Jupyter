@@ -11,6 +11,8 @@
 
 ## Magics
 
+Jupyter has a set of predefined _magic functions_ that you can call with a command line style syntax. There are two kinds of magics, line-oriented and cell-oriented. Line magics are prefixed with the `%` character and work much like OS command-line calls: they get as an argument the rest of the line, where arguments are passed without parentheses or quotes. Cell magics are prefixed with a double `%%`, and they are functions that get as an argument not only the rest of the line, but also the lines below it in a separate argument.
+
     %load 
 
 This magic loads a Python file from a filepath or URL and replaces the contents of the cell with the contents of the file.
