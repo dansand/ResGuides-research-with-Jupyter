@@ -128,6 +128,8 @@ plt.imshow(face)
 
 It's common that libraries include a small ammount of reprentative data, for examples / demonstrations. 
 
+## Fancy indexing
+
 
 ## Random numbers
 
