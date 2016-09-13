@@ -76,9 +76,36 @@ Wall time: 1.1 s
 
 ## What about scripts?
 
+We can easy run scripts and load pieces of code into the notebook. As an example, let's save a function we wrote into a script. The  code for fibonacci function, if you recall was:
+
+```python
+def fibonacci(n):
+    """
+    Takes one argument `n` and returns the `n`-th Fibonacci number.
+    """
+    f0 = 0
+    f1 = 1
+    while n > 1:
+        nxt = f0 + f1
+        f0 = f1
+        f1 = nxt
+        n -= 1
+    return f1
+```
+Try going to your jupyter _dashboard_ then select the `new` dropdown and selecting `Text File`. This will open a `plain text` file. Paste the contents of the fibonacci sequence function into the file, then save the file with a name like `fibonacci.py` (python scripts typically end with .py). Now we're ready to load that script into a Jupyter session. 
+
+```python
+%load fib.py
+```
+
+How about that? We now get the contents of the script in a cell. See how the `%load` magic is commented out with the `#` Not that the cell hasn't run yet - until we do that, the function has not been stored in memory.
+
+Now try using a slightly different _magic_: `%run fib.py`.
+
+What do you think happened here. 
 
 
-## Binder
+## NbViewer, github Binder
 
 Version control and social coding sites like GitHub make it simple to share code, and projects like the Jupyter notebook provide interactive interfaces for language-agnostic analysis. But executing that code remains a hurdle — dependencies, data, and system configuration are less portable than code, and are more difficult to specify. Binder has two primary goals: to make it easy to construct reproducible environments, even without knowledge of containerization technology; and to make these environments available for instantaneous deployment in the browser.
 
