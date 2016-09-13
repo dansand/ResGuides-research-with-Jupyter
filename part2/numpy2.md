@@ -166,7 +166,17 @@ print('answer is :', sum(np.random.binomial(n=9, p=0.1, size=20000) == 0)/20000.
 
 ## Fancy indexing
 
-Fancy indexing generally refers using arrays of indices or Booleans to index another array. Imagine you wanted to sqaure only the negative values in an array:
+Fancy indexing generally refers using arrays of indices or Booleans to index another array. 
+
+```python
+a = np.arange(10)
+print(a[[2, 3, 2, 4, 2]])
+```
+```
+[2 3 2 4 2]
+```
+
+Or, imagine you wanted to square only the negative values in an array:
 
 ```python
 rand = np.random.RandomState(42)
