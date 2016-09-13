@@ -76,7 +76,7 @@ Wall time: 1.1 s
 
 ## What about scripts?
 
-We can easy run scripts and load pieces of code into the notebook. As an example, let's save a function we wrote into a script. The  code for fibonacci function, if you recall was:
+We can easily run scripts and load pieces of code into the notebook. As an example, let's save a function we wrote into a script. The  code for fibonacci function, if you recall was:
 
 ```python
 def fibonacci(n):
