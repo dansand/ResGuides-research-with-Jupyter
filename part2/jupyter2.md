@@ -45,7 +45,7 @@ Render the cell as a block of HTML
 
     %timeit
 
-The major advantage of the` %timeit` magig that you don't have to import timer.timeit, and run the code multiple times to figure out which is the better approach; %timeit will automatically calculate number of runs required for your code based on a total of 2 seconds execution window.
+The major advantage of the` %timeit` magic that you don't have to import timer.timeit, and run the code multiple times to figure out which is the better approach; %timeit will automatically calculate number of runs required for your code based on a total of 2 seconds execution window.
 
 
 ```python
