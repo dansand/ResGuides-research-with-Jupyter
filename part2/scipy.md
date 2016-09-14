@@ -80,15 +80,37 @@ x = np.linspace(0, 70, n)
 y = 0.5 * np.cumsum(np.random.randn(n)) #Return a sample (or samples) from the "standard normal" distribution.
 ```
 
+Import the 1-d Spline function from Scipy:
+
+```python
+from scipy.interpolate import UnivariateSpline
+```
+
+```python
+k = 5 # 5th degree spline
+s = 0.1*(n - np.sqrt(2*n)) # smoothing factor
+spline_0 = UnivariateSpline(x, y, k=k, s=s)
+spline_1 = UnivariateSpline(x, y, k=k, s=s).derivative(n=1)
+spline_2 = UnivariateSpline(x, y, k=k, s=s).derivative(n=2)
+```
+
+```python
+y_sp0 = spline_0(x)
+y_sp1 = spline_1(x)
+y_sp2 = spline_2(x)
+```
+
+
+
 ```python
 
 # plot data, spline fit, and derivatives
 fig, ax = plt.subplots()
 
 ax.plot(x, y, 'ko', ms=2, label='data')
-ax.plot(x, spline_0(x), 'k', label='5th deg spline')
-ax.plot(x, spline_1(x), 'g', label='1st order derivative', lw = 0.5)
-ax.plot(x, spline_2(x), 'b', label='2nd order derivative',  lw = 0.5)
+ax.plot(x, y_sp0, 'k', label='5th deg spline')
+ax.plot(x, y_sp1, 'g', label='1st order derivative', lw = 0.5)
+ax.plot(x, y_sp2, 'b', label='2nd order derivative',  lw = 0.5)
 
 ax.legend(loc='best')
 ax.grid()
