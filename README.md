@@ -6,9 +6,7 @@ Research with Jupyter is a course with three fundamental aims:
 * to introduce the core components of Scientific Python (Scipy)
 * to build familiarity and skills using Jupyter notebooks
 
-This course is intended to be taught. You may find the book useful to read by yourself, but we include only the bare minimum discussion, and assume that instructors will add detail as the opportunity arises. We have provided links to recorded lectures / video tutorials, to try to make the course more useful for those working by themselves.
-
-We do assume that the course will be taught using the Jupyter notebook environment. You will find two sections which develop familiarity with the notebook environment. Again, these sections are most useful if they are demonstrated, rather than read.  
+This course is intended to be taught. You may find the book useful to read by yourself, but we include only the bare minimum discussion, and assume that instructors will add detail as the opportunity arises. We have provided links to recorded lectures / video tutorials, to try to make the course more useful for those working by themselves. We assume that the course will be taught using the Jupyter notebook environment. You will find two sections which develop familiarity with the notebook environment.
 
 This book draws much of its content and examples from the resources listed below:
 

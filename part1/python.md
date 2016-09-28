@@ -9,7 +9,7 @@
 
 ## What is Python?
 
-Conceived in the late 1980s as a teaching and scripting language, Python has since become an essential tool for many programmers, engineers, researchers, and data scientists across academia and industry. The appeal of Python is in its simplicity and beauty, as well as the convenience of the large ecosystem of domain-specific tools that have been built on top of it. 
+Python was created in the late 1980s, primarily as as a teaching and _scripting_ language. Python has since become an essential tool for many programmers, engineers, researchers, and data scientists across academia and industry. Accordingly, a large _ecosystem_ of discipline-specific tools have been built on top of it. Part 2 of this course will introduce you to the Scientific Python Stack (SciPy) a collection of open source software for scientific computing in Python, and particularly a specified set of core packages.
 
 ## Python prompt
 
@@ -18,7 +18,8 @@ The traditional, pehaps still the default way to to start using Python, is to op
 ```bash
 $ python
 ```
-Here is a representative output of what you might see when you launch Python, namely a brief summary of which distribution and version of Python you are using. 
+
+Here is a representative output of what you might see when you launch Python, namely a brief summary of which distribution and version of Python you are using.
 
 ```
 Python 2.7.9 (default, Mar  1 2015, 12:57:24)
@@ -79,11 +80,11 @@ As you can see, Python is a great calculator. If you're wondering what else you 
 
 ## Evaluation Order
 
-If you had an expression such as `2 + 3 * 4`, is the addition done first or the multiplication? Convention dictates that the multiplication should be done first. This means that the multiplication operator has higher _precedence_ than the addition operator.
+If you had an expression such as `2 + 3 * 4`, is the addition done first or the multiplication and does it matter? It certainly does matter, and Python will obediently follow the convention that the multiplication should be done first. Alternatively we can use round brackets `()` to override the default operator _precedence_, as well as making our code easier to follow.
 
 ## Numbers
 
-We've begun using numbers in python and it seems pretty straight forward. However, as diligent Pythonistas, let's observe that not all number are created equal. In fact, there are a _number of types of numbers_ in python. Let's verify this, before we move on:
+We've begun using numbers in python and it seems pretty straight forward. However, let's pause for a moment and observe that not all number are created equal. In fact, there are a _number of types of numbers_ in Python. Let's verify this, before we move on:
 
 ```python
 type(2)
@@ -125,25 +126,6 @@ You can also multiply strings with a number:
 ```
 'RickRickRick'
 ```
-If you need to put an apostrophe inside your string, you have two ways to do it.
-
-Using double quotes:
-
-```python
-"Runnin' down the hill"
-```
-```
-"Runnin' down the hill"
-```
-
-or escaping the apostrophe with a backslash (`\`):
-
-```python
-'Runnin\' down the hill'
-```
-```
-"Runnin' down the hill"
-```
 
 Nice, huh? To see your name in uppercase letters, simply type:
 
@@ -154,7 +136,7 @@ Nice, huh? To see your name in uppercase letters, simply type:
 'RICK'
 ```
 
-You just used the `upper` __method__ on your string! A method (like `upper()`) is a sequence of instructions that Python performs on a given object (`"Rick"`), once you call it. The notation `x.method()` reminds us that the method is attached or belongs to the data type `x`. 
+You just used the `upper` __method__ on your string! A method (like `upper()`) is a sequence of instructions that Python performs on a given object (`"Rick"`), once you call it. The notation `x.method()` reminds us that the method is attached or belongs to the data type `x`.
 
 If you want to know the number of letters contained in your name, there is a __function__ for that too!
 

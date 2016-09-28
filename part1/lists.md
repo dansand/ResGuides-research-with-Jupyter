@@ -8,9 +8,9 @@
 > *   Create and index lists of simple values.
 > *   List slicing.
 
-##Creating lists
+##The listmakers
 
- A list is a way to store many values. We create a list simply by putting values inside square brackets:
+ A list is a way to store many values. As long as the values are objects recognisable to Python, they can go in a list. We create a list simply by putting values inside square brackets:
 
 ```python
 [1, 3, 5, 7]
@@ -25,7 +25,7 @@ The list was evaluated by Python (and returned to us) but Python didn’t save t
 weight_kg = 55
 ```
 
-Okay, so just to be clear, `=` is the assignment operator in Python; it binds a data object to a variable name, so that we can easilt refer to that object. A different operator, which we will see later, is used for equality comparison (`==`). 
+Okay, so just to be clear, `=` is the assignment operator in Python; it binds a data object to a variable name, so that we can easilt refer to that object. A different operator, which we will see later, is used for equality comparison (`==`).
 
 Let's _assign_ our list to a variable:
 
@@ -178,12 +178,3 @@ pets
 With your neighbour, work out how to index this list, so you return the `greyound` string.
 
 <!--endsec-->
-
-
-
-
-
-
-
-
-
