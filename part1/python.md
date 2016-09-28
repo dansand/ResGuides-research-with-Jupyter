@@ -9,7 +9,7 @@
 
 ## What is Python?
 
-Python was created in the late 1980s, primarily as as a teaching and _scripting_ language. Python has since become an essential tool for many programmers, engineers, researchers, and data scientists across academia and industry. Accordingly, a large _ecosystem_ of discipline-specific tools have been built on top of it. Part 2 of this course will introduce you to the Scientific Python Stack (SciPy) a collection of open source software for scientific computing in Python, and particularly a specified set of core packages.
+Python was created in the late 1980s, primarily as a teaching and _scripting_ language. Python has since become an essential tool for many programmers, engineers, researchers, and data scientists across academia and industry. Accordingly, a large _ecosystem_ of discipline-specific tools have been built on top of it. Part 2 of this course will introduce you to the Scientific Python Stack (SciPy) a collection of open source software for scientific computing in Python.
 
 ## Python prompt
 
