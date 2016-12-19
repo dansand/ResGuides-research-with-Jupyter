@@ -106,10 +106,10 @@ Hopefully, `data[0,0]` reminds you a bit of the indexing scheme we used for list
 
 Again, like lists, we count from zero: therfore if we have an MxN numpy array, its indices go from 0 to M-1 on the first axis and 0 to N-1 on the second. Because if this convention, indexing takes a bit of getting used to. 
 
-An index like `data[250, 0]` selects a single element of an array, but we can select whole sections as well. For example, we can select the first ten days (columns) of values for the first four patients (rows) like this:
+An index like `data[250, 0]` selects a single element of an array, but we can select whole sections as well. For example, we can select the first ten data points like this:
 
 ```python
-print(data[0:10, 0:2])
+print(data[0:10, :])
 ```
 
 ```
